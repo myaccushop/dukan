@@ -14,8 +14,8 @@
     var $_title;
     var $_blocks = array();
     var $_grid_container_width = 24;
-    var $_grid_content_width = 16;
-    var $_grid_column_width = 4;
+    var $_grid_content_width = 24;
+    var $_grid_column_width = 0;
 
     function oscTemplate() {
       $this->_title = TITLE;

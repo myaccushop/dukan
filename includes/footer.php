@@ -17,17 +17,17 @@
   <p align="center"><?php echo FOOTER_TEXT_BODY; ?></p>
 </div>
 
-<?php
+<!-- ?php
   if ($banner = tep_banner_exists('dynamic', '468x50')) {
-?>
+? -->
 
-<div class="grid_24" style="text-align: center; padding-bottom: 20px;">
-  <?php echo tep_display_banner('static', $banner); ?>
-</div>
+<!-- div class="grid_24" style="text-align: center; padding-bottom: 20px;" -->
+  <!-- ?php echo tep_display_banner('static', $banner); ? -->
+<!-- /div -->
 
-<?php
+<!-- ?php
   }
-?>
+? -->
 
 <script type="text/javascript">
 $('.productListTable tr:nth-child(even)').addClass('alt');

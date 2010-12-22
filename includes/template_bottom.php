@@ -14,6 +14,8 @@
 </div> <!-- bodyContent //-->
 
 <?php
+
+/*
   if ($oscTemplate->hasBlocks('boxes_column_left')) {
 ?>
 
@@ -33,6 +35,7 @@
 
 <?php
   }
+  */
 ?>
 
 <?php require(DIR_WS_INCLUDES . 'footer.php'); ?>
