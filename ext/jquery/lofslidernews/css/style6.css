@@ -31,7 +31,7 @@
 .lof-main-outer{
 	position:relative;
 	height:100%;
-	width:900px;
+  /* width:900px; */
 	z-index:3px;
 	overflow:hidden;
 }
@@ -88,8 +88,8 @@ ul.lof-main-wapper{
 
 ul.lof-main-wapper li{
 	overflow:hidden;
-	padding:0px;
-	margin:0px;
+	/* padding:0px;
+	margin:0px; */
 	position:absolute;
 }
 .lof-opacity  li{
