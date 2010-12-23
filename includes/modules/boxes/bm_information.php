@@ -17,6 +17,7 @@
     var $description;
     var $sort_order;
     var $enabled = false;
+    var $html = "";
 
     function bm_information() {
       $this->title = MODULE_BOXES_INFORMATION_TITLE;
@@ -33,16 +34,25 @@
     function execute() {
       global $oscTemplate;
 
-      $data = '<div class="ui-widget infoBoxContainer">' .
-              '  <div class="ui-widget-header infoBoxHeading">' . MODULE_BOXES_INFORMATION_BOX_TITLE . '</div>' .
-              '  <div class="ui-widget-content infoBoxContents">' .
-              '    <a href="' . tep_href_link(FILENAME_SHIPPING) . '">' . MODULE_BOXES_INFORMATION_BOX_SHIPPING . '</a><br />' .
-              '    <a href="' . tep_href_link(FILENAME_PRIVACY) . '">' . MODULE_BOXES_INFORMATION_BOX_PRIVACY . '</a><br />' .
-              '    <a href="' . tep_href_link(FILENAME_CONDITIONS) . '">' . MODULE_BOXES_INFORMATION_BOX_CONDITIONS . '</a><br />' .
-              '    <a href="' . tep_href_link(FILENAME_CONTACT_US) . '">' . MODULE_BOXES_INFORMATION_BOX_CONTACT . '</a>' .
-              '  </div>' .
+      // $data = '<div class="ui-widget infoBoxContainer grid_6">' .
+      //         '  <div class="ui-widget-header infoBoxHeading">' . MODULE_BOXES_INFORMATION_BOX_TITLE . '</div>' .
+      //         '  <div class="ui-widget-content infoBoxContents">' .
+      //         '    <a href="' . tep_href_link(FILENAME_SHIPPING) . '">' . MODULE_BOXES_INFORMATION_BOX_SHIPPING . '</a><br />' .
+      //         '    <a href="' . tep_href_link(FILENAME_PRIVACY) . '">' . MODULE_BOXES_INFORMATION_BOX_PRIVACY . '</a><br />' .
+      //         '    <a href="' . tep_href_link(FILENAME_CONDITIONS) . '">' . MODULE_BOXES_INFORMATION_BOX_CONDITIONS . '</a><br />' .
+      //         '    <a href="' . tep_href_link(FILENAME_CONTACT_US) . '">' . MODULE_BOXES_INFORMATION_BOX_CONTACT . '</a>' .
+      //         '  </div>' .
+      //         '</div>';
+      $data = '<div class="grid_6 bottom_box">' .
+              '  <div class="bottom_box_title">' . MODULE_BOXES_INFORMATION_BOX_TITLE . '</div>' .
+              '  <div class="bottom_box_items"> <ul>' .
+              '    <li><a href="' . tep_href_link(FILENAME_SHIPPING) . '">' . MODULE_BOXES_INFORMATION_BOX_SHIPPING . '</a></li>' .
+              '    <li><a href="' . tep_href_link(FILENAME_PRIVACY) . '">' . MODULE_BOXES_INFORMATION_BOX_PRIVACY . '</a></li>' .
+              '    <li><a href="' . tep_href_link(FILENAME_CONDITIONS) . '">' . MODULE_BOXES_INFORMATION_BOX_CONDITIONS . '</a></li>' .
+              '    <li><a href="' . tep_href_link(FILENAME_CONTACT_US) . '">' . MODULE_BOXES_INFORMATION_BOX_CONTACT . '</a></li>' .
+              '  </ul></div>' .
               '</div>';
-
+      $this->html = $data;
       $oscTemplate->addBlock($data, $this->group);
     }
 

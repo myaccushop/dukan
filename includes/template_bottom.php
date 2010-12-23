@@ -12,7 +12,7 @@
 ?>
 
 </div> <!-- bodyContent //-->
-
+<div id="bottomContent" class="grid_24">
 <?php
 
 /*
@@ -36,7 +36,23 @@
 <?php
   }
   */
+  //
+  // Pring Information box (need to style it).
+  //
+  $group = "boxes";
+  $class = "bm_information";
+  if ( !class_exists($class) ) {
+    global $language;
+    include(DIR_WS_LANGUAGES . $language . '/modules/' . $group . '/' . $module);
+    include(DIR_WS_MODULES . $group . '/' . $class . '.php');
+  }
+
+  $mb = new $class();
+  $mb->execute();
+  echo $mb->html;
+
 ?>
+</div> <!-- bottomContent -->
 
 <?php require(DIR_WS_INCLUDES . 'footer.php'); ?>
 
