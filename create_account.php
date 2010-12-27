@@ -12,10 +12,15 @@
 
   require('includes/application_top.php');
 
+// PWA BOF
+  if (isset($HTTP_GET_VARS['guest']) && $cart->count_contents() < 1) tep_redirect(tep_href_link(FILENAME_SHOPPING_CART));
+// PWA EOF
+
 // needs to be included earlier to set the success message in the messageStack
   require(DIR_WS_LANGUAGES . $language . '/' . FILENAME_CREATE_ACCOUNT);
 
   $process = false;
+
   if (isset($HTTP_POST_VARS['action']) && ($HTTP_POST_VARS['action'] == 'process') && isset($HTTP_POST_VARS['formid']) && ($HTTP_POST_VARS['formid'] == $sessiontoken)) {
     $process = true;
 
@@ -93,7 +98,9 @@
 
       $messageStack->add('create_account', ENTRY_EMAIL_ADDRESS_CHECK_ERROR);
     } else {
-      $check_email_query = tep_db_query("select count(*) as total from " . TABLE_CUSTOMERS . " where customers_email_address = '" . tep_db_input($email_address) . "'");
+      // PWA BOF 2b
+      $check_email_query = tep_db_query("select count(*) as total from " . TABLE_CUSTOMERS . " where customers_email_address = '" . tep_db_input($email_address) . "' and guest_account != '1'");
+      // PWA EOF 2b
       $check_email = tep_db_fetch_array($check_email_query);
       if ($check_email['total'] > 0) {
         $error = true;
@@ -157,6 +164,10 @@
     }
 
 
+// PWA BOF
+    if (!isset($HTTP_GET_VARS['guest']) && !isset($HTTP_POST_VARS['guest'])) {
+// PWA EOF
+
     if (strlen($password) < ENTRY_PASSWORD_MIN_LENGTH) {
       $error = true;
 
@@ -166,16 +177,33 @@
 
       $messageStack->add('create_account', ENTRY_PASSWORD_ERROR_NOT_MATCHING);
     }
+// PWA BOF
+    } 
+// PWA EOF
 
     if ($error == false) {
-      $sql_data_array = array('customers_firstname' => $firstname,
+		// PWA BOF 2b
+		if (!isset($HTTP_GET_VARS['guest']) && !isset($HTTP_POST_VARS['guest']))
+		{
+			$dbPass = tep_encrypt_password($password);
+			$guestaccount = '0';
+		}else{
+			$dbPass = 'null';
+			$guestaccount = '1';
+		}
+		// PWA EOF 2b
+
+
+    $sql_data_array = array('customers_firstname' => $firstname,
                               'customers_lastname' => $lastname,
                               'customers_email_address' => $email_address,
                               'customers_telephone' => $telephone,
                               'customers_fax' => $fax,
                               'customers_newsletter' => $newsletter,
-                              'customers_password' => tep_encrypt_password($password));
-
+                              // PWA BOF 2b
+                              'customers_password' => $dbPass,
+                              'guest_account' => $guestaccount);
+                              // PWA EOF 2b
       if (ACCOUNT_GENDER == 'true') $sql_data_array['customers_gender'] = $gender;
       if (ACCOUNT_DOB == 'true') $sql_data_array['customers_dob'] = tep_date_raw($dob);
 
@@ -204,6 +232,11 @@
         }
       }
 
+// PWA BOF
+     if (isset($HTTP_GET_VARS['guest']) or isset($HTTP_POST_VARS['guest']))
+       tep_session_register('customer_is_guest');
+// PWA EOF
+
       tep_db_perform(TABLE_ADDRESS_BOOK, $sql_data_array);
 
       $address_id = tep_db_insert_id();
@@ -225,6 +258,10 @@
       tep_session_register('customer_default_address_id');
       tep_session_register('customer_country_id');
       tep_session_register('customer_zone_id');
+
+// PWA BOF
+      if (isset($HTTP_GET_VARS['guest']) or isset($HTTP_POST_VARS['guest'])) tep_redirect(tep_href_link(FILENAME_CHECKOUT_SHIPPING));
+// PWA EOF
 
 // reset session token
       $sessiontoken = md5(tep_rand() . tep_rand() . tep_rand() . tep_rand());
@@ -252,13 +289,28 @@
     }
   }
 
-  $breadcrumb->add(NAVBAR_TITLE, tep_href_link(FILENAME_CREATE_ACCOUNT, '', 'SSL'));
+ // PWA BOF
+ if (!isset($HTTP_GET_VARS['guest']) && !isset($HTTP_POST_VARS['guest'])){
+   $breadcrumb->add(NAVBAR_TITLE, tep_href_link(FILENAME_CREATE_ACCOUNT, '', 'SSL'));
+ }else{
+   $breadcrumb->add(NAVBAR_TITLE_PWA, tep_href_link(FILENAME_CREATE_ACCOUNT, 'guest=guest', 'SSL'));
+ }
+// PWA EOF
 
   require(DIR_WS_INCLUDES . 'template_top.php');
   require('includes/form_check.js.php');
 ?>
 
-<h1><?php echo HEADING_TITLE; ?></h1>
+<?php
+// PWA BOF
+if (!isset($HTTP_GET_VARS['guest']) && !isset($HTTP_POST_VARS['guest'])){
+?>
+  <h1><?php echo HEADING_TITLE; ?></h1>
+<?php }else{ ?>
+  <h1><?php echo HEADING_TITLE_PWA; ?></h1>
+<?php }
+// PWA EOF
+?>
 
 <?php
   if ($messageStack->size('create_account') > 0) {
@@ -268,7 +320,10 @@
 
 <p><?php echo sprintf(TEXT_ORIGIN_LOGIN, tep_href_link(FILENAME_LOGIN, tep_get_all_get_params(), 'SSL')); ?></p>
 
-<?php echo tep_draw_form('create_account', tep_href_link(FILENAME_CREATE_ACCOUNT, '', 'SSL'), 'post', 'onsubmit="return check_form(create_account);"', true) . tep_draw_hidden_field('action', 'process'); ?>
+<!-- PWA BOF -->
+<?php echo tep_draw_form('create_account', tep_href_link(FILENAME_CREATE_ACCOUNT, (isset($HTTP_GET_VARS['guest'])? 'guest=guest':''), 'SSL'), 'post', 'onSubmit="return check_form(create_account);"', true) . tep_draw_hidden_field('action', 'process'); ?>
+<!-- PWA EOF -->
+
 
 <div class="contentContainer">
   <div>
@@ -429,6 +484,12 @@
     </table>
   </div>
 
+<?php
+// PWA BOF
+  if (!isset($HTTP_GET_VARS['guest']) && !isset($HTTP_POST_VARS['guest'])) {
+// PWA EOF
+?>
+
   <h2><?php echo CATEGORY_PASSWORD; ?></h2>
 
   <div class="contentText">
@@ -443,6 +504,18 @@
       </tr>
     </table>
   </div>
+
+<?php
+  // PWA BOF
+  }
+  else
+  { // Ingo PWA Ende
+?>
+ <?php echo tep_draw_hidden_field('guest', 'guest'); ?>
+<?php
+  }
+// PWA EOF
+?>
 
   <div class="buttonSet">
     <span class="buttonAction"><?php echo tep_draw_button(IMAGE_BUTTON_CONTINUE, 'person', null, 'primary'); ?></span>

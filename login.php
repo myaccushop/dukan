@@ -25,7 +25,10 @@
     $password = tep_db_prepare_input($HTTP_POST_VARS['password']);
 
 // Check if email exists
-    $check_customer_query = tep_db_query("select customers_id, customers_firstname, customers_password, customers_email_address, customers_default_address_id from " . TABLE_CUSTOMERS . " where customers_email_address = '" . tep_db_input($email_address) . "'");
+// PWA BOF
+// using guest_account with customers_email_address
+   $check_customer_query = tep_db_query(  "select customers_id, customers_firstname, customers_password, customers_email_address, customers_default_address_id, guest_account from " . TABLE_CUSTOMERS . " where customers_email_address = '" . tep_db_input($email_address). "' and guest_account='0'");
+// PWA EOF
     if (!tep_db_num_rows($check_customer_query)) {
       $error = true;
     } else {
@@ -91,6 +94,22 @@
   if ($messageStack->size('login') > 0) {
     echo $messageStack->output('login');
   }
+?>
+<?php
+  // PWA BOF
+  if (defined('PURCHASE_WITHOUT_ACCOUNT') && ($cart->count_contents() > 0) && (PURCHASE_WITHOUT_ACCOUNT == 'ja' || PURCHASE_WITHOUT_ACCOUNT == 'yes')) {
+?>
+<div class="contentContainer" style="width: 90%; float: left;">
+  <h2><?php echo HEADING_RETURNING_CUSTOMER; ?></h2>
+
+  <div class="contentText">
+    <p><?php echo TEXT_GUEST_INTRODUCTION; ?></p>
+    <p align="right"><?php echo tep_draw_button(IMAGE_BUTTON_CHECKOUT_WITHOUT_ACCOUNT, 'triangle-1-e', tep_href_link(FILENAME_CREATE_ACCOUNT, 'guest=guest', 'SSL')); ?></p>
+  </div>
+</div>
+<?php
+  }
+  // PWA EOF
 ?>
 
 <div class="contentContainer" style="width: 45%; float: left;">

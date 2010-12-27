@@ -15,6 +15,20 @@
   require(DIR_WS_LANGUAGES . $language . '/' . FILENAME_LOGOFF);
 
   $breadcrumb->add(NAVBAR_TITLE);
+// PWA BOF 2b
+//delete the temporary account
+  $pwa_query = tep_db_query("select guest_account from " . TABLE_CUSTOMERS . " where customers_id = '" . (int)$customer_id . "'");
+  $pwa = tep_db_fetch_array($pwa_query);
+  if ($pwa['guest_account'] == 1) {
+  tep_db_query("delete from " . TABLE_CUSTOMERS . " where customers_id = '" . (int)$customer_id . "'");
+  tep_db_query("delete from " . TABLE_ADDRESS_BOOK . " where customers_id = '" . (int)$customer_id . "'");
+  tep_db_query("delete from " . TABLE_CUSTOMERS_INFO . " where customers_info_id = '" . (int)$customer_id . "'");
+  tep_db_query("delete from " . TABLE_CUSTOMERS_BASKET . " where customers_id = '" . (int)$customer_id . "'");
+  tep_db_query("delete from " . TABLE_CUSTOMERS_BASKET_ATTRIBUTES . " where customers_id = '" . (int)$customer_id . "'");
+  }
+
+  tep_session_unregister('guest_account');
+// PWA EOF
 
   tep_session_unregister('customer_id');
   tep_session_unregister('customer_default_address_id');

@@ -10,6 +10,26 @@
   Released under the GNU General Public License
 */
 
+// PWA BOF 2b
+//delete the temporary account
+  $pwa_query = tep_db_query("select guest_account from " . TABLE_CUSTOMERS . " where customers_id = '" . (int)$customer_id . "'");
+  $pwa = tep_db_fetch_array($pwa_query);
+  if ($pwa['guest_account'] == 1) {
+  tep_db_query("delete from " . TABLE_CUSTOMERS . " where customers_id = '" . (int)$customer_id . "'");
+  tep_db_query("delete from " . TABLE_ADDRESS_BOOK . " where customers_id = '" . (int)$customer_id . "'");
+  tep_db_query("delete from " . TABLE_CUSTOMERS_INFO . " where customers_info_id = '" . (int)$customer_id . "'");
+  tep_db_query("delete from " . TABLE_CUSTOMERS_BASKET . " where customers_id = '" . (int)$customer_id . "'");
+  tep_db_query("delete from " . TABLE_CUSTOMERS_BASKET_ATTRIBUTES . " where customers_id = '" . (int)$customer_id . "'");
+  tep_session_unregister('guest_account');
+  tep_session_unregister('customer_id');
+  tep_session_unregister('customer_default_address_id');
+  tep_session_unregister('customer_first_name');
+  tep_session_unregister('customer_country_id');
+  tep_session_unregister('customer_zone_id');
+  tep_session_unregister('comments');
+  }
+// PWA EOF 2b
+
   require('includes/application_top.php');
 
 // if the customer is not logged on, redirect them to the shopping cart page
@@ -49,6 +69,9 @@
   $global_query = tep_db_query("select global_product_notifications from " . TABLE_CUSTOMERS_INFO . " where customers_info_id = '" . (int)$customer_id . "'");
   $global = tep_db_fetch_array($global_query);
 
+  //PWA BOF
+  if (!tep_session_is_registered('customer_is_guest')){
+  //PWA EOF
   if ($global['global_product_notifications'] != '1') {
     $orders_query = tep_db_query("select orders_id from " . TABLE_ORDERS . " where customers_id = '" . (int)$customer_id . "' order by date_purchased desc limit 1");
     $orders = tep_db_fetch_array($orders_query);
@@ -60,6 +83,9 @@
                                 'text' => $products['products_name']);
     }
   }
+  //PWA BOF
+  }
+  //PWA EOF
 
   require(DIR_WS_INCLUDES . 'template_top.php');
 ?>

@@ -11,6 +11,9 @@
 */
 
 define('NAVBAR_TITLE', 'Create an Account');
+define('NAVBAR_TITLE_PWA', 'Enter Billing & Shipping Information');
+define('HEADING_TITLE_PWA', 'Billing & Shipping Information');
+
 
 define('HEADING_TITLE', 'My Account Information');
 

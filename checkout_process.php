@@ -92,6 +92,9 @@
                           'customers_telephone' => $order->customer['telephone'], 
                           'customers_email_address' => $order->customer['email_address'],
                           'customers_address_format_id' => $order->customer['format_id'], 
+ // PWA BOF
+                          'customers_dummy_account' => $order->customer['is_dummy_account'], 
+ // PWA EOF
                           'delivery_name' => trim($order->delivery['firstname'] . ' ' . $order->delivery['lastname']),
                           'delivery_company' => $order->delivery['company'],
                           'delivery_street_address' => $order->delivery['street_address'], 
@@ -245,6 +248,12 @@
                  EMAIL_TEXT_ORDER_NUMBER . ' ' . $insert_id . "\n" .
                  EMAIL_TEXT_INVOICE_URL . ' ' . tep_href_link(FILENAME_ACCOUNT_HISTORY_INFO, 'order_id=' . $insert_id, 'SSL', false) . "\n" .
                  EMAIL_TEXT_DATE_ORDERED . ' ' . strftime(DATE_FORMAT_LONG) . "\n\n";
+ // PWA BOF
+  if ($order->customer['is_dummy_account']) {
+    $email_order .= EMAIL_WARNING . "\n\n";
+  }
+  // PWA EOF
+
   if ($order->info['comments']) {
     $email_order .= tep_db_output($order->info['comments']) . "\n\n";
   }

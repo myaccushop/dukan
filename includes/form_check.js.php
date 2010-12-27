@@ -100,9 +100,16 @@ function check_form(form_name) {
   check_select("country", "", "<?php echo ENTRY_COUNTRY_ERROR; ?>");
 
   check_input("telephone", <?php echo ENTRY_TELEPHONE_MIN_LENGTH; ?>, "<?php echo ENTRY_TELEPHONE_NUMBER_ERROR; ?>");
+<?php
+// PWA BOF
+  if (!isset($HTTP_GET_VARS['guest'])) {
+?>
 
   check_password("password", "confirmation", <?php echo ENTRY_PASSWORD_MIN_LENGTH; ?>, "<?php echo ENTRY_PASSWORD_ERROR; ?>", "<?php echo ENTRY_PASSWORD_ERROR_NOT_MATCHING; ?>");
   check_password("password_new", "password_confirmation", <?php echo ENTRY_PASSWORD_MIN_LENGTH; ?>, "<?php echo ENTRY_PASSWORD_NEW_ERROR; ?>", "<?php echo ENTRY_PASSWORD_NEW_ERROR_NOT_MATCHING; ?>");
+<?php
+  } // PWA EOF
+?>
 
   if (error == true) {
     alert(error_message);
