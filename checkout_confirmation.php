@@ -273,8 +273,14 @@
   }
 ?>
 
+
+  <div id="accept_legal_part">
+  <?php echo tep_draw_checkbox_field('accept_legal', '1'); ?>
+  I have read and accept the <a target="_blank" href="<?php echo FILENAME_CONDITIONS; ?>">Legal Terms and Conditions</a>
+  </div>
+
   <div class="contentText">
-    <div style="float: left; width: 60%; padding-top: 5px; padding-left: 15%;">
+    <div style="float: left; width: 60%; padding-top: 15px; padding-left: 15%;">
       <div id="coProgressBar" style="height: 5px;"></div>
 
       <table border="0" width="100%" cellspacing="0" cellpadding="2">
@@ -286,13 +292,13 @@
       </table>
     </div>
 
-    <div style="float: right;">
+    <br style="clear:both">
 
+    <div id="confirm_button" style="float: right;">
 <?php
   if (is_array($payment_modules->modules)) {
     echo $payment_modules->process_button();
   }
-
   echo tep_draw_button(IMAGE_BUTTON_CONFIRM_ORDER, 'check', null, 'primary');
 ?>
 
@@ -305,6 +311,20 @@
 $('#coProgressBar').progressbar({
   value: 100
 });
+
+$('#confirm_button button').attr('disabled', true);
+$('#confirm_button button').animate({opacity:0.4}, 300 );
+
+$('#accept_legal_part input').change (function() {
+  if ($(this).attr('checked') == true) {
+    $('#confirm_button button').removeAttr('disabled');
+    $('#confirm_button button').animate({opacity:1}, 300 );
+  } else {
+    $('#confirm_button button').attr('disabled', true);
+    $('#confirm_button button').animate({opacity:0.4}, 300 );
+  }
+});
+
 </script>
 
 </form>

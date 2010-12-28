@@ -127,11 +127,10 @@
       $messageStack->add('create_account', ENTRY_CITY_ERROR);
     }
 
-    if (is_numeric($country) == false) {
-      $error = true;
-
-      $messageStack->add('create_account', ENTRY_COUNTRY_ERROR);
-    }
+    // if (is_numeric($country) == false) {
+    //   $error = true;
+    //   $messageStack->add('create_account', ENTRY_COUNTRY_ERROR);
+    // }
 
     if (ACCOUNT_STATE == 'true') {
       $zone_id = 0;
