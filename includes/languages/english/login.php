@@ -11,6 +11,7 @@
 */
 
 // PWA BOF
+define('HEADING_GUEST_CUSTOMER', 'Checkout Without Account');
 define('TEXT_GUEST_INTRODUCTION', '<b>Do you want to go straight to the checkout process?</b><br><br>Would like like to check out without creating a customer account? Please note that all of our services will not be available to customers that do not wish to create an account. Also, you cannot view the status of your order, and each time you shop with us you will have to re-enter all of your data.<br><br>Creating an account is free. If you still wish to continue to checkout please click the checkout button to your right.');
 // PWA BOF
 define('NAVBAR_TITLE', 'Login');

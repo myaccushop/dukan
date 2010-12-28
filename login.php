@@ -100,7 +100,7 @@
   if (defined('PURCHASE_WITHOUT_ACCOUNT') && ($cart->count_contents() > 0) && (PURCHASE_WITHOUT_ACCOUNT == 'ja' || PURCHASE_WITHOUT_ACCOUNT == 'yes')) {
 ?>
 <div class="contentContainer" style="width: 90%; float: left;">
-  <h2><?php echo HEADING_RETURNING_CUSTOMER; ?></h2>
+  <h2><?php echo HEADING_GUEST_CUSTOMER; ?></h2>
 
   <div class="contentText">
     <p><?php echo TEXT_GUEST_INTRODUCTION; ?></p>
