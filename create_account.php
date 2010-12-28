@@ -434,20 +434,27 @@ if (!isset($HTTP_GET_VARS['guest']) && !isset($HTTP_POST_VARS['guest'])){
         <td class="fieldKey"><?php echo ENTRY_STATE; ?></td>
         <td class="fieldValue">
 <?php
-    if ($process == true) {
-      if ($entry_state_has_zones == true) {
-        $zones_array = array();
-        $zones_query = tep_db_query("select zone_name from " . TABLE_ZONES . " where zone_country_id = '" . (int)$country . "' order by zone_name");
-        while ($zones_values = tep_db_fetch_array($zones_query)) {
-          $zones_array[] = array('id' => $zones_values['zone_name'], 'text' => $zones_values['zone_name']);
-        }
-        echo tep_draw_pull_down_menu('state', $zones_array);
-      } else {
-        echo tep_draw_input_field('state');
+    $zones_array = array();
+    $us_contiguous_states = array ( "AK", "AZ", "AR", "CA", "CO", "CT",
+                                    "DE", "DC", "FL", "GA", "ID", "IL",
+                                    "IN", "IA", "KS", "KY", "LA", "ME",
+                                    "MD", "MA", "MI", "MN", "MS", "MO",
+                                    "MT", "NE", "NV", "NH", "NJ", "NM",
+                                    "NY", "NC", "ND", "OH", "OK", "OR",
+                                    "PA", "RI", "SC", "SD", "TN", "TX",
+                                    "UT", "VT", "VA", "WA", "WV", "WI", "WY");
+    //
+    // Currently only support United States (=223)
+    //
+    $zones_query = tep_db_query("select zone_code, zone_name from " . TABLE_ZONES .
+                   " where zone_country_id = '223' order by zone_code");
+    while ($zones_values = tep_db_fetch_array($zones_query)) {
+      if (in_array($zones_values['zone_code'], $us_contiguous_states)) {
+        $zones_array[] = array( 'id' => $zones_values['zone_name'],
+                                'text' => $zones_values['zone_code'] . " - " . $zones_values['zone_name']);
       }
-    } else {
-      echo tep_draw_input_field('state');
     }
+    echo tep_draw_pull_down_menu('state', $zones_array);
 
     if (tep_not_null(ENTRY_STATE_TEXT)) echo '&nbsp;<span class="inputRequirement">' . ENTRY_STATE_TEXT . '</span>';
 ?>
@@ -460,7 +467,10 @@ if (!isset($HTTP_GET_VARS['guest']) && !isset($HTTP_POST_VARS['guest'])){
 
       <tr>
         <td class="fieldKey"><?php echo ENTRY_COUNTRY; ?></td>
-        <td class="fieldValue"><?php echo tep_get_country_list('country') . '&nbsp;' . (tep_not_null(ENTRY_COUNTRY_TEXT) ? '<span class="inputRequirement">' . ENTRY_COUNTRY_TEXT . '</span>': ''); ?></td>
+        <td class="fieldValue">
+          <!-- ?php echo tep_get_country_list('country', '223') . '&nbsp;' . (tep_not_null(ENTRY_COUNTRY_TEXT) ? '<span class="inputRequirement">' . ENTRY_COUNTRY_TEXT . '</span>': ''); ? -->
+          United States
+        </td>
       </tr>
     </table>
   </div>
