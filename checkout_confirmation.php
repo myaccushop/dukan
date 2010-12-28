@@ -324,16 +324,19 @@ $('#coProgressBar').progressbar({
 $('#confirm_button button').attr('disabled', true);
 $('#confirm_button button').animate({opacity:0.4}, 300 );
 $('#confirm_button button').css('cursor', 'wait');
+$('#accept_legal_part').css ('border', '2px solid #f77');
 
 $('#accept_legal_part input').change (function() {
   if ($(this).attr('checked') == true) {
     $('#confirm_button button').removeAttr('disabled');
     $('#confirm_button button').animate({opacity:1}, 300 );
     $('#confirm_button button').css('cursor', 'pointer');
+    $('#accept_legal_part').animate ({borderTopColor:"transparent",borderBottomColor:"transparent",borderLeftColor:"transparent",borderRightColor:"transparent"}, 800);
   } else {
     $('#confirm_button button').attr('disabled', true);
     $('#confirm_button button').animate({opacity:0.4}, 300 );
     $('#confirm_button button').css('cursor', 'wait');
+    $('#accept_legal_part').animate ({borderTopColor:"#f77",borderBottomColor:"#f77",borderLeftColor:"#f77",borderRightColor:"#f77"}, 100);
   }
 });
 

@@ -48,11 +48,20 @@
 </script>
 </div>
 
+<?php
+if ($PHP_SELF == FILENAME_LANDING) {
+  //
+  // Do not show breadcrumb on landing page
+  //
+} else {
+?>
+
 <div class="grid_24 ui-widget infoBoxContainer">
   <div class="ui-widget-header infoBoxHeading"><?php echo '&nbsp;&nbsp;' . $breadcrumb->trail(' &raquo; '); ?></div>
 </div>
 
 <?php
+  }
   if (isset($HTTP_GET_VARS['error_message']) && tep_not_null($HTTP_GET_VARS['error_message'])) {
 ?>
 <table border="0" width="100%" cellspacing="0" cellpadding="2">

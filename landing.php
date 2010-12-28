@@ -109,7 +109,7 @@ ul.lof-main-wapper li {
     //
     // Generating New Products Content (npc)
     //
-    $npc = '<div id="lofslidecontent45" class="lof-slidecontent grid_24 alpha omega" style="height:340px;"><div class="preload"><div></div></div> <div class="lof-main-outer grid_24 alpha omega" style="height:340px;">' . "\n";
+    $npc = '<div id="lofslidecontent45" class="lof-slidecontent grid_24 alpha omega" style="height:340px;margin: 2.5em 0 2.5em 0;"><div class="preload"><div></div></div> <div class="lof-main-outer grid_24 alpha omega" style="height:340px;">' . "\n";
     $npc .= '    <div onclick="return false" href="" class="lof-previous">Previous</div>' . "\n";
     $npc .= '<ul class="lof-main-wapper">' . "\n";
     while ($new_products = tep_db_fetch_array($new_products_query)) {
