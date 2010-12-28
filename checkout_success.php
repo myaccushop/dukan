@@ -10,6 +10,8 @@
   Released under the GNU General Public License
 */
 
+  require('includes/application_top.php');
+
 // PWA BOF 2b
 //delete the temporary account
   $pwa_query = tep_db_query("select guest_account from " . TABLE_CUSTOMERS . " where customers_id = '" . (int)$customer_id . "'");
@@ -29,8 +31,6 @@
   tep_session_unregister('comments');
   }
 // PWA EOF 2b
-
-  require('includes/application_top.php');
 
 // if the customer is not logged on, redirect them to the shopping cart page
   if (!tep_session_is_registered('customer_id')) {

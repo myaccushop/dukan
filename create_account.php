@@ -486,10 +486,6 @@ if (!isset($HTTP_GET_VARS['guest']) && !isset($HTTP_POST_VARS['guest'])){
         <td class="fieldKey"><?php echo ENTRY_FAX_NUMBER; ?></td>
         <td class="fieldValue"><?php echo tep_draw_input_field('fax') . '&nbsp;' . (tep_not_null(ENTRY_FAX_NUMBER_TEXT) ? '<span class="inputRequirement">' . ENTRY_FAX_NUMBER_TEXT . '</span>': ''); ?></td>
       </tr>
-      <tr>
-        <td class="fieldKey"><?php echo ENTRY_NEWSLETTER; ?></td>
-        <td class="fieldValue"><?php echo tep_draw_checkbox_field('newsletter', '1') . '&nbsp;' . (tep_not_null(ENTRY_NEWSLETTER_TEXT) ? '<span class="inputRequirement">' . ENTRY_NEWSLETTER_TEXT . '</span>': ''); ?></td>
-      </tr>
     </table>
   </div>
 

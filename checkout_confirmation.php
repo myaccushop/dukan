@@ -278,6 +278,15 @@
   <?php echo tep_draw_checkbox_field('accept_legal', '1'); ?>
   I have read and accept the <a target="_blank" href="<?php echo FILENAME_CONDITIONS; ?>">Legal Terms and Conditions</a>
   </div>
+<?php
+  if (isset($HTTP_GET_VARS['legal_deny'])) {
+?>
+  <div id="accept_deny_part" style="color: red;margin-left:2em">
+  <b>Alert!</b> Checkout order cannot be processed unless <a target="_blank" href="<?php echo FILENAME_CONDITIONS; ?>">Legal Terms and Conditions</a> are accepted.
+  </div>
+<?php
+  }
+?>
 
   <div class="contentText">
     <div style="float: left; width: 60%; padding-top: 15px; padding-left: 15%;">
@@ -314,14 +323,17 @@ $('#coProgressBar').progressbar({
 
 $('#confirm_button button').attr('disabled', true);
 $('#confirm_button button').animate({opacity:0.4}, 300 );
+$('#confirm_button button').css('cursor', 'wait');
 
 $('#accept_legal_part input').change (function() {
   if ($(this).attr('checked') == true) {
     $('#confirm_button button').removeAttr('disabled');
     $('#confirm_button button').animate({opacity:1}, 300 );
+    $('#confirm_button button').css('cursor', 'pointer');
   } else {
     $('#confirm_button button').attr('disabled', true);
     $('#confirm_button button').animate({opacity:0.4}, 300 );
+    $('#confirm_button button').css('cursor', 'wait');
   }
 });
 
