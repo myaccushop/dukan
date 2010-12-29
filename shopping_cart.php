@@ -94,7 +94,7 @@
         }
       }
 
-      $products_name .= '<br /><br />' . tep_draw_input_field('cart_quantity[]', $products[$i]['quantity'], 'size="4"') . tep_draw_hidden_field('products_id[]', $products[$i]['id']) . tep_draw_button(IMAGE_BUTTON_UPDATE, 'refresh') . '&nbsp;&nbsp;&nbsp;or <a href="' . tep_href_link(FILENAME_SHOPPING_CART, 'products_id=' . $products[$i]['id'] . '&action=remove_product') . '">remove</a>';
+      $products_name .= '<br /><br />' . tep_draw_input_field('cart_quantity[]', $products[$i]['quantity'], 'size="4"') . tep_draw_hidden_field('products_id[]', $products[$i]['id']) . tep_draw_button(IMAGE_BUTTON_UPDATE, 'refresh') . '&nbsp;&nbsp;&nbsp;or&nbsp;&nbsp;&nbsp;'. tep_draw_button('Remove', 'trash', tep_href_link(FILENAME_SHOPPING_CART, 'products_id=' . $products[$i]['id'] . '&action=remove_product'));
 
       $products_name .= '    </td>' .
                         '  </tr>' .
@@ -132,7 +132,7 @@
 
   <div class="buttonSet">
     <span class="buttonAction"><?php echo tep_draw_button(IMAGE_BUTTON_CHECKOUT, 'triangle-1-e', tep_href_link(FILENAME_CHECKOUT_SHIPPING, '', 'SSL'), 'primary'); ?></span>
-    <span class="buttonAction"><?php echo tep_draw_button(IMAGE_BUTTON_CONTINUE_SHOPPING, 'triangle-1-e', tep_href_link(FILENAME_LANDING, '', 'SSL'), 'primary'); ?></span>
+    <span class="buttonAction" style="float:left"><?php echo tep_draw_button(IMAGE_BUTTON_CONTINUE_SHOPPING, 'triangle-1-w', tep_href_link(FILENAME_LANDING, '', 'SSL')); ?></span>
   </div>
 
 <?php
