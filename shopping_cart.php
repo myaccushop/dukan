@@ -130,18 +130,32 @@
 
   </div>
 
+  <div id="accept_legal_part">
+  <?php echo tep_draw_checkbox_field('accept_legal', '1'); ?>
+  I have read and accept the <a target="_blank" href="<?php echo FILENAME_CONDITIONS; ?>">Legal Terms and Conditions</a>
+  </div>
+<?php
+  if (isset($HTTP_GET_VARS['legal_deny'])) {
+?>
+  <div id="accept_deny_part" style="color: red;margin-left:2em">
+  <b>Alert!</b> Checkout order cannot be processed unless <a target="_blank" href="<?php echo FILENAME_CONDITIONS; ?>">Legal Terms and Conditions</a> are accepted.
+  </div>
+<?php
+  }
+?>
+  <br style="clear:both">
+
   <div class="buttonSet">
-    <span class="buttonAction"><?php echo tep_draw_button(IMAGE_BUTTON_CHECKOUT, 'triangle-1-e', tep_href_link(FILENAME_CHECKOUT_SHIPPING, '', 'SSL'), 'primary'); ?></span>
     <span class="buttonAction" style="float:left"><?php echo tep_draw_button(IMAGE_BUTTON_CONTINUE_SHOPPING, 'triangle-1-w', tep_href_link(FILENAME_LANDING, '', 'SSL')); ?></span>
   </div>
 
+  <div id="checkout_methods">
+    <!-- span class="buttonAction"><?php echo tep_draw_button(IMAGE_BUTTON_CHECKOUT, 'triangle-1-e', tep_href_link(FILENAME_CHECKOUT_SHIPPING, '', 'SSL'), 'primary'); ?></span -->
 <?php
     $initialize_checkout_methods = $payment_modules->checkout_initialization_method();
 
     if (!empty($initialize_checkout_methods)) {
 ?>
-
-  <p align="right" style="clear: both; padding: 15px 50px 0 0;"><?php echo TEXT_ALTERNATIVE_CHECKOUT_METHODS; ?></p>
 
 <?php
       reset($initialize_checkout_methods);
@@ -155,6 +169,7 @@
     }
 ?>
 
+  </div> <!-- checkout_methods -->
 </div>
 
 </form>
@@ -171,9 +186,40 @@
   </div>
 </div>
 
+
 <?php
   }
+?>
 
+<script type="text/javascript">
+$('#checkout_methods a').attr('disabled', true);
+$('#checkout_methods a').animate({opacity:0.4}, 300 );
+$('#checkout_methods a').css('cursor', 'wait');
+$('#checkout_methods a').attr('title', $('#checkout_methods a').attr('href'));
+$('#checkout_methods a').attr('href', "<?php echo $PHP_SELF . "?legal_deny" ?>");
+$('#accept_legal_part').css ('border', '2px solid #f77');
+
+$('#accept_legal_part input').change (function() {
+  if ($(this).attr('checked') == true) {
+    $('#checkout_methods a').removeAttr('disabled');
+    $('#checkout_methods a').animate({opacity:1}, 300 );
+    $('#checkout_methods a').css('cursor', 'pointer');
+    $('#checkout_methods a').attr('href', $('#checkout_methods a').attr('title'));
+    $('#accept_legal_part').animate ({borderTopColor:"transparent",borderBottomColor:"transparent",borderLeftColor:"transparent",borderRightColor:"transparent"}, 800);
+  } else {
+    $('#checkout_methods a').attr('disabled', true);
+    $('#checkout_methods a').animate({opacity:0.4}, 300 );
+    $('#checkout_methods a').css('cursor', 'wait');
+    $('#checkout_methods a').attr('title', $('#checkout_methods a').attr('href'));
+    $('#checkout_methods a').attr('href', "<?php echo $PHP_SELF . "?legal_deny" ?>");
+    $('#accept_legal_part').animate ({borderTopColor:"#f77",borderBottomColor:"#f77",borderLeftColor:"#f77",borderRightColor:"#f77"}, 100);
+  }
+});
+</script>
+
+<?php
   require(DIR_WS_INCLUDES . 'template_bottom.php');
   require(DIR_WS_INCLUDES . 'application_bottom.php');
 ?>
+
+

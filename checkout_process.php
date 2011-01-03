@@ -18,12 +18,12 @@
     tep_redirect(tep_href_link(FILENAME_LOGIN, '', 'SSL'));
   }
 
-  if (isset($HTTP_POST_VARS['accept_legal']) && ($HTTP_POST_VARS['accept_legal'] == 1)) {
-    // Legal terms accepted
-  } else {
-    // Go back to confirmation page
-    tep_redirect(tep_href_link(FILENAME_CHECKOUT_CONFIRMATION . "?legal_deny"));
-  }
+  // if (isset($HTTP_POST_VARS['accept_legal']) && ($HTTP_POST_VARS['accept_legal'] == 1)) {
+  //   // Legal terms accepted
+  // } else {
+  //   // Go back to confirmation page
+  //   tep_redirect(tep_href_link(FILENAME_CHECKOUT_CONFIRMATION . "?legal_deny"));
+  // }
 
 // if there is nothing in the customers cart, redirect them to the shopping cart page
   if ($cart->count_contents() < 1) {
