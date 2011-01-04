@@ -18,9 +18,9 @@
 <title><?php echo TITLE; ?></title>
 <base href="<?php echo HTTP_SERVER . DIR_WS_ADMIN; ?>" />
 <!--[if IE]><script type="text/javascript" src="<?php echo tep_catalog_href_link('ext/flot/excanvas.min.js'); ?>"></script><![endif]-->
-<link rel="stylesheet" type="text/css" href="<?php echo tep_catalog_href_link('ext/jquery/ui/redmond/jquery-ui-1.8.6.css'); ?>">
-<script type="text/javascript" src="<?php echo tep_catalog_href_link('ext/jquery/jquery-1.4.2.min.js'); ?>"></script>
-<script type="text/javascript" src="<?php echo tep_catalog_href_link('ext/jquery/ui/jquery-ui-1.8.6.min.js'); ?>"></script>
+<link rel="stylesheet" type="text/css" href="<?php echo tep_catalog_href_link('ext/jquery/ui/smoothness/jquery-ui-1.8.7.custom.css'); ?>">
+<script type="text/javascript" src="<?php echo tep_catalog_href_link('ext/jquery/jquery-1.4.4.min.js'); ?>"></script>
+<script type="text/javascript" src="<?php echo tep_catalog_href_link('ext/jquery/ui/jquery-ui-1.8.7.custom.min.js'); ?>"></script>
 
 <?php
   if (tep_not_null(JQUERY_DATEPICKER_I18N_CODE)) {

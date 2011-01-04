@@ -21,9 +21,6 @@
       href="http://look.mahesha.com/ext/jquery/lofslidernews/css/style6.css" />
 <script language="javascript"
         type="text/javascript"
-        src="http://look.mahesha.com/ext/jquery/lofslidernews/js/jquery.js"></script>
-<script language="javascript"
-        type="text/javascript"
         src="http://look.mahesha.com/ext/jquery/lofslidernews/js/jquery.easing.js"></script>
 <script language="javascript"
         type="text/javascript"
