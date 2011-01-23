@@ -15,32 +15,13 @@
 <div id="bottomContent" class="grid_24">
 <?php
 
-/*
-  if ($oscTemplate->hasBlocks('boxes_column_left')) {
-?>
-
-<div id="columnLeft" class="grid_<?php echo $oscTemplate->getGridColumnWidth(); ?> pull_<?php echo $oscTemplate->getGridContentWidth(); ?>">
-  <?php echo $oscTemplate->getBlocks('boxes_column_left'); ?>
-</div>
-
-<?php
-  }
-
-  if ($oscTemplate->hasBlocks('boxes_column_right')) {
-?>
-
-<div id="columnRight" class="grid_<?php echo $oscTemplate->getGridColumnWidth(); ?>">
-  <?php echo $oscTemplate->getBlocks('boxes_column_right'); ?>
-</div>
-
-<?php
-  }
-  */
+$bottom_boxes = array ('information', 'whats_new');
+foreach ($bottom_boxes as $box_type) {
   //
-  // Pring Information box (need to style it).
+  // Print Information box (need to style it).
   //
   $group = "boxes";
-  $class = "bm_information";
+  $class = "bm_" . $box_type;
   if ( !class_exists($class) ) {
     global $language;
     include(DIR_WS_LANGUAGES . $language . '/modules/' . $group . '/' . $module);
@@ -50,6 +31,7 @@
   $mb = new $class();
   $mb->execute();
   echo $mb->html;
+}
 
 ?>
 </div> <!-- bottomContent -->
