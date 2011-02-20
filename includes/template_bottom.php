@@ -12,7 +12,7 @@
 ?>
 
 </div> <!-- bodyContent //-->
-<div id="bottomContent" class="grid_24">
+<div id="bottomContent" class="grid_24 alpha omega">
 <?php
 
 $bottom_boxes = array ('information', 'whats_new');

@@ -13,9 +13,9 @@
   require(DIR_WS_INCLUDES . 'counter.php');
 ?>
 
-<div class="grid_24 footer">
+<!--div class="grid_24 alpha omega footer">
   <p align="center"><?php echo FOOTER_TEXT_BODY; ?></p>
-</div>
+</div -->
 
 <!-- ?php
   if ($banner = tep_banner_exists('dynamic', '468x50')) {

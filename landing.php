@@ -32,7 +32,7 @@ $(document).ready( function(){
                   next      : $('#lofslidecontent45 .lof-next') };
 
   $obj = $('#lofslidecontent45').lofJSidernews( {
-    interval        : 10000,
+    interval        : 6000,
     easing          : 'easeInOutQuad',
     duration        : 1200,
     auto            : false,
@@ -112,7 +112,7 @@ ul.lof-main-wapper li {
     while ($new_products = tep_db_fetch_array($new_products_query)) {
       $counter++;
 
-      $npc .= '<li class="grid_24">' . tep_image(DIR_WS_IMAGES . $new_products['products_image'], $new_products['products_name'], "950px", "340px"). "\n";
+      $npc .= '<li class="grid_24">' . tep_image(DIR_WS_IMAGES . $new_products['products_image'], $new_products['products_name'], "960px", "340px"). "\n";
       $npc .= '<div class="lof-main-item-desc grid_24">' . "\n";
       $npc .= '  <h3 class="grid_20"><a target="_parent" title="Newsflash ' . $counter . '" href="' . tep_href_link(FILENAME_PRODUCT_INFO, 'products_id=' . $new_products['products_id']) . '">' . $new_products['products_name'] . '</a> <i>' . $currencies->display_price($new_products['products_price'], tep_get_tax_rate($new_products['products_tax_class_id'])) . '</i></h3>' . "\n";
       $npc .= '  <h2 class="grid_20">Content of Newsflash  ' . $counter . '</h2>' . "\n";
