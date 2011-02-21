@@ -37,7 +37,7 @@ $(document).ready( function(){
     duration        : 1200,
     auto            : false,
     maxItemDisplay  : 5,
-    mainWidth       : 960,
+    mainWidth       : 950,
     navPosition     : 'horizontal', // horizontal
     navigatorHeight : 15,
     navigatorWidth  : 25,
@@ -106,14 +106,14 @@ ul.lof-main-wapper li {
     //
     // Generating New Products Content (npc)
     //
-    $npc = '<div id="lofslidecontent45" class="lof-slidecontent grid_24 alpha omega" style="height:340px;margin: 2.5em 0 2.5em 0;"><div class="preload"><div></div></div> <div class="lof-main-outer grid_24 alpha omega" style="height:340px;">' . "\n";
+    $npc = '<div id="lofslidecontent45" class="lof-slidecontent grid_24" style="height:340px;margin: 2.5em 0 2.5em 0;"><div class="preload"><div></div></div> <div class="lof-main-outer grid_24 alpha omega" style="height:340px;">' . "\n";
     $npc .= '    <div onclick="return false" href="" class="lof-previous">Previous</div>' . "\n";
     $npc .= '<ul class="lof-main-wapper">' . "\n";
     while ($new_products = tep_db_fetch_array($new_products_query)) {
       $counter++;
 
-      $npc .= '<li class="grid_24">' . tep_image(DIR_WS_IMAGES . $new_products['products_image'], $new_products['products_name'], "960px", "340px"). "\n";
-      $npc .= '<div class="lof-main-item-desc grid_24">' . "\n";
+      $npc .= '<li class="grid_24 alpha omega">' . tep_image(DIR_WS_IMAGES . $new_products['products_image'], $new_products['products_name'], "950px", "340px"). "\n";
+      $npc .= '<div class="lof-main-item-desc grid_24 alpla omega">' . "\n";
       $npc .= '  <h3 class="grid_20"><a target="_parent" title="Newsflash ' . $counter . '" href="' . tep_href_link(FILENAME_PRODUCT_INFO, 'products_id=' . $new_products['products_id']) . '">' . $new_products['products_name'] . '</a> <i>' . $currencies->display_price($new_products['products_price'], tep_get_tax_rate($new_products['products_tax_class_id'])) . '</i></h3>' . "\n";
       $npc .= '  <h2 class="grid_20">Content of Newsflash  ' . $counter . '</h2>' . "\n";
       $npc .= '  <p class="grid_20">The one thing about a Web site, it always changes! Joomla! makes it easy to add Articles, content,...' . "\n";
@@ -141,7 +141,7 @@ ul.lof-main-wapper li {
 
   <div class="contentText grid_24 alpha omega">
     <?php echo $npc; ?>
-  </div>
+  </div></div>
 <?php
   }
 
