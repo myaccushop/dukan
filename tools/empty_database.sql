@@ -32,3 +32,4 @@ TRUNCATE `products_options_values_to_products_options`;
 TRUNCATE `products_to_categories`;
 TRUNCATE `reviews`;
 TRUNCATE `reviews_description`;
+TRUNCATE `specials`;
