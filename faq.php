@@ -12,9 +12,9 @@
 
   require('includes/application_top.php');
 
-  require(DIR_WS_LANGUAGES . $language . '/' . FILENAME_SHIPPING);
+  require(DIR_WS_LANGUAGES . $language . '/' . FILENAME_FAQ);
 
-  $breadcrumb->add(NAVBAR_TITLE, tep_href_link(FILENAME_SHIPPING));
+  $breadcrumb->add(NAVBAR_TITLE, tep_href_link(FILENAME_FAQ));
 
   require(DIR_WS_INCLUDES . 'template_top.php');
 ?>
@@ -23,11 +23,7 @@
 
 <div class="contentContainer">
   <div class="contentText">
-    <?php echo TEXT_SHIPPING_INFORMATION; ?>
-  </div>
-
-  <div class="buttonSet">
-    <span class="buttonAction"><?php echo tep_draw_button(IMAGE_BUTTON_CONTINUE, 'triangle-1-e', tep_href_link(FILENAME_DEFAULT)); ?></span>
+    <?php echo TEXT_FAQ_INFORMATION; ?>
   </div>
 </div>
 
