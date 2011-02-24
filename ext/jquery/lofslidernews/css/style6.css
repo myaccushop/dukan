@@ -69,8 +69,7 @@
 	text-transform:uppercase;
 	text-decoration:none
 }
-.lof-main-item-desc h3 a:hover{
-
+.lof-main-item-desc h3 a:hover {
 	text-decoration:underline;
 }
 .lof-main-item-desc h3 i {
@@ -119,7 +118,7 @@ ul.lof-main-wapper li img{
 	color:#FFF;
 	float:left
 }
-ul.lof-navigator{
+ul.lof-navigator {
 	top:0;
 	padding:0;
 	margin:0;
@@ -139,7 +138,11 @@ ul.lof-navigator li{
 	text-align:center;
 
 }
-ul.lof-navigator li img{
+
+ul.lof-navigator li.active {
+  background-color: #222;
+}
+ul.lof-navigator li img {
 	border:#666 solid 3px;	
 }
 ul.lof-navigator li.active img, ul.lof-navigator li:hover img {
