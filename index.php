@@ -35,7 +35,7 @@ $(document).ready( function(){
     interval        : 7000,
     easing          : 'easeInOutQuad',
     duration        : 1200,
-    auto            : true,
+    auto            : false,
     maxItemDisplay  : 5,
     mainWidth       : 950,
     navPosition     : 'horizontal', // horizontal
@@ -113,10 +113,10 @@ ul.lof-main-wapper li {
       $counter++;
 
       $npc .= '<li class="grid_24 alpha omega">' . tep_image(DIR_WS_IMAGES . $new_products['products_image'], $new_products['products_name'], "950px", "340px"). "\n";
-      $npc .= '<div class="lof-main-item-desc grid_24 alpla omega">' . "\n";
-      $npc .= '  <h3 class="grid_20"><a target="_parent" title="Newsflash ' . $counter . '" href="' . tep_href_link(FILENAME_PRODUCT_INFO, 'products_id=' . $new_products['products_id']) . '">' . $new_products['products_name'] . '</a> <i>' . $currencies->display_price($new_products['products_price'], tep_get_tax_rate($new_products['products_tax_class_id'])) . '</i></h3>' . "\n";
-      $npc .= '  <h2 class="grid_20">Content of Newsflash  ' . $counter . '</h2>' . "\n";
-      $npc .= '  <p class="grid_20">The one thing about a Web site, it always changes! Joomla! makes it easy to add Articles, content,...' . "\n";
+      $npc .= '<div class="lof-main-item-desc grid_11 push_13">' . "\n";
+      $npc .= '  <h3><a target="_parent" title="Newsflash ' . $counter . '" href="' . tep_href_link(FILENAME_PRODUCT_INFO, 'products_id=' . $new_products['products_id']) . '">' . $new_products['products_name'] . '</a> <i>' . $currencies->display_price($new_products['products_price'], tep_get_tax_rate($new_products['products_tax_class_id'])) . '</i></h3>' . "\n";
+      $npc .= '  <h2>Content of Newsflash  ' . $counter . '</h2>' . "\n";
+      $npc .= '  <p>The one thing about a Web site, it always changes! Joomla! makes it easy to add Articles, content,...' . "\n";
       $npc .= '  <a class="readmore" href="' . tep_href_link(FILENAME_PRODUCT_INFO, 'products_id=' . $new_products['products_id']) . '">Read more </a>'. "\n";
       $npc .= "  </p>\n";
       $npc .= "</div>\n";
@@ -142,6 +142,29 @@ ul.lof-main-wapper li {
   <div class="contentText grid_24 alpha omega">
     <?php echo $npc; ?>
   </div></div>
+  <div id="miniCatContent" class="grid_24">
+<?php
+
+$bottom_boxes = array ('information', 'whats_new');
+foreach ($bottom_boxes as $box_type) {
+  //
+  // Print Information box (need to style it).
+  //
+  $group = "boxes";
+  $class = "bm_" . $box_type;
+  if ( !class_exists($class) ) {
+    global $language;
+    include(DIR_WS_LANGUAGES . $language . '/modules/' . $group . '/' . $module);
+    include(DIR_WS_MODULES . $group . '/' . $class . '.php');
+  }
+
+  $mb = new $class();
+  $mb->execute();
+  echo $mb->html;
+}
+
+?>
+</div> <!-- miniCatContent -->
 <?php
   }
 

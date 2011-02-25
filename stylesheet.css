@@ -11,14 +11,14 @@
 
 .ui-widget {
   font-family: Lucida Grande, Lucida Sans, Verdana, Arial, sans-serif;
-  font-size: 11px;
+  font-size: 13px;
 }
 
 body {
   background: #ffffff;
   color: #000;
   margin: 0px;
-  font-size: 11px;
+  font-size: 13px;
   font-family: Lucida Grande, Lucida Sans, Verdana, Arial, sans-serif;
 }
 
@@ -54,12 +54,12 @@ body {
 
 .infoBoxHeading {
   padding: 2px;
-  font-size: 11px;
+  font-size: 13px;
 }
 
 .infoBoxContents {
   padding: 5px;
-  font-size: 11px;
+  font-size: 13px;
   line-height: 1.5;
 }
 
@@ -77,13 +77,13 @@ body {
 
 .contentText, .contentText table {
   padding: 5px 0 5px 0;
-  font-size: 11px;
+  font-size: 13px;
   line-height: 1.5;
 }
 
 .productListTable {
   padding: 5px;
-  font-size: 11px;
+  font-size: 13px;
   line-height: 1.5;
 }
 
@@ -92,14 +92,14 @@ body {
 }
 
 .fieldKey {
-  font-size: 11px;
+  font-size: 13px;
   font-weight: bold;
   line-height: 1.5;
   width: 150px;
 }
 
 .fieldValue {
-  font-size: 11px;
+  font-size: 13px;
   line-height: 1.5;
 }
 
@@ -114,7 +114,7 @@ img {
 }
 
 table, p {
-  font-size: 11px;
+  font-size: 13px;
   line-height: 1.5;
 }
 
@@ -139,11 +139,24 @@ table, p {
   float: right;
 }
 
-.boxText { font-family: Verdana, Arial, sans-serif; font-size: 10px; }
-.errorBox { font-family : Verdana, Arial, sans-serif; font-size : 10px; background: #ffb3b5; font-weight: bold; }
-.stockWarning { font-family : Verdana, Arial, sans-serif; font-size : 10px; color: #cc0033; }
+.boxText{
+  font-size: 13px;
+}
+.errorBox {
+  font-size : 13px;
+  background: #ffb3b5;
+  font-weight: bold;
+}
+.stockWarning {
+  font-size : 13px;
+  color: #cc0033;
+}
 .productsNotifications { background: #f2fff7; }
-.orderEdit { font-family : Verdana, Arial, sans-serif; font-size : 10px; color: #70d250; text-decoration: underline; }
+.orderEdit {
+  font-size : 13px;
+  color: #70d250;
+  text-decoration: underline;
+}
 
 A {
   color: #000000;
@@ -167,8 +180,7 @@ TR.headerNavigation {
 }
 
 TD.headerNavigation {
-  font-family: Verdana, Arial, sans-serif;
-  font-size: 10px;
+  font-size: 13px;
   background: #bbc3d3;
   color: #ffffff;
   font-weight : bold;
@@ -187,8 +199,7 @@ TR.headerError {
 }
 
 TD.headerError {
-  font-family: Tahoma, Verdana, Arial, sans-serif;
-  font-size: 12px;
+  font-size: 14px;
   background: #ff0000;
   color: #ffffff;
   font-weight : bold;
@@ -200,8 +211,7 @@ TR.headerInfo {
 }
 
 TD.headerInfo {
-  font-family: Tahoma, Verdana, Arial, sans-serif;
-  font-size: 12px;
+  font-size: 14px;
   background: #00ff00;
   color: #ffffff;
   font-weight: bold;
@@ -213,7 +223,6 @@ TR.footer {
 }
 
 TD.footer {
-  font-family: Verdana, Arial, sans-serif;
   font-size: 10px;
   background: #bbc3d3;
   color: #ffffff;
@@ -230,21 +239,18 @@ TD.footer {
 
 .infoBoxNoticeContents {
   background: #FFE6E6;
-  font-family: Verdana, Arial, sans-serif;
-  font-size: 10px;
+  font-size: 13px;
 }
 
 TD.infoBoxHeading {
-  font-family: Verdana, Arial, sans-serif;
-  font-size: 10px;
+  font-size: 13px;
   font-weight: bold;
   background: #bbc3d3;
   color: #ffffff;
 }
 
 TD.infoBox, SPAN.infoBox {
-  font-family: Verdana, Arial, sans-serif;
-  font-size: 10px;
+  font-size: 13px;
 }
 
 TR.accountHistory-odd, TR.addressBook-odd, TR.alsoPurchased-odd, TR.payment-odd, TR.productListing-odd, TR.productReviews-odd, TR.upcomingProducts-odd, TR.shippingOptions-odd {
@@ -286,7 +292,6 @@ A.pageResults:hover {
 }
 
 TD.pageHeading, DIV.pageHeading {
-  font-family: Verdana, Arial, sans-serif;
   font-size: 20px;
   font-weight: bold;
   color: #9a9a9a;
@@ -297,54 +302,45 @@ TR.subBar {
 }
 
 TD.subBar {
-  font-family: Verdana, Arial, sans-serif;
-  font-size: 10px;
+  font-size: 12px;
   color: #000000;
 }
 
 TD.main, P.main {
-  font-family: Verdana, Arial, sans-serif;
-  font-size: 11px;
+  font-size: 13px;
   line-height: 1.5;
 }
 
 TD.smallText, SPAN.smallText, P.smallText {
-  font-family: Verdana, Arial, sans-serif;
-  font-size: 10px;
+  font-size: 11px;
 }
 
 TD.accountCategory {
-  font-family: Verdana, Arial, sans-serif;
   font-size: 13px;
   color: #aabbdd;
 }
 
 TD.tableHeading {
-  font-family: Verdana, Arial, sans-serif;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: bold;
 }
 
 SPAN.newItemInCart {
-  font-family: Verdana, Arial, sans-serif;
-  font-size: 10px;
+  font-size: 12px;
   color: #ff0000;
 }
 
 CHECKBOX, INPUT, RADIO, SELECT {
-  font-family: Verdana, Arial, sans-serif;
-  font-size: 11px;
+  font-size: 13px;
 }
 
 TEXTAREA {
   width: 100%;
-  font-family: Verdana, Arial, sans-serif;
-  font-size: 11px;
+  font-size: 13px;
 }
 
 SPAN.greetUser {
-  font-family: Verdana, Arial, sans-serif;
-  font-size: 12px;
+  font-size: 14px;
   color: #f0a480;
   font-weight: bold;
 }
@@ -357,25 +353,21 @@ TABLE.formArea {
 }
 
 TD.formAreaTitle {
-  font-family: Tahoma, Verdana, Arial, sans-serif;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: bold;
 }
 
 SPAN.markProductOutOfStock {
-  font-family: Tahoma, Verdana, Arial, sans-serif;
-  font-size: 12px;
+  font-size: 14px;
   color: #c76170;
   font-weight: bold;
 }
 
 SPAN.productSpecialPrice {
-  font-family: Verdana, Arial, sans-serif;
   color: #ff0000;
 }
 
 SPAN.errorText {
-  font-family: Verdana, Arial, sans-serif;
   color: #ff0000;
 }
 
@@ -383,18 +375,35 @@ SPAN.errorText {
 .moduleRowOver { background-color: #D7E9F7; cursor: pointer; cursor: hand; }
 .moduleRowSelected { background-color: #E9F4FC; }
 
-.checkoutBarFrom, .checkoutBarTo { font-family: Verdana, Arial, sans-serif; font-size: 10px; color: #8c8c8c; }
-.checkoutBarCurrent { font-family: Verdana, Arial, sans-serif; font-size: 10px; color: #000000; }
+.checkoutBarFrom, .checkoutBarTo {
+  font-size: 12px;
+  color: #8c8c8c;
+}
+.checkoutBarCurrent {
+  font-size: 12px;
+  color: #000000;
+}
 
 /* message box */
 
-.messageBox { font-family: Verdana, Arial, sans-serif; font-size: 10px; }
-.messageStackError, .messageStackWarning { font-family: Verdana, Arial, sans-serif; font-size: 10px; background-color: #ffb3b5; }
-.messageStackSuccess { font-family: Verdana, Arial, sans-serif; font-size: 10px; background-color: #99ff00; }
+.messageBox {
+  font-size: 12px;
+}
+.messageStackError, .messageStackWarning {
+  font-size: 12px;
+  background-color: #ffb3b5;
+}
+.messageStackSuccess {
+  font-size: 12px;
+  background-color: #99ff00;
+}
 
 /* input requirement */
 
-.inputRequirement { font-family: Verdana, Arial, sans-serif; font-size: 10px; color: #ff0000; }
+.inputRequirement {
+  font-size: 12px;
+  color: #ff0000;
+}
 
 /* buttons */
 
