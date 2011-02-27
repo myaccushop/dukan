@@ -146,7 +146,7 @@
   <br style="clear:both">
 
   <div class="buttonSet">
-    <span class="buttonAction" style="float:left"><?php echo tep_draw_button(IMAGE_BUTTON_CONTINUE_SHOPPING, 'triangle-1-w', tep_href_link(FILENAME_LANDING, '', 'SSL')); ?></span>
+    <span class="buttonAction" style="float:left"><?php echo tep_draw_button(IMAGE_BUTTON_CONTINUE_SHOPPING, 'triangle-1-w', tep_href_link(FILENAME_DEFAULT, '', 'SSL')); ?></span>
   </div>
 
   <div id="checkout_methods">

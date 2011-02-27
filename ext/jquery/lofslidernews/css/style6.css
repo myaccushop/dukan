@@ -43,22 +43,24 @@
 	position:absolute;
 	bottom:0px;
 	left:0px;
-	width:100%;
 	background:url(../images/bg_trans.png);
-	height:100px;
+	height:95%;
 	padding:10px;
 }
 .lof-main-item-desc p{
 	margin:0 8px;
-	padding:8px 0
+	padding:8px;
+  padding-right: 50px;
 }
 .lof-main-item-desc h3{
 	padding:0;
-	margin:0
+	margin:0;
+  padding-right: 50px;
 }
 .lof-main-item-desc h2{
 	padding:0;
 	margin:15px 0 0 0px;
+  padding-right: 50px;
 }
 .lof-main-item-desc h3 a{	
 	margin:0;
@@ -67,10 +69,9 @@
 	padding:2px 3px;
 	font-family:"Trebuchet MS",Trebuchet,Arial,Verdana,sans-serif;
 	text-transform:uppercase;
-	text-decoration:none
+	text-decoration:none;
 }
-.lof-main-item-desc h3 a:hover{
-
+.lof-main-item-desc h3 a:hover {
 	text-decoration:underline;
 }
 .lof-main-item-desc h3 i {
@@ -119,7 +120,7 @@ ul.lof-main-wapper li img{
 	color:#FFF;
 	float:left
 }
-ul.lof-navigator{
+ul.lof-navigator {
 	top:0;
 	padding:0;
 	margin:0;
@@ -139,7 +140,11 @@ ul.lof-navigator li{
 	text-align:center;
 
 }
-ul.lof-navigator li img{
+
+ul.lof-navigator li.active {
+  background-color: #222;
+}
+ul.lof-navigator li img {
 	border:#666 solid 3px;	
 }
 ul.lof-navigator li.active img, ul.lof-navigator li:hover img {

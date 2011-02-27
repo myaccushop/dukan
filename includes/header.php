@@ -49,11 +49,11 @@
 </div>
 
 <?php
-if ($PHP_SELF == FILENAME_LANDING) {
-  //
-  // Do not show breadcrumb on landing page
-  //
-} else {
+// if ($PHP_SELF == FILENAME_DEFAULT) {
+//   //
+//   // Do not show breadcrumb on landing page
+//   //
+// } else {
 ?>
 
 <div class="grid_24 ui-widget infoBoxContainer">
@@ -61,7 +61,7 @@ if ($PHP_SELF == FILENAME_LANDING) {
 </div>
 
 <?php
-  }
+  // }
   if (isset($HTTP_GET_VARS['error_message']) && tep_not_null($HTTP_GET_VARS['error_message'])) {
 ?>
 <table border="0" width="100%" cellspacing="0" cellpadding="2">
