@@ -142,7 +142,7 @@ ul.lof-main-wapper li {
   <div class="contentText grid_24 alpha omega">
     <?php echo $npc; ?>
   </div></div>
-  <div id="miniCatContent" class="grid_24">
+  <!-- div id="miniCatContent" class="grid_24">
 <?php
 
 $bottom_boxes = array ('information', 'whats_new');
@@ -164,7 +164,7 @@ foreach ($bottom_boxes as $box_type) {
 }
 
 ?>
-</div> <!-- miniCatContent -->
+</div --> <!-- miniCatContent -->
 <?php
   }
 
