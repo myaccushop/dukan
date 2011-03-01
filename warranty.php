@@ -12,9 +12,9 @@
 
   require('includes/application_top.php');
 
-  require(DIR_WS_LANGUAGES . $language . '/' . FILENAME_SHIPPING);
+  require(DIR_WS_LANGUAGES . $language . '/' . FILENAME_WARRANTY);
 
-  $breadcrumb->add(NAVBAR_TITLE, tep_href_link(FILENAME_SHIPPING));
+  $breadcrumb->add(NAVBAR_TITLE, tep_href_link(FILENAME_WARRANTY));
 
   require(DIR_WS_INCLUDES . 'template_top.php');
 ?>
@@ -23,7 +23,7 @@
 
 <div class="contentContainer">
   <div class="contentText">
-    <?php echo TEXT_SHIPPING_INFORMATION; ?>
+    <?php echo TEXT_WARRANTY_INFORMATION; ?>
   </div>
 
   <div class="buttonSet">
