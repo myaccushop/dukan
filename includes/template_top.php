@@ -26,7 +26,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=<?php echo CHARSET; ?>" />
 <title><?php echo tep_output_string_protected($oscTemplate->getTitle()); ?></title>
 <base href="<?php echo (($request_type == 'SSL') ? HTTPS_SERVER : HTTP_SERVER) . DIR_WS_CATALOG; ?>" />
-<link rel="stylesheet" type="text/css" href="ext/jquery/ui/smoothness/jquery-ui-1.8.7.custom.css" />
+<link rel="stylesheet" type="text/css" href="ext/jquery/ui/custom-theme/jquery-ui-1.8.10.custom.css" />
 <script type="text/javascript" src="ext/jquery/jquery-1.4.4.min.js"></script>
 <script type="text/javascript" src="ext/jquery/ui/jquery-ui-1.8.7.custom.min.js"></script>
 
