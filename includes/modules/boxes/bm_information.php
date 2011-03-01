@@ -48,6 +48,7 @@
               '  <div class="bottom_box_items"> <ul>' .
               '    <li><a href="' . tep_href_link(FILENAME_SHIPPING) . '">' . MODULE_BOXES_INFORMATION_BOX_SHIPPING . '</a></li>' .
               '    <li><a href="' . tep_href_link(FILENAME_RETURNS) . '">' . MODULE_BOXES_INFORMATION_BOX_RETURNS . '</a></li>' .
+              '    <li><a href="' . tep_href_link(FILENAME_WARRANTY) . '">' . MODULE_BOXES_INFORMATION_BOX_WARRANTY . '</a></li>' .
               '    <li><a href="' . tep_href_link(FILENAME_FAQ) . '">' . MODULE_BOXES_INFORMATION_BOX_FAQ . '</a></li>' .
               '    <li><a href="' . tep_href_link(FILENAME_PRIVACY) . '">' . MODULE_BOXES_INFORMATION_BOX_PRIVACY . '</a></li>' .
               '    <li><a href="' . tep_href_link(FILENAME_CONDITIONS) . '">' . MODULE_BOXES_INFORMATION_BOX_CONDITIONS . '</a></li>' .
