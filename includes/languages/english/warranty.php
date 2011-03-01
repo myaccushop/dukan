@@ -10,22 +10,8 @@
   Released under the GNU General Public License
 */
 
-define('NAVBAR_TITLE', 'Shipping');
-define('HEADING_TITLE', 'Shipping');
+define('NAVBAR_TITLE', 'Warranty');
+define('HEADING_TITLE', 'Warranty');
 
-define('TEXT_SHIPPING_INFORMATION', '<p>We offer only  Flat rate shipping only. Orders will be shipped using FedEx ground shipping. The shipping time is usually between 1 to 7 business days. Following maps shows *approximate transit time for ground shipping, for more detail visit FedEx website.
-
-<p><img height="664" src="https://lh5.googleusercontent.com/_MjyUohgdlQyRCHtno7_FLYvIF2s-I136po2JNpPjdhSowCtweaxaeJTzf0fUltVQ5EQ8nhzYCBggVcVbAkausce_0Syn0haoGBEvKltgK7CsR-m7A" width="540">
-
-<p>* Above map is just given for reference only and actual transit time may vary
-
-<p>Each order of DRO Bundle will incur $49.99 flat rate shipping. Sorry, we cannot combined multiple orders in single shipping charge. E.g. if you order 3 DRO Bundles then you will need to pay shipping charge for every single DRO Bundle, the total shipping charges will be $49.99 times 3.
-
-<p>We ship to only to Contiguous U.S. states.  Order placed with shipping address other than in contiguous states will be cancelled.
-
-<p>We also don’t ship to P.O. boxes, order will be cancelled if the shipping address is P.O. Box
-
-<p>We will collect your payment (through PayPal) when your order is shipped and not while your order is in process. Order will shipped the same day if order is placed before 12 pm PST on that day. All orders placed after 12 pm will be shipped the next business day.
-
-<p>Shipping charges include the shipping insurance, if you find the items included in the box are damaged due to shipping then please send us the pictures of it within 24 hours of receiving delivery so that we can take the insurance claim with the FedEx. Any damage claim reported after 24 hrs after the receiving the delivery will be declined.');
+define('TEXT_WARRANTY_INFORMATION', 'This is to certify that ACCUDRO SYSTEMS warrants to the first purchaser only, the described Digital Readout to be free from defects in materials and workmanship, when properly maintained, and under normal use and service, which means the installation &nbsp;and use in a manner consistent for which it was designed. This warranty will expire thirty six [36] months from the date of sale, and repairs or replacement under this warranty shall be at repair facilities designated by ACCUDRO SYSTEMS. Shipping cost to the repair facility are to be borne by the Purchaser. The warranty herein is expressly in lieu of any and all other warranties, expressed or implied. No implied warranty of merchantability is made and there are no warranties which extend to use of the digital readout for purposes beyond the description hereof.</span></p><p class="c1"><span class="c0"></span></p><p class="c1"><span class="c0">ACCUDRO SYSTEMS and Customer agree that ACCUDRO SYSTEMS shall have no liability for any down time, loss of use or productivity or any other incidental or consequential damages arising out of this warranty which are alleged to have been causes by any of the goods delivered hereunder.</span></p><p class="c1"><span class="c0"></span></p><p class="c1"><span class="c0">Customer and ACCUDRO SYSTEMS further agree that customers sole remedy for any defect in new goods delivered hereunder, whether customer claim arises under the warranty set forth above, or otherwise, shall be limited to the repair or replacement at ACCUDRO SYSTEMS option within three [3] years after sale of such goods to the first purchaser, of any defective goods, of which notice of the detects is given by customer to ACCUDRO SYSTEMS immediately after such defect is or ought to have been discovered and which goods are returned to ACCUDRO SYSTEMS within ten days after ACCUDRO SYSTEMS request their return for inspection and/or repair of replacement.</span></p>');
 ?>
