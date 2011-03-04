@@ -31,13 +31,16 @@
     }
 
     function tep_show_category($counter) {
-      global $tree, $categories_string, $cPath_array;
+      global $tree, $categories_string, $cPath_array, $last_level;
 
-      for ($i=0; $i<$tree[$counter]['level']; $i++) {
-        $categories_string .= "&nbsp;&nbsp;";
+      //for ($i=0; $i<$tree[$counter]['level']; $i++) {
+      //  $categories_string .= "&nbsp;&nbsp;";
+      //}
+
+      if ($tree[$counter]['level'] > $last_level) {
+        $categories_string .= '<ul>';
       }
-
-      $categories_string .= '<a href="';
+      $categories_string .= '<li><a href="';
 
       if ($tree[$counter]['parent'] == 0) {
         $cPath_new = 'cPath=' . $counter;
@@ -45,13 +48,13 @@
         $cPath_new = 'cPath=' . $tree[$counter]['path'];
       }
 
-      $categories_string .= tep_href_link(FILENAME_DEFAULT, $cPath_new) . '">';
+      $categories_string .= tep_href_link(FILENAME_CATALOG, $cPath_new) . '">';
 
       if (isset($cPath_array) && in_array($counter, $cPath_array)) {
         $categories_string .= '<strong>';
       }
 
-// display category name
+      // display category name
       $categories_string .= $tree[$counter]['name'];
 
       if (isset($cPath_array) && in_array($counter, $cPath_array)) {
@@ -59,7 +62,7 @@
       }
 
       if (tep_has_category_subcategories($counter)) {
-        $categories_string .= '-&gt;';
+        $categories_string .= ' &raquo;';
       }
 
       $categories_string .= '</a>';
@@ -71,18 +74,25 @@
         }
       }
 
-      $categories_string .= '<br />';
+      $categories_string .= '</li>';
+
+      $last_level = $tree[$counter]['level'];
 
       if ($tree[$counter]['next_id'] != false) {
+
+        if ($tree[$tree[$counter]['next_id']]['level'] < $last_level) {
+          $categories_string .= '</ul>';
+        }
         $this->tep_show_category($tree[$counter]['next_id']);
       }
     }
 
     function getData() {
-      global $categories_string, $tree, $languages_id, $cPath, $cPath_array;
+      global $categories_string, $tree, $languages_id, $cPath, $cPath_array, $last_level;
 
       $categories_string = '';
       $tree = array();
+      $last_level = 0;
 
       $categories_query = tep_db_query("select c.categories_id, cd.categories_name, c.parent_id from " . TABLE_CATEGORIES . " c, " . TABLE_CATEGORIES_DESCRIPTION . " cd where c.parent_id = '0' and c.categories_id = cd.categories_id and cd.language_id='" . (int)$languages_id ."' order by sort_order, cd.categories_name");
       while ($categories = tep_db_fetch_array($categories_query))  {
@@ -140,11 +150,17 @@
         }
       }
 
+      // echo "<pre>";
+      // print_r ($tree);
+      // echo "</pre>";
+
       $this->tep_show_category($first_element);
 
-      $data = '<div class="ui-widget infoBoxContainer">' .
-              '  <div class="ui-widget-header infoBoxHeading">' . MODULE_BOXES_CATEGORIES_BOX_TITLE . '</div>' .
-              '  <div class="ui-widget-content infoBoxContents">' . $categories_string . '</div>' .
+      $data = '<div class="grid_6 bottom_box">' .
+              '  <div class="bottom_box_title">' . MODULE_BOXES_CATEGORIES_BOX_TITLE . '</div>' .
+              '  <div class="bottom_box_items"> <ul>' .
+              $categories_string .
+              '  </ul></div>' .
               '</div>';
 
       return $data;
@@ -159,6 +175,7 @@
         $output = $this->getData();
       }
 
+      $this->html = $output;
       $oscTemplate->addBlock($output, $this->group);
     }
 

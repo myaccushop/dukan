@@ -15,7 +15,7 @@
 <div id="bottomContent" class="grid_24">
 <?php
 
-$bottom_boxes = array ('information', 'whats_new');
+$bottom_boxes = array ('information', 'categories');
 foreach ($bottom_boxes as $box_type) {
   //
   // Print Information box (need to style it).
@@ -34,6 +34,13 @@ foreach ($bottom_boxes as $box_type) {
 }
 
 ?>
+<div class="grid_12 bottom_accu_box">
+  <img src="images/store_logo.png" alt="AccuDRO logo">
+  <div class="accu_text">555.555.5555</div>
+  <div class="accu_text"><a href="mailto:support@accudro.com">support@accudro.com</a></div>
+
+</div>
+
 </div> <!-- bottomContent -->
 
 <?php require(DIR_WS_INCLUDES . 'footer.php'); ?>

@@ -5,6 +5,9 @@
   margin-top: 10px;
   border-radius: 0 0 15px 15px;
 }
+.bottom_box {
+  height: 100%;
+}
 #bottomContent .bottom_box_title {
   color: #925ae7;
   font-size: medium;
@@ -38,6 +41,22 @@
 #bottomContent .footer {
   font-size: x-small;
   color: #aaa;
+}
+
+.bottom_accu_box {
+  text-align: right;
+  margin: 0 auto;
+  padding-top: 3em;
+}
+
+.bottom_accu_box img {
+  padding-bottom: 10px;
+  margin-right: 10px;
+}
+
+.accu_text {
+  font-size: 1.2em;
+  margin: 5px 15px 5px 0;
 }
 
 /* Possible overrides */
