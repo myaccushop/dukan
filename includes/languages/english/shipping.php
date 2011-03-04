@@ -15,7 +15,7 @@ define('HEADING_TITLE', 'Shipping');
 
 define('TEXT_SHIPPING_INFORMATION', '<p>We offer only  Flat rate shipping only. Orders will be shipped using FedEx ground shipping. The shipping time is usually between 1 to 7 business days. Following maps shows *approximate transit time for ground shipping, for more detail visit FedEx website.
 
-<p><img height="664" src="https://lh5.googleusercontent.com/_MjyUohgdlQyRCHtno7_FLYvIF2s-I136po2JNpPjdhSowCtweaxaeJTzf0fUltVQ5EQ8nhzYCBggVcVbAkausce_0Syn0haoGBEvKltgK7CsR-m7A" width="540">
+<p><img src="images/fedex_groung_ship_map.jpg" >
 
 <p>* Above map is just given for reference only and actual transit time may vary
 
