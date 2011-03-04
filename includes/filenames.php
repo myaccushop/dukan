@@ -48,13 +48,14 @@
   define('FILENAME_PRIVACY', 'privacy.php');
   define('FILENAME_PRODUCT_INFO', 'product_info.php');
   define('FILENAME_PRODUCT_LISTING', 'product_listing.php');
-  define('FILENAME_PRODUCT_REVIEWS', 'product_reviews.php');
+//  define('FILENAME_PRODUCT_REVIEWS', 'product_reviews.php');
   define('FILENAME_PRODUCT_REVIEWS_INFO', 'product_reviews_info.php');
   define('FILENAME_PRODUCT_REVIEWS_WRITE', 'product_reviews_write.php');
   define('FILENAME_PRODUCTS_NEW', 'products_new.php');
   define('FILENAME_REDIRECT', 'redirect.php');
-  define('FILENAME_REVIEWS', 'reviews.php');
+//  define('FILENAME_REVIEWS', 'reviews.php');
   define('FILENAME_SHIPPING', 'shipping.php');
+  define('FILENAME_WARRANTY', 'warranty.php');
   define('FILENAME_RETURNS', 'returns.php');
   define('FILENAME_FAQ', 'faq.php');
   define('FILENAME_SHOPPING_CART', 'shopping_cart.php');
