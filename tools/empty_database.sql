@@ -1,7 +1,7 @@
-#
-# An SQL command to empty Data tables. Execute this in phpMyAdmin to
-# remove any shop-specific data from data tables
-#
+--
+-- An SQL command to empty Data tables. Execute this in phpMyAdmin to
+-- remove any shop-specific data from data tables
+--
 
 TRUNCATE `address_book`;
 TRUNCATE `categories`;

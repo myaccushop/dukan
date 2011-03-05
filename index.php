@@ -112,7 +112,21 @@ ul.lof-main-wapper li {
     while ($new_products = tep_db_fetch_array($new_products_query)) {
       $counter++;
 
-      $npc .= '<li class="grid_24 alpha omega">' . tep_image(DIR_WS_IMAGES . $new_products['products_image'], $new_products['products_name'], "950px", "340px"). "\n";
+      //
+      // Get the hi-res image for the slider (sort_order = 2)
+      //
+      $product_image_query = tep_db_query ("select image from "
+                                            . TABLE_PRODUCTS_IMAGES
+                                            . " where products_id = '"
+                                            . (int)$new_products['products_id']
+                                            . "' && sort_order = 2");
+      $new_image = $new_products['products_image'];
+      if (tep_db_num_rows($product_image_query) > 0) {
+        $product_image = tep_db_fetch_array($product_image_query);
+        $new_image = $product_image['image'];
+      }
+
+      $npc .= '<li class="grid_24 alpha omega">' . tep_image(DIR_WS_IMAGES . $new_image, $new_products['products_name'], "950px", "340px"). "\n";
       $npc .= '<div class="lof-main-item-desc grid_11 push_13">' . "\n";
       $npc .= '  <h3><a target="_parent" title="Newsflash ' . $counter . '" href="' . tep_href_link(FILENAME_PRODUCT_INFO, 'products_id=' . $new_products['products_id']) . '">' . $new_products['products_name'] . '</a> <i>' . $currencies->display_price($new_products['products_price'], tep_get_tax_rate($new_products['products_tax_class_id'])) . '</i></h3>' . "\n";
       $npc .= '  <h2>Content of Newsflash  ' . $counter . '</h2>' . "\n";
