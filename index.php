@@ -58,6 +58,7 @@ ul.lof-main-wapper li {
                             p.products_image,
                             p.products_tax_class_id,
                             pd.products_name,
+                            pd.products_description,
                             if( s.status,
                                 s.specials_new_products_price,
                                 p.products_price)
@@ -77,6 +78,7 @@ ul.lof-main-wapper li {
                                     p.products_image,
                                     p.products_tax_class_id,
                                     pd.products_name,
+                                    pd.products_description,
                                     if( s.status,
                                         s.specials_new_products_price,
                                         p.products_price)
@@ -106,7 +108,7 @@ ul.lof-main-wapper li {
     //
     // Generating New Products Content (npc)
     //
-    $npc = '<div id="lofslidecontent45" class="lof-slidecontent grid_24" style="height:340px;margin: 2.5em 0 2.5em 0;"><div class="preload"><div></div></div> <div class="lof-main-outer grid_24 alpha omega" style="height:340px;">' . "\n";
+    $npc = '<div id="lofslidecontent45" class="lof-slidecontent grid_24" style="height:340px;margin: 1em 0 0 0;"><div class="preload"><div></div></div> <div class="lof-main-outer grid_24 alpha omega" style="height:340px;">' . "\n";
     $npc .= '    <div onclick="return false" href="" class="lof-previous">Previous</div>' . "\n";
     $npc .= '<ul class="lof-main-wapper">' . "\n";
     while ($new_products = tep_db_fetch_array($new_products_query)) {
@@ -130,7 +132,7 @@ ul.lof-main-wapper li {
       $npc .= '<div class="lof-main-item-desc grid_11 push_13">' . "\n";
       $npc .= '  <h3><a target="_parent" title="Newsflash ' . $counter . '" href="' . tep_href_link(FILENAME_PRODUCT_INFO, 'products_id=' . $new_products['products_id']) . '">' . $new_products['products_name'] . '</a> <i>' . $currencies->display_price($new_products['products_price'], tep_get_tax_rate($new_products['products_tax_class_id'])) . '</i></h3>' . "\n";
       $npc .= '  <h2>Content of Newsflash  ' . $counter . '</h2>' . "\n";
-      $npc .= '  <p>The one thing about a Web site, it always changes! Joomla! makes it easy to add Articles, content,...' . "\n";
+      $npc .= '  <p>' . $new_products['products_description'] . "\n";
       $npc .= '  <a class="readmore" href="' . tep_href_link(FILENAME_PRODUCT_INFO, 'products_id=' . $new_products['products_id']) . '">Read more </a>'. "\n";
       $npc .= "  </p>\n";
       $npc .= "</div>\n";

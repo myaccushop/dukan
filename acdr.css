@@ -46,7 +46,7 @@
 .bottom_accu_box {
   text-align: right;
   margin: 0 auto;
-  padding-top: 3em;
+  padding-top: 1em;
 }
 
 .bottom_accu_box img {
@@ -79,7 +79,7 @@
   color: #000;
   background-color: #eee;
   border-radius: 3px 3px 3px 3px;
-  padding: 5px;
+  padding: 5px 0 5px 0;
   font-weight: bold;
 }
 .bread_trail a {
