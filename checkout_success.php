@@ -87,6 +87,15 @@
   }
   //PWA EOF
 
+  tep_session_unregister('customer_id');
+  tep_session_unregister('customer_default_address_id');
+  tep_session_unregister('customer_first_name');
+  tep_session_unregister('customer_country_id');
+  tep_session_unregister('customer_zone_id');
+  tep_session_unregister('comments');
+
+  $cart->reset();
+
   require(DIR_WS_INCLUDES . 'template_top.php');
 ?>
 
@@ -101,7 +110,7 @@
 
   <div class="contentText">
 
-<?php
+<!-- ?php
   if ($global['global_product_notifications'] != '1') {
     echo TEXT_NOTIFY_PRODUCTS . '<br /><p class="productsNotifications">';
 
@@ -117,7 +126,7 @@
   }
 
   echo TEXT_SEE_ORDERS . '<br /><br />' . TEXT_CONTACT_STORE_OWNER;
-?>
+? -->
 
   </div>
 
