@@ -43,7 +43,7 @@
       //         '    <a href="' . tep_href_link(FILENAME_CONTACT_US) . '">' . MODULE_BOXES_INFORMATION_BOX_CONTACT . '</a>' .
       //         '  </div>' .
       //         '</div>';
-      $data = '<div class="grid_6 bottom_box">' .
+      $data = '<div class="grid_5 bottom_box">' .
               '  <div class="bottom_box_title">' . MODULE_BOXES_INFORMATION_BOX_TITLE . '</div>' .
               '  <div class="bottom_box_items"> <ul>' .
               '    <li><a href="' . tep_href_link(FILENAME_SHIPPING) . '">' . MODULE_BOXES_INFORMATION_BOX_SHIPPING . '</a></li>' .
@@ -51,8 +51,7 @@
               '    <li><a href="' . tep_href_link(FILENAME_WARRANTY) . '">' . MODULE_BOXES_INFORMATION_BOX_WARRANTY . '</a></li>' .
               '    <li><a href="' . tep_href_link(FILENAME_FAQ) . '">' . MODULE_BOXES_INFORMATION_BOX_FAQ . '</a></li>' .
               '    <li><a href="' . tep_href_link(FILENAME_PRIVACY) . '">' . MODULE_BOXES_INFORMATION_BOX_PRIVACY . '</a></li>' .
-              '    <li><a href="' . tep_href_link(FILENAME_CONDITIONS) . '">' . MODULE_BOXES_INFORMATION_BOX_CONDITIONS . '</a></li>' .
-              '    <li><a href="' . tep_href_link(FILENAME_CONTACT_US) . '">' . MODULE_BOXES_INFORMATION_BOX_CONTACT . '</a></li>' .
+              '    <li><a href="' . tep_href_link(FILENAME_ABOUT) . '">' . MODULE_BOXES_INFORMATION_BOX_ABOUT . '</a></li>' .
               '  </ul></div>' .
               '</div>';
       $this->html = $data;

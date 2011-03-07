@@ -34,14 +34,25 @@
       global $HTTP_GET_VARS, $languages_id, $currencies, $oscTemplate;
 
       if (!isset($HTTP_GET_VARS['products_id'])) {
-        if ($random_product = tep_random_select("select p.products_id, pd.products_name, p.products_price, p.products_tax_class_id, p.products_image, s.specials_new_products_price from " . TABLE_PRODUCTS . " p, " . TABLE_PRODUCTS_DESCRIPTION . " pd, " . TABLE_SPECIALS . " s where p.products_status = '1' and p.products_id = s.products_id and pd.products_id = s.products_id and pd.language_id = '" . (int)$languages_id . "' and s.status = '1' order by s.specials_date_added desc limit " . MAX_RANDOM_SELECT_SPECIALS)) {
-          $data = '<div class="ui-widget infoBoxContainer">' .
-                  '  <div class="ui-widget-header infoBoxHeading"><a href="' . tep_href_link(FILENAME_SPECIALS) . '">' . MODULE_BOXES_SPECIALS_BOX_TITLE . '</a></div>' .
-                  '  <div class="ui-widget-content infoBoxContents" style="text-align: center;"><a href="' . tep_href_link(FILENAME_PRODUCT_INFO, 'products_id=' . $random_product["products_id"]) . '">' . tep_image(DIR_WS_IMAGES . $random_product['products_image'], $random_product['products_name'], SMALL_IMAGE_WIDTH, SMALL_IMAGE_HEIGHT) . '</a><br /><a href="' . tep_href_link(FILENAME_PRODUCT_INFO, 'products_id=' . $random_product['products_id']) . '">' . $random_product['products_name'] . '</a><br /><del>' . $currencies->display_price($random_product['products_price'], tep_get_tax_rate($random_product['products_tax_class_id'])) . '</del><br /><span class="productSpecialPrice">' . $currencies->display_price($random_product['specials_new_products_price'], tep_get_tax_rate($random_product['products_tax_class_id'])) . '</span></div>' .
-                  '</div>';
-
-          $oscTemplate->addBlock($data, $this->group);
+        $specials_products_query = tep_db_query ("select p.products_id, pd.products_name, p.products_price, p.products_tax_class_id, p.products_image, s.specials_new_products_price from " . TABLE_PRODUCTS . " p, " . TABLE_PRODUCTS_DESCRIPTION . " pd, " . TABLE_SPECIALS . " s where p.products_status = '1' and p.products_id = s.products_id and pd.products_id = s.products_id and pd.language_id = '" . (int)$languages_id . "' and s.status = '1' order by s.specials_date_added desc limit " . MAX_RANDOM_SELECT_SPECIALS);
+        // if ($random_product = tep_random_select("select p.products_id, pd.products_name, p.products_price, p.products_tax_class_id, p.products_image, s.specials_new_products_price from " . TABLE_PRODUCTS . " p, " . TABLE_PRODUCTS_DESCRIPTION . " pd, " . TABLE_SPECIALS . " s where p.products_status = '1' and p.products_id = s.products_id and pd.products_id = s.products_id and pd.language_id = '" . (int)$languages_id . "' and s.status = '1' order by s.specials_date_added desc limit " . MAX_RANDOM_SELECT_SPECIALS)) {
+        $data = '<div class="grid_24 bottom_box box_with_image alpha omega">' .
+                '  <div class="bottom_box_title">' . MODULE_BOXES_SPECIALS_BOX_TITLE . '</div>';
+        $count = 1;
+        while ($specials_product = tep_db_fetch_array($specials_products_query)) {
+          if (tep_not_null($specials_product['specials_new_products_price'])) {
+            $whats_new_price = '<del>' . $currencies->display_price($specials_product['products_price'], tep_get_tax_rate($specials_product['products_tax_class_id'])) . '</del><br />';
+            $whats_new_price .= '<span class="productSpecialPrice">' . $currencies->display_price($specials_product['specials_new_products_price'], tep_get_tax_rate($specials_product['products_tax_class_id'])) . '</span>';
+          } else {
+            $whats_new_price = $currencies->display_price($specials_product['products_price'], tep_get_tax_rate($specials_product['products_tax_class_id']));
+          }
+          $div_cls = ($count == 1) ? "alpha" : (($count == MAX_RANDOM_SELECT_SPECIALS) ? "omega" : "");
+          $data .= '  <div class="bottom_box_items grid_6 ' . $div_cls . '" style="float: left"><ul><li><a href="' . tep_href_link(FILENAME_PRODUCT_INFO, 'products_id=' . $specials_product['products_id']) . '">' . tep_image(DIR_WS_IMAGES . $specials_product['products_image'], $specials_product['products_name'], SMALL_IMAGE_WIDTH, SMALL_IMAGE_HEIGHT) . '</a><br /><a href="' . tep_href_link(FILENAME_PRODUCT_INFO, 'products_id=' . $specials_product['products_id']) . '">' . $specials_product['products_name'] . '</a><br />' . $whats_new_price . '</li></ul></div><!!-- ' . $count . ' - ' . MAX_RANDOM_SELECT_SPECIALS . ' -->';
+          $count ++;
         }
+        $data .= '</div>';
+        $this->html = $data;
+        $oscTemplate->addBlock($data, $this->group);
       }
     }
 

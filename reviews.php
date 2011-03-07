@@ -12,6 +12,8 @@
 
   require('includes/application_top.php');
 
+  tep_redirect(tep_href_link(FILENAME_DEFAULT));
+
   require(DIR_WS_LANGUAGES . $language . '/' . FILENAME_REVIEWS);
 
   $breadcrumb->add(NAVBAR_TITLE, tep_href_link(FILENAME_REVIEWS));

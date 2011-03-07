@@ -32,6 +32,7 @@
   define('FILENAME_CHECKOUT_SUCCESS', 'checkout_success.php');
   define('FILENAME_CONTACT_US', 'contact_us.php');
   define('FILENAME_CONDITIONS', 'conditions.php');
+  define('FILENAME_ABOUT', 'about.php');
   define('FILENAME_COOKIE_USAGE', 'cookie_usage.php');
   define('FILENAME_CREATE_ACCOUNT', 'create_account.php');
   define('FILENAME_CREATE_ACCOUNT_SUCCESS', 'create_account_success.php');
@@ -48,12 +49,12 @@
   define('FILENAME_PRIVACY', 'privacy.php');
   define('FILENAME_PRODUCT_INFO', 'product_info.php');
   define('FILENAME_PRODUCT_LISTING', 'product_listing.php');
-//  define('FILENAME_PRODUCT_REVIEWS', 'product_reviews.php');
+  define('FILENAME_PRODUCT_REVIEWS', 'product_reviews.php');
   define('FILENAME_PRODUCT_REVIEWS_INFO', 'product_reviews_info.php');
   define('FILENAME_PRODUCT_REVIEWS_WRITE', 'product_reviews_write.php');
   define('FILENAME_PRODUCTS_NEW', 'products_new.php');
   define('FILENAME_REDIRECT', 'redirect.php');
-//  define('FILENAME_REVIEWS', 'reviews.php');
+  define('FILENAME_REVIEWS', 'reviews.php');
   define('FILENAME_SHIPPING', 'shipping.php');
   define('FILENAME_WARRANTY', 'warranty.php');
   define('FILENAME_RETURNS', 'returns.php');
@@ -63,4 +64,7 @@
   define('FILENAME_SSL_CHECK', 'ssl_check.php');
   define('FILENAME_TELL_A_FRIEND', 'tell_a_friend.php');
   define('FILENAME_UPCOMING_PRODUCTS', 'upcoming_products.php');
+  define('FILENAME_KB_VIDEOS', 'kb_videos.php');
+  define('FILENAME_KB_MANUALS', 'kb_manuals.php');
+  define('FILENAME_KB_FAQ', 'kb_faq.php');
 ?>

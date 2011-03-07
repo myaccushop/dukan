@@ -1,14 +1,14 @@
-#bottomContent {
-  background-color: #0;
+.bottomContent {
   padding-top: 15px;
   padding-bottom: 10px;
   margin-top: 10px;
+  border: thin solid #ddd;
   border-radius: 0 0 15px 15px;
 }
 .bottom_box {
   height: 100%;
 }
-#bottomContent .bottom_box_title {
+.bottomContent .bottom_box_title {
   color: #925ae7;
   font-size: medium;
   font-weight: bold;
@@ -17,28 +17,28 @@
   border-bottom: thin solid #aaa;
   text-shadow: 0 1px 1px #eee;
 }
-#bottomContent .bottom_box_items ul {
+.bottomContent .bottom_box_items ul {
   padding-left: 8px;
 }
-#bottomContent .bottom_box_items li {
+.bottomContent .bottom_box_items li {
   list-style: none;
   margin: 0;
   color: #5a68e7;
   line-height: 1.7em;
   text-shadow: 0 0px 0px #444;
 }
-#bottomContent .bottom_box_items li a {
+.bottomContent .bottom_box_items li a {
   text-decoration: none;
   color: #5a68e7;
 }
-#bottomContent .bottom_box_items li .productSpecialPrice {
+.bottomContent .bottom_box_items li .productSpecialPrice {
   color: #900;
 }
-#bottomContent .bottom_box_items li a:hover {
+.bottomContent .bottom_box_items li a:hover {
   text-decoration: none;
   color: #1827aa;
 }
-#bottomContent .footer {
+.bottomContent .footer {
   font-size: x-small;
   color: #aaa;
 }
@@ -55,7 +55,6 @@
 }
 
 .accu_text {
-  font-size: 1.2em;
   margin: 5px 15px 5px 0;
 }
 
@@ -63,4 +62,29 @@
 .infoBoxHeading {
   border-radius: 3px 3px 3px 3px;
   padding: 5px;
+}
+
+.footer p {
+  font-size: x-small;
+  color: #aaa;
+}
+.footer p a {
+  color: #004b91;
+}
+.footer p a:hover {
+  color: #cc9900;
+}
+
+.bread_trail {
+  color: #000;
+  background-color: #eee;
+  border-radius: 3px 3px 3px 3px;
+  padding: 5px;
+  font-weight: bold;
+}
+.bread_trail a {
+  color: #004b91;
+}
+.bread_trail a:hover {
+  color: #cc9900;
 }

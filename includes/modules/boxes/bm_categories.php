@@ -156,7 +156,7 @@
 
       $this->tep_show_category($first_element);
 
-      $data = '<div class="grid_6 bottom_box">' .
+      $data = '<div class="grid_5 bottom_box">' .
               '  <div class="bottom_box_title">' . MODULE_BOXES_CATEGORIES_BOX_TITLE . '</div>' .
               '  <div class="bottom_box_items"> <ul>' .
               $categories_string .

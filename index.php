@@ -156,10 +156,10 @@ ul.lof-main-wapper li {
   <div class="contentText grid_24 alpha omega">
     <?php echo $npc; ?>
   </div></div>
-  <div id="miniCatContent" class="grid_24 alpha omega">
+  <div id="miniCatContent" class="bottomContent grid_24 alpha omega">
 <?php
 
-$bottom_boxes = array ('whats_new');
+$bottom_boxes = array ('specials');
 foreach ($bottom_boxes as $box_type) {
   //
   // Print Information box (need to style it).
