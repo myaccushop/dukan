@@ -9,7 +9,7 @@
   height: 100%;
 }
 .bottomContent .bottom_box_title {
-  color: #925ae7;
+  color: #383838;
   font-size: medium;
   font-weight: bold;
   padding-left: 8px;
@@ -23,20 +23,20 @@
 .bottomContent .bottom_box_items li {
   list-style: none;
   margin: 0;
-  color: #5a68e7;
+  color: #004b91;
   line-height: 1.7em;
   text-shadow: 0 0px 0px #444;
 }
 .bottomContent .bottom_box_items li a {
   text-decoration: none;
-  color: #5a68e7;
+  color: #004b91;
 }
 .bottomContent .bottom_box_items li .productSpecialPrice {
   color: #900;
 }
 .bottomContent .bottom_box_items li a:hover {
   text-decoration: none;
-  color: #1827aa;
+  color: #cc9900;
 }
 .bottomContent .footer {
   font-size: x-small;
@@ -83,7 +83,7 @@
   font-weight: bold;
 }
 .bread_trail a {
-  color: #004b91;
+  color: #383838;
 }
 .bread_trail a:hover {
   color: #cc9900;
