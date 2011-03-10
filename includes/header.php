@@ -59,7 +59,15 @@
 <!-- div class="grid_24 ui-widget infoBoxContainer">
   <div class="ui-widget-header infoBoxHeading"><?php echo '&nbsp;&nbsp;' . $breadcrumb->trail(' &raquo; '); ?></div>
 </div -->
-  <div class="grid_24 bread_trail"><?php echo '&nbsp;&nbsp;' . $breadcrumb->trail(' &raquo; '); ?></div>
+  <div class="grid_24 bread_trail"><?php echo '&nbsp;&nbsp;' . $breadcrumb->trail(' &raquo; '); ?>
+    <div id="search_container">
+      <?php echo tep_draw_form('quick_find', tep_href_link(FILENAME_ADVANCED_SEARCH_RESULT, '', 'NONSSL', false), 'get') ?>
+      <?php echo tep_draw_input_field('keywords', '', 'size="10" maxlength="30" style="width: 75%"') . '&nbsp;'
+        . tep_draw_hidden_field('search_in_description', '1') . tep_hide_session_id()
+        . tep_image_submit('button_quick_find.png', MODULE_BOXES_SEARCH_BOX_TITLE) ?>
+      </form>
+    </div>
+  </div>
 
 <?php
   // }

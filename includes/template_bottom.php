@@ -39,8 +39,8 @@ foreach ($bottom_boxes as $box_type) {
   <img src="images/store_logo.png" alt="AccuDRO logo" width="100px">
   <div class="accu_text">555.555.5555</div>
   <div class="accu_text"><a href="mailto:support@accudro.com">support@accudro.com</a></div>
-  <!-- PayPal Logo --><a href="#" onclick="javascript:window.open('https://www.paypal.com/cgi-bin/webscr?cmd=xpt/Marketing/popup/OLCWhatIsPayPal-outside','olcwhatispaypal','toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=yes, resizable=yes, width=400, height=350');"><img  src="https://www.paypal.com/en_US/i/bnr/horizontal_solution_PPeCheck.gif" border="0" alt="Solution Graphics" width="150px"></a><!-- PayPal Logo -->
-  <a href="//www.PositiveSSL.com" title="SSL Certificate Authority" style="font-family: arial; font-size: 10px; text-decoration: none;"><img src="images/PositiveSSL_tl_trans.gif" alt="SSL Certificate Authority" title="SSL Certificate Authority" border="0" width="60px" /></a>
+  <!-- PayPal Logo --><a href="#" onclick="javascript:window.open('https://www.paypal.com/cgi-bin/webscr?cmd=xpt/Marketing/popup/OLCWhatIsPayPal-outside','olcwhatispaypal','toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=yes, resizable=yes, width=400, height=350');"><img  src="https://www.paypal.com/en_US/i/bnr/horizontal_solution_PPeCheck.gif" border="0" alt="Solution Graphics" width="200px"></a><!-- PayPal Logo -->
+  <a href="//www.PositiveSSL.com" title="SSL Certificate Authority" style="font-family: arial; font-size: 10px; text-decoration: none;"><img src="images/PositiveSSL_tl_trans.gif" alt="SSL Certificate Authority" title="SSL Certificate Authority" border="0" width="80px" /></a>
 
 </div>
 

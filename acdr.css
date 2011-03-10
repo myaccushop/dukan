@@ -46,7 +46,6 @@
 .bottom_accu_box {
   text-align: right;
   margin: 0 auto;
-  padding-top: 1em;
 }
 
 .bottom_accu_box img {
@@ -81,10 +80,24 @@
   border-radius: 3px 3px 3px 3px;
   padding: 5px 0 5px 0;
   font-weight: bold;
+  line-height: 2em;
 }
 .bread_trail a {
   color: #383838;
 }
 .bread_trail a:hover {
   color: #cc9900;
+}
+
+#search_container {
+  width: 150px;
+  float: right;
+}
+#search_container input[type="image"] {
+  width: 17px;
+}
+
+.lof-main-item-desc h3 {
+  font-size: large;
+  font-weight: bold;
 }
