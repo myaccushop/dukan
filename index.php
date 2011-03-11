@@ -121,7 +121,7 @@ ul.lof-main-wapper li {
                                             . TABLE_PRODUCTS_IMAGES
                                             . " where products_id = '"
                                             . (int)$new_products['products_id']
-                                            . "' && sort_order = 2");
+                                            . "' && sort_order = 1");
       $new_image = $new_products['products_image'];
       if (tep_db_num_rows($product_image_query) > 0) {
         $product_image = tep_db_fetch_array($product_image_query);
