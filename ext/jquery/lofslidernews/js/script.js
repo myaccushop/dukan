@@ -79,7 +79,7 @@ function handler(event) {
 	 $.lofSidernews = function( obj, settings ){
 		this.settings = {
 			direction	    	: '',
-			mainItemSelector    : 'li',
+			mainItemSelector    : 'li.slide',
 			navInnerSelector	: 'ul',
 			navSelector  		: 'li' ,
 			navigatorEvent		: 'click',
@@ -101,8 +101,8 @@ function handler(event) {
 		this.nextNo         = null;
 		this.previousNo     = null;
 		this.maxWidth  = this.settings.mainWidth || 600;
-		this.wrapper = $( obj ).find( this.settings.wapperSelector );	
-		this.slides = this.wrapper.find( this.settings.mainItemSelector );
+	  this.wrapper = $( obj ).find( this.settings.wapperSelector );	
+	  this.slides = this.wrapper.find( this.settings.mainItemSelector );
 		if( !this.wrapper.length || !this.slides.length ) return ;
 		// set width of wapper
 		if( this.settings.maxItemDisplay > this.slides.length ){
