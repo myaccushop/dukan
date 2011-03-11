@@ -5,6 +5,9 @@
   border: thin solid #ddd;
   border-radius: 0 0 15px 15px;
 }
+#miniCatContent {
+  border-radius: 0;
+}
 .bottom_box {
   height: 100%;
 }
@@ -100,4 +103,7 @@
 .lof-main-item-desc h3 {
   font-size: large;
   font-weight: bold;
+}
+.space_top .buttonAction {
+  margin-top: 30px;
 }
