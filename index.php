@@ -57,6 +57,7 @@ ul.lof-main-wapper > li {
       tep_db_query("select  p.products_id,
                             p.products_image,
                             p.products_tax_class_id,
+                            p.products_status,
                             pd.products_name,
                             pd.products_description,
                             if( s.status,
@@ -67,8 +68,7 @@ ul.lof-main-wapper > li {
                               " p left join " . TABLE_SPECIALS .
                               " s on p.products_id = s.products_id, " .
                               TABLE_PRODUCTS_DESCRIPTION . " pd
-                            where p.products_status = '1' and
-                                  p.products_id = pd.products_id and
+                            where p.products_id = pd.products_id and
                                   pd.language_id = '" . (int)$languages_id . "'
                             order by p.products_date_added desc
                             limit " . MAX_DISPLAY_NEW_PRODUCTS);
@@ -77,6 +77,7 @@ ul.lof-main-wapper > li {
       tep_db_query("select distinct p.products_id,
                                     p.products_image,
                                     p.products_tax_class_id,
+                                    p.products_status,
                                     pd.products_name,
                                     pd.products_description,
                                     if( s.status,
@@ -92,7 +93,6 @@ ul.lof-main-wapper > li {
                                     where p.products_id = p2c.products_id and
                                           p2c.categories_id = c.categories_id and
                                           c.parent_id = '" . (int)$new_products_category_id . "' and
-                                          p.products_status = '1' and
                                           p.products_id = pd.products_id and
                                           pd.language_id = '" . (int)$languages_id . "'
                                     order by p.products_date_added desc

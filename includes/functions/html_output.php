@@ -401,6 +401,9 @@
     if (empty($title)) {
       $args[] = 'text:false';
     }
+    if (isset($params['disabled'])) {
+      array_push($args, 'disabled:true');
+    }
 
     if (!empty($args)) {
       $button .= '{' . implode(',', $args) . '}';
