@@ -159,17 +159,19 @@ ul.lof-main-wapper > li {
   <div id="miniCatContent" class="bottomContent grid_24 alpha omega">
 <?php
 
-$bottom_boxes = array ('specials');
+$bottom_boxes = array ('specials', 'features');
 foreach ($bottom_boxes as $box_type) {
   //
   // Print Information box (need to style it).
   //
   $group = "boxes";
   $class = "bm_" . $box_type;
+  $module = $class . '.php';
+
   if ( !class_exists($class) ) {
     global $language;
     include(DIR_WS_LANGUAGES . $language . '/modules/' . $group . '/' . $module);
-    include(DIR_WS_MODULES . $group . '/' . $class . '.php');
+    include(DIR_WS_MODULES . $group . '/' . $module);
   }
 
   $mb = new $class();
