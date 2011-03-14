@@ -1,5 +1,5 @@
 .bottomContent {
-  padding-top: 15px;
+  padding-top: 1px;
   padding-bottom: 10px;
   margin-top: 10px;
   border: thin solid #ddd;
@@ -13,11 +13,12 @@
 }
 .bottomContent .bottom_box_title {
   color: #383838;
+  background-color: #ffb3ff;
   font-size: medium;
   font-weight: bold;
   padding-left: 8px;
   padding-bottom: 5px;
-  border-bottom: thin solid #aaa;
+ # border-bottom: thin solid #aaa;
   text-shadow: 0 1px 1px #eee;
 }
 .bottomContent .bottom_box_items ul {
@@ -79,7 +80,7 @@
 
 .bread_trail {
   color: #000;
-  background-color: #eee;
+  background-color: #ffb3ff;
   border-radius: 3px 3px 3px 3px;
   padding: 5px 0 5px 0;
   font-weight: bold;
