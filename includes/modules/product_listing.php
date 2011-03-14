@@ -133,8 +133,8 @@
             break;
           case 'PRODUCT_LIST_BUY_NOW':
             $prod_list_contents .= '        <td align="center">';
-            if($product_info['products_quantity'] <= 0 || $product_info['products_status']==0) {
-              $prod_list_contents .= tep_draw_button(IMAGE_BUTTON_OUT_OF_STOCK, 'alert', $_SERVER["REQUEST_URI"], 'primary', array("disabled" => "1"));
+            if($listing['products_quantity'] <= 0 || $listing['products_status']==0) {
+              $prod_list_contents .= tep_draw_button(IMAGE_BUTTON_OUT_OF_STOCK, 'alert', $_SERVER["REQUEST_URI"], 'primary', array("disabled" => "2"));
             } else {
               $prod_list_contents .= tep_draw_button(IMAGE_BUTTON_BUY_NOW, 'cart', tep_href_link(basename($PHP_SELF), tep_get_all_get_params(array('action')) . 'action=buy_now&products_id=' . $listing['products_id']));
             }
