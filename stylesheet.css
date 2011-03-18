@@ -11,14 +11,14 @@
 
 .ui-widget {
   font-family: Lucida Grande, Lucida Sans, Verdana, Arial, sans-serif;
-  font-size: 13px;
+  font-size: 14px;
 }
 
 body {
   background: #ffffff;
   color: #000;
   margin: 0px;
-  font-size: 13px;
+  font-size: 15px;
   font-family: Lucida Grande, Lucida Sans, Verdana, Arial, sans-serif;
 }
 
@@ -76,8 +76,8 @@ body {
 }
 
 .contentText, .contentText table {
-  padding: 5px 0 5px 0;
-  font-size: 13px;
+#  padding: 5px 0 5px 0;
+  font-size: 15px;
   line-height: 1.5;
 }
 
@@ -114,7 +114,7 @@ img {
 }
 
 table, p {
-  font-size: 13px;
+  font-size: 15px;
   line-height: 1.5;
 }
 
