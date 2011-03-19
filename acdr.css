@@ -13,7 +13,7 @@
 }
 .bottomContent .bottom_box_title {
   color: #383838;
-  background-color: #ffb3ff;
+  background-color: #F2F2F2;
   font-size: medium;
   font-weight: bold;
   padding-left: 8px;
@@ -32,8 +32,9 @@
   text-shadow: 0 0px 0px #444;
 }
 .bottomContent .bottom_box_items li a {
-  text-decoration: none;
+#  text-decoration: none;
   color: #004b91;
+  text-shadow: 0 1px 1px #eee;
 }
 .bottomContent .bottom_box_items li .productSpecialPrice {
   color: #900;
@@ -80,7 +81,7 @@
 
 .bread_trail {
   color: #000;
-  background-color: #ffb3ff;
+  background-color: #F2F2F2;
   border-radius: 3px 3px 3px 3px;
   padding: 5px 0 5px 0;
   font-weight: bold;
