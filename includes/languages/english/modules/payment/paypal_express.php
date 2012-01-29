@@ -24,5 +24,7 @@
   define('MODULE_PAYMENT_PAYPAL_EXPRESS_BUTTON', 'https://www.paypal.com/en_US/i/btn/btn_xpressCheckout.gif');
   define('MODULE_PAYMENT_PAYPAL_EXPRESS_LANGUAGE_LOCALE', 'en_US');
 
+  define('MODULE_PAYMENT_PAYPAL_EXPRESS_TEXT_EMAIL_FOOTER', "For any questions or support, please contact:\n" . EMAIL_SEPARATOR . "\n  " . STORE_NAME . "\n  " . STORE_OWNER_EMAIL_ADDRESS . "\n  " . SUPPORT_PHONE_NUMBER );
+
   unset($paypal_express_ping_button);
 ?>

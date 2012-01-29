@@ -26,6 +26,7 @@
       $this->description = MODULE_PAYMENT_PAYPAL_EXPRESS_TEXT_DESCRIPTION;
       $this->sort_order = MODULE_PAYMENT_PAYPAL_EXPRESS_SORT_ORDER;
       $this->enabled = ((MODULE_PAYMENT_PAYPAL_EXPRESS_STATUS == 'True') ? true : false);
+      $this->email_footer = MODULE_PAYMENT_PAYPAL_EXPRESS_TEXT_EMAIL_FOOTER;
 
       if ((int)MODULE_PAYMENT_PAYPAL_EXPRESS_ORDER_STATUS_ID > 0) {
         $this->order_status = MODULE_PAYMENT_PAYPAL_EXPRESS_ORDER_STATUS_ID;
