@@ -36,9 +36,10 @@ foreach ($bottom_boxes as $box_type) {
 
 ?>
 <div class="grid_9 bottom_accu_box">
-  <img src="images/store_logo.png" alt="AccuDRO logo" width="100px">
-  <div class="accu_text">555.555.5555</div>
-  <div class="accu_text"><a href="mailto:support@accudro.com">support@accudro.com</a></div>
+  <img src="images/store_logo.png" alt="<?php echo STORE_NAME ?> logo" width="100px">
+  <div class="accu_text"><?php echo SUPPORT_PHONE_NUMBER ?></div>
+  <div class="accu_text"><a href="mailto:<?php echo STORE_OWNER_EMAIL_ADDRESS ?>">
+    <?php echo STORE_OWNER_EMAIL_ADDRESS ?></a></div>
   <!-- PayPal Logo -->
   <!-- a href="#" onclick="javascript:window.open('https://www.paypal.com/cgi-bin/webscr?cmd=xpt/Marketing/popup/OLCWhatIsPayPal-outside','olcwhatispaypal','toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=yes, resizable=yes, width=400, height=350');"><img  src="https://www.paypal.com/en_US/i/bnr/horizontal_solution_PPeCheck.gif" border="0" alt="Solution Graphics" width="200px"></a -->
   <a href="https://www.paypal.com/cgi-bin/webscr?cmd=xpt/Marketing/popup/OLCWhatIsPayPal-outside" target="_blank"><img  src="images/horizontal_solution_PPeCheck.gif" border="0" alt="Solution Graphics" width="200px">
