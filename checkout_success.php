@@ -33,9 +33,14 @@
 // PWA EOF 2b
 
 // if the customer is not logged on, redirect them to the shopping cart page
-  if (!tep_session_is_registered('customer_id')) {
-    tep_redirect(tep_href_link(FILENAME_SHOPPING_CART));
-  }
+//
+// PWA unregisters a session, so following is always going to be true. But
+// we don't want to go to shopping cart after checkout is successful. commenting
+// the following if-block.
+//
+// if (!tep_session_is_registered('customer_id')) {
+//   tep_redirect(tep_href_link(FILENAME_SHOPPING_CART));
+// }
 
   if (isset($HTTP_GET_VARS['action']) && ($HTTP_GET_VARS['action'] == 'update')) {
     $notify_string = '';
