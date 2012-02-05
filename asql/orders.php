@@ -15,6 +15,8 @@
   require(DIR_WS_CLASSES . 'currencies.php');
   $currencies = new currencies();
 
+  include(DIR_WS_CLASSES . 'order.php');
+
   $orders_statuses = array();
   $orders_status_array = array();
   $orders_status_query = tep_db_query("select orders_status_id, orders_status_name from " . TABLE_ORDERS_STATUS . " where language_id = '" . (int)$languages_id . "'");
@@ -47,7 +49,23 @@
               $notify_comments = sprintf(EMAIL_TEXT_COMMENTS_UPDATE, $comments) . "\n\n";
             }
 
-            $email = STORE_NAME . "\n" . EMAIL_SEPARATOR . "\n" . EMAIL_TEXT_ORDER_NUMBER . ' ' . $oID . "\n" . EMAIL_TEXT_INVOICE_URL . ' ' . tep_catalog_href_link(FILENAME_CATALOG_ACCOUNT_HISTORY_INFO, 'order_id=' . $oID, 'SSL') . "\n" . EMAIL_TEXT_DATE_ORDERED . ' ' . tep_date_long($check_status['date_purchased']) . "\n\n" . $notify_comments . sprintf(EMAIL_TEXT_STATUS_UPDATE, $orders_status_array[$status]);
+            $notify_order = new order($oID);
+            $products_ordered = "";
+            for ($i=0, $n=sizeof($notify_order->products); $i<$n; $i++) {
+              $products_ordered .= "  " . $notify_order->products[$i]['qty'] . ' x '
+                                . $notify_order->products[$i]['name'] . ' (' . $notify_order->products[$i]['model'] . ') = '
+                                . $currencies->display_price($notify_order->products[$i]['final_price'], $notify_order->products[$i]['tax'], $notify_order->products[$i]['qty'])
+                               //  . $products_ordered_attributes
+                                . "\n";
+            }
+
+            $email = sprintf(EMAIL_TEXT_STATUS_UPDATE, $orders_status_array[$status])
+                    . $notify_comments
+                    . "Order Summary" . "\n" . EMAIL_SEPARATOR . "\n"
+                    . "  " . EMAIL_TEXT_ORDER_NUMBER . ' ' . $oID . "\n"
+                    . "  " . EMAIL_TEXT_DATE_ORDERED . ' ' . tep_date_long($check_status['date_purchased']) . "\n\n"
+                    . $products_ordered . "\n\n"
+                    . COMMUNICATION_EMAIL_FOOTER . "\n";
 
             tep_mail($check_status['customers_name'], $check_status['customers_email_address'], EMAIL_TEXT_SUBJECT, $email, STORE_OWNER, STORE_OWNER_EMAIL_ADDRESS);
 
@@ -87,8 +105,6 @@
       $messageStack->add(sprintf(ERROR_ORDER_DOES_NOT_EXIST, $oID), 'error');
     }
   }
-
-  include(DIR_WS_CLASSES . 'order.php');
 
   require(DIR_WS_INCLUDES . 'template_top.php');
 ?>
