@@ -45,7 +45,9 @@
       if (isset($products[$i]['attributes']) && is_array($products[$i]['attributes'])) {
         while (list($option, $value) = each($products[$i]['attributes'])) {
           echo tep_draw_hidden_field('id[' . $products[$i]['id'] . '][' . $option . ']', $value);
-          $attributes = tep_db_query("select popt.products_options_name, poval.products_options_values_name, pa.options_values_price, pa.price_prefix
+          /* $attributes = tep_db_query("select popt.products_options_name, poval.products_options_values_name, pa.options_values_price, pa.price_prefix */
+          $attributes = tep_db_query("select popt.products_options_name, popt.products_options_track_stock, poval.products_options_values_name, pa.options_values_price, pa.price_prefix
+  
                                       from " . TABLE_PRODUCTS_OPTIONS . " popt, " . TABLE_PRODUCTS_OPTIONS_VALUES . " poval, " . TABLE_PRODUCTS_ATTRIBUTES . " pa
                                       where pa.products_id = '" . (int)$products[$i]['id'] . "'
                                        and pa.options_id = '" . (int)$option . "'
@@ -61,7 +63,8 @@
           $products[$i][$option]['products_options_values_name'] = $attributes_values['products_options_values_name'];
           $products[$i][$option]['options_values_price'] = $attributes_values['options_values_price'];
           $products[$i][$option]['price_prefix'] = $attributes_values['price_prefix'];
-        }
+          $products[$i][$option]['track_stock'] = $attributes_values['products_options_track_stock'];
+          }
       }
     }
 ?>
@@ -79,7 +82,14 @@
                        '    <td valign="top"><a href="' . tep_href_link(FILENAME_PRODUCT_INFO, 'products_id=' . $products[$i]['id']) . '"><strong>' . $products[$i]['name'] . '</strong></a>';
 
       if (STOCK_CHECK == 'true') {
-        $stock_check = tep_check_stock($products[$i]['id'], $products[$i]['quantity']);
+        //$stock_check = tep_check_stock($products[$i]['id'], $products[$i]['quantity']);
+//++++ QT Pro: Begin Changed code
+        if (isset($products[$i]['attributes']) && is_array($products[$i]['attributes'])) {
+          $stock_check = tep_check_stock($products[$i]['id'], $products[$i]['quantity'], $products[$i]['attributes']); 
+        }else{
+          $stock_check = tep_check_stock($products[$i]['id'], $products[$i]['quantity']);
+        }
+//++++ QT Pro: End Changed Code
         if (tep_not_null($stock_check)) {
           $any_out_of_stock = 1;
 

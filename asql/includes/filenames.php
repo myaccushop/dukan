@@ -53,4 +53,9 @@
   define('FILENAME_VERSION_CHECK', 'version_check.php');
   define('FILENAME_WHOS_ONLINE', 'whos_online.php');
   define('FILENAME_ZONES', 'zones.php');
+//++++ QT Pro: Begin Changed code
+  define('FILENAME_STATS_LOW_STOCK_ATTRIB', 'stats_low_stock_attrib.php');
+  define('FILENAME_STOCK', 'stock.php');
+  define('FILENAME_QTPRODOCTOR', 'qtprodoctor.php');
+//++++ QT Pro: End Changed Code
 ?>

@@ -14,7 +14,17 @@
     echo $messageStack->output();
   }
 ?>
+<?php //++++ QT Pro: Begin added code
 
+$qtpro_sick_count = qtpro_sick_product_count();
+if($qtpro_sick_count != 0){
+?>
+<table border="0" width="100%" cellspacing="0" cellpadding="0"><tr><td class="messageStackWarning"><?php echo 'Warning: There are '. $qtpro_sick_count . ' sick products in the database. Please visit <a href="' . tep_href_link(FILENAME_QTPRODOCTOR) . '" class="headerLink">the QTPro doctor</a>.'; ?></td></tr></table>
+<?php
+}
+//++++ QT Pro: End added code 
+?>
+  
 <table border="0" width="100%" cellspacing="0" cellpadding="0">
   <tr>
     <td colspan="2"><?php echo '<a href="' . tep_href_link(FILENAME_DEFAULT, '', 'NONSSL') . '">' . tep_image(DIR_WS_IMAGES . 'oscommerce.png', 'osCommerce Online Merchant v' . tep_get_version()) . '</a>'; ?></td>

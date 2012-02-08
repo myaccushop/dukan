@@ -149,40 +149,26 @@ $("#piGal a[rel^='fancybox']").fancybox({
 <?php echo stripslashes($product_info['products_description']); ?>
 
 <?php
+//++++ QT Pro: End Changed Code
     $products_attributes_query = tep_db_query("select count(*) as total from " . TABLE_PRODUCTS_OPTIONS . " popt, " . TABLE_PRODUCTS_ATTRIBUTES . " patrib where patrib.products_id='" . (int)$HTTP_GET_VARS['products_id'] . "' and patrib.options_id = popt.products_options_id and popt.language_id = '" . (int)$languages_id . "'");
     $products_attributes = tep_db_fetch_array($products_attributes_query);
     if ($products_attributes['total'] > 0) {
-?>
-
-    <p><?php echo TEXT_PRODUCT_OPTIONS; ?></p>
-
-    <p>
-<?php
-      $products_options_name_query = tep_db_query("select distinct popt.products_options_id, popt.products_options_name from " . TABLE_PRODUCTS_OPTIONS . " popt, " . TABLE_PRODUCTS_ATTRIBUTES . " patrib where patrib.products_id='" . (int)$HTTP_GET_VARS['products_id'] . "' and patrib.options_id = popt.products_options_id and popt.language_id = '" . (int)$languages_id . "' order by popt.products_options_name");
-      while ($products_options_name = tep_db_fetch_array($products_options_name_query)) {
-        $products_options_array = array();
-        $products_options_query = tep_db_query("select pov.products_options_values_id, pov.products_options_values_name, pa.options_values_price, pa.price_prefix from " . TABLE_PRODUCTS_ATTRIBUTES . " pa, " . TABLE_PRODUCTS_OPTIONS_VALUES . " pov where pa.products_id = '" . (int)$HTTP_GET_VARS['products_id'] . "' and pa.options_id = '" . (int)$products_options_name['products_options_id'] . "' and pa.options_values_id = pov.products_options_values_id and pov.language_id = '" . (int)$languages_id . "'");
-        while ($products_options = tep_db_fetch_array($products_options_query)) {
-          $products_options_array[] = array('id' => $products_options['products_options_values_id'], 'text' => $products_options['products_options_values_name']);
-          if ($products_options['options_values_price'] != '0') {
-            $products_options_array[sizeof($products_options_array)-1]['text'] .= ' (' . $products_options['price_prefix'] . $currencies->display_price($products_options['options_values_price'], tep_get_tax_rate($product_info['products_tax_class_id'])) .') ';
-          }
-        }
-
-        if (is_string($HTTP_GET_VARS['products_id']) && isset($cart->contents[$HTTP_GET_VARS['products_id']]['attributes'][$products_options_name['products_options_id']])) {
-          $selected_attribute = $cart->contents[$HTTP_GET_VARS['products_id']]['attributes'][$products_options_name['products_options_id']];
-        } else {
-          $selected_attribute = false;
-        }
-?>
-      <strong><?php echo $products_options_name['products_options_name'] . ':'; ?></strong><br /><?php echo tep_draw_pull_down_menu('id[' . $products_options_name['products_options_id'] . ']', $products_options_array, $selected_attribute); ?><br />
-<?php
-      }
-?>
-    </p>
+//++++ QT Pro: Begin Changed code
+      $products_id=(preg_match("/^\d{1,10}(\{\d{1,10}\}\d{1,10})*$/",$HTTP_GET_VARS['products_id']) ? $HTTP_GET_VARS['products_id'] : (int)$HTTP_GET_VARS['products_id']); 
+      require(DIR_WS_CLASSES . 'pad_' . PRODINFO_ATTRIBUTE_PLUGIN . '.php');
+      $class = 'pad_' . PRODINFO_ATTRIBUTE_PLUGIN;
+      $pad = new $class($products_id);
+      echo $pad->draw();
+//++++ QT Pro
+    ?>
 
 <?php
-    }
+     }
+//++++ QT Pro:
+//Display a table with which attributecombinations is on stock to the customer?
+if(PRODINFO_ATTRIBUTE_DISPLAY_STOCK_LIST == 'True'): require(DIR_WS_MODULES . "qtpro_stock_table.php"); endif;
+
+//++++ QT Pro: End Changed Code
 ?>
 
     <div style="clear: both;"></div>

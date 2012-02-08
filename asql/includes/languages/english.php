@@ -91,12 +91,16 @@ define('BOX_TAXES_TAX_CLASSES', 'Tax Classes');
 define('BOX_TAXES_TAX_RATES', 'Tax Rates');
 
 // reports box text in includes/boxes/reports.php
+//++++ QT Pro: Begin Changed code
+define('BOX_REPORTS_STATS_LOW_STOCK_ATTRIB', 'Stock Report');
+//++++ QT Pro: End Changed Code
 define('BOX_HEADING_REPORTS', 'Reports');
 define('BOX_REPORTS_PRODUCTS_VIEWED', 'Products Viewed');
 define('BOX_REPORTS_PRODUCTS_PURCHASED', 'Products Purchased');
 define('BOX_REPORTS_ORDERS_TOTAL', 'Customer Orders-Total');
 
 // tools text in includes/boxes/tools.php
+define('BOX_TOOLS_QTPRODOCTOR', 'QTPro Doctor');
 define('BOX_HEADING_TOOLS', 'Tools');
 define('BOX_TOOLS_ACTION_RECORDER', 'Action Recorder');
 define('BOX_TOOLS_BACKUP', 'Database Backup');
@@ -209,6 +213,7 @@ define('IMAGE_LOCK', 'Lock');
 define('IMAGE_MODULE_INSTALL', 'Install Module');
 define('IMAGE_MODULE_REMOVE', 'Remove Module');
 define('IMAGE_MOVE', 'Move');
+define('IMAGE_QTSTOCK', 'Stock');
 define('IMAGE_NEW_BANNER', 'New Banner');
 define('IMAGE_NEW_CATEGORY', 'New Category');
 define('IMAGE_NEW_COUNTRY', 'New Country');

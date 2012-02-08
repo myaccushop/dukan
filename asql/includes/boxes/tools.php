@@ -64,6 +64,11 @@
         'link' => tep_href_link(FILENAME_VERSION_CHECK)
       ),
       array(
+            'code' => FILENAME_QTPRODOCTOR,
+            'title' => BOX_TOOLS_QTPRODOCTOR,
+            'link' => tep_href_link(FILENAME_QTPRODOCTOR)
+            ),
+      array(
         'code' => FILENAME_WHOS_ONLINE,
         'title' => BOX_TOOLS_WHOS_ONLINE,
         'link' => tep_href_link(FILENAME_WHOS_ONLINE)

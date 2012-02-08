@@ -24,6 +24,11 @@
         'link' => tep_href_link(FILENAME_STATS_PRODUCTS_PURCHASED)
       ),
       array(
+            'code' => FILENAME_STATS_LOW_STOCK_ATTRIB,
+            'title' => BOX_REPORTS_STATS_LOW_STOCK_ATTRIB,
+            'link' => tep_href_link(FILENAME_STATS_LOW_STOCK_ATTRIB)
+            ),
+          array(
         'code' => FILENAME_STATS_CUSTOMERS,
         'title' => BOX_REPORTS_ORDERS_TOTAL,
         'link' => tep_href_link(FILENAME_STATS_CUSTOMERS)

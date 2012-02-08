@@ -68,13 +68,33 @@
   $order_total_modules = new order_total;
   $order_total_modules->process();
 
+/* // Stock Check */
+/*   $any_out_of_stock = false; */
+/*   if (STOCK_CHECK == 'true') { */
+/*     for ($i=0, $n=sizeof($order->products); $i<$n; $i++) { */
+/*       if (tep_check_stock($order->products[$i]['id'], $order->products[$i]['qty'])) { */
+/*         $any_out_of_stock = true; */
+/*       } */
+/*     } */
 // Stock Check
   $any_out_of_stock = false;
   if (STOCK_CHECK == 'true') {
+//++++ QT Pro: Begin Changed code
+    $check_stock='';
     for ($i=0, $n=sizeof($order->products); $i<$n; $i++) {
-      if (tep_check_stock($order->products[$i]['id'], $order->products[$i]['qty'])) {
+      if (isset($order->products[$i]['attributes']) && is_array($order->products[$i]['attributes'])) {
+        $attributes=array();
+        foreach ($order->products[$i]['attributes'] as $attribute) {
+          $attributes[$attribute['option_id']]=$attribute['value_id'];
+        }
+        $check_stock[$i] = tep_check_stock($order->products[$i]['id'], $order->products[$i]['qty'], $attributes);
+      } else {
+        $check_stock[$i] = tep_check_stock($order->products[$i]['id'], $order->products[$i]['qty']);
+      }
+      if ($check_stock[$i]) {
         $any_out_of_stock = true;
       }
+//++++ QT Pro: End Changed Code
     }
     // Out of Stock
     if ( (STOCK_ALLOW_CHECKOUT != 'true') && ($any_out_of_stock == true) ) {
@@ -169,10 +189,14 @@
          '            <td align="right" valign="top" width="30">' . $order->products[$i]['qty'] . '&nbsp;x</td>' . "\n" .
          '            <td valign="top">' . $order->products[$i]['name'];
 
+    /* if (STOCK_CHECK == 'true') { */
+    /*   echo tep_check_stock($order->products[$i]['id'], $order->products[$i]['qty']); */
+    /* } */
     if (STOCK_CHECK == 'true') {
-      echo tep_check_stock($order->products[$i]['id'], $order->products[$i]['qty']);
+      //++++ QT Pro: Begin Changed code
+      echo $check_stock[$i];
+      //++++ QT Pro: End Changed Code
     }
-
     if ( (isset($order->products[$i]['attributes'])) && (sizeof($order->products[$i]['attributes']) > 0) ) {
       for ($j=0, $n2=sizeof($order->products[$i]['attributes']); $j<$n2; $j++) {
         echo '<br /><nobr><small>&nbsp;<i> - ' . $order->products[$i]['attributes'][$j]['option'] . ': ' . $order->products[$i]['attributes'][$j]['value'] . '</i></small></nobr>';

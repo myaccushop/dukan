@@ -35,16 +35,36 @@
     }
   }
 
+/* // Stock Check */
+/*   if ( (STOCK_CHECK == 'true') && (STOCK_ALLOW_CHECKOUT != 'true') ) { */
+/*     $products = $cart->get_products(); */
+/*     for ($i=0, $n=sizeof($products); $i<$n; $i++) { */
+/*       if (tep_check_stock($products[$i]['id'], $products[$i]['quantity'])) { */
+/*         tep_redirect(tep_href_link(FILENAME_SHOPPING_CART)); */
+/*         break; */
+/*       } */
+/*     } */
+/*   } */
 // Stock Check
+//++++ QT Pro: Begin Changed code
   if ( (STOCK_CHECK == 'true') && (STOCK_ALLOW_CHECKOUT != 'true') ) {
     $products = $cart->get_products();
+    $any_out_of_stock = 0;
     for ($i=0, $n=sizeof($products); $i<$n; $i++) {
-      if (tep_check_stock($products[$i]['id'], $products[$i]['quantity'])) {
-        tep_redirect(tep_href_link(FILENAME_SHOPPING_CART));
-        break;
-      }
+     if (isset($products[$i]['attributes']) && is_array($products[$i]['attributes'])) {
+       $stock_check = tep_check_stock($products[$i]['id'], $products[$i]['quantity'], $products[$i]['attributes']);
+     }
+     else{
+       $stock_check = tep_check_stock($products[$i]['id'], $products[$i]['quantity']);
+     }
+     if ($stock_check) $any_out_of_stock = 1;
+  	}
+    if ($any_out_of_stock == 1) {
+      tep_redirect(tep_href_link(FILENAME_SHOPPING_CART));
+      break;
     }
-  }
+ 	}
+//++++ QT Pro: End Changed Code
 
 // if no billing destination address was selected, use the customers own address as default
   if (!tep_session_is_registered('billto')) {

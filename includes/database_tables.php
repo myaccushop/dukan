@@ -59,4 +59,7 @@
   define('TABLE_ZONES_TO_GEO_ZONES', 'zones_to_geo_zones');
   define('TABLE_WHOS_ONLINE', 'whos_online');
   define('TABLE_ZONES', 'zones');
+//++++ QT Pro: Begin Changed code
+  define('TABLE_PRODUCTS_STOCK', 'products_stock');
+//++++ QT Pro: End Changed Code
 ?>

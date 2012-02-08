@@ -114,24 +114,65 @@
     return $product['specials_new_products_price'];
   }
 
+/* //// */
+/* // Return a product's stock */
+/* // TABLES: products */
+/*   function tep_get_products_stock($products_id) { */
+/*     $products_id = tep_get_prid($products_id); */
+/*     $stock_query = tep_db_query("select products_quantity from " . TABLE_PRODUCTS . " where products_id = '" . (int)$products_id . "'"); */
+/*     $stock_values = tep_db_fetch_array($stock_query); */
+
+/*     return $stock_values['products_quantity']; */
+/*   } */
 ////
 // Return a product's stock
 // TABLES: products
-  function tep_get_products_stock($products_id) {
+//++++ QT Pro: Begin Changed code
+  function tep_get_products_stock($products_id, $attributes=array()) {
+    global $languages_id;
     $products_id = tep_get_prid($products_id);
-    $stock_query = tep_db_query("select products_quantity from " . TABLE_PRODUCTS . " where products_id = '" . (int)$products_id . "'");
-    $stock_values = tep_db_fetch_array($stock_query);
-
-    return $stock_values['products_quantity'];
+    if (sizeof($attributes)>0) {
+      $all_nonstocked = true;
+      $attr_list='';
+      $options_list=implode(",",array_keys($attributes));
+      $track_stock_query=tep_db_query("select products_options_id, products_options_track_stock from " . TABLE_PRODUCTS_OPTIONS . " where products_options_id in ($options_list) and language_id= '" . (int)$languages_id . "' order by products_options_id");
+      while($track_stock_array=tep_db_fetch_array($track_stock_query)) {
+        if ($track_stock_array['products_options_track_stock']) {
+          $attr_list.=$track_stock_array['products_options_id'] . '-' . $attributes[$track_stock_array['products_options_id']] . ',';
+          $all_nonstocked=false;
+        }
+      }
+      $attr_list=substr($attr_list,0,strlen($attr_list)-1);
+    }
+    
+    if ((sizeof($attributes)==0) | ($all_nonstocked)) {
+      $stock_query = tep_db_query("select products_quantity as quantity from " . TABLE_PRODUCTS . " where products_id = '" . (int)$products_id . "'");
+    } else {
+      $stock_query=tep_db_query("select products_stock_quantity as quantity from " . TABLE_PRODUCTS_STOCK . " where products_id='". (int)$products_id . "' and products_stock_attributes='$attr_list'");
+    }
+    if (tep_db_num_rows($stock_query)>0) {
+      $stock=tep_db_fetch_array($stock_query);
+      $quantity=$stock['quantity'];
+    } else {
+      $quantity = 0;
+    }
+    return $quantity;
+//++++ QT Pro: End Changed Code
   }
-
+  
 ////
+/* // Check if the required stock is available */
+/* // If insufficent stock is available return an out of stock message */
+/*   function tep_check_stock($products_id, $products_quantity) { */
+/*     $stock_left = tep_get_products_stock($products_id) - $products_quantity; */
+/*     $out_of_stock = ''; */
 // Check if the required stock is available
 // If insufficent stock is available return an out of stock message
-  function tep_check_stock($products_id, $products_quantity) {
-    $stock_left = tep_get_products_stock($products_id) - $products_quantity;
+//++++ QT Pro: Begin Changed code
+  function tep_check_stock($products_id, $products_quantity, $attributes=array()) {
+    $stock_left = tep_get_products_stock($products_id, $attributes) - $products_quantity;
+//++++ QT Pro: End Changed Code
     $out_of_stock = '';
-
     if ($stock_left < 0) {
       $out_of_stock = '<span class="markProductOutOfStock">' . STOCK_MARK_PRODUCT_OUT_OF_STOCK . '</span>';
     }
