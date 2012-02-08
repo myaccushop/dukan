@@ -1,0 +1,6 @@
+Tips:
+
+* If you change support phone number, update 'SUPPORT_PHONE_NUMBER' define in the following locations:
+
+    <admin>/includes/languages/english.php
+    includes/languages/english.php

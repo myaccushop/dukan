@@ -359,6 +359,10 @@
     }
   }
   tep_mail($order->customer['firstname'] . ' ' . $order->customer['lastname'], $order->customer['email_address'], EMAIL_TEXT_SUBJECT, $email_order, STORE_OWNER, STORE_OWNER_EMAIL_ADDRESS);
+  //
+  //  Always send an email notification to store owner
+  //
+  tep_mail(STORE_OWNER, STORE_OWNER_EMAIL_ADDRESS, 'New order: ' . EMAIL_TEXT_SUBJECT, $email_order, STORE_OWNER, STORE_OWNER_EMAIL_ADDRESS);
 
 // send emails to other people
   if (SEND_EXTRA_ORDER_EMAILS_TO != '') {
