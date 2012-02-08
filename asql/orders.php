@@ -52,10 +52,16 @@
             $notify_order = new order($oID);
             $products_ordered = "";
             for ($i=0, $n=sizeof($notify_order->products); $i<$n; $i++) {
+              $products_ordered_attributes = '';
+              foreach ($notify_order->products[$i]['attributes'] as $attr) {
+                $products_ordered_attributes .= "\n    - " . $attr['option'] . ": " . $attr['value'];
+              }
               $products_ordered .= "  " . $notify_order->products[$i]['qty'] . ' x '
                                 . $notify_order->products[$i]['name'] . ' (' . $notify_order->products[$i]['model'] . ') = '
-                                . $currencies->display_price($notify_order->products[$i]['final_price'], $notify_order->products[$i]['tax'], $notify_order->products[$i]['qty'])
-                               //  . $products_ordered_attributes
+                                . $currencies->display_price( $notify_order->products[$i]['final_price'],
+                                                              $notify_order->products[$i]['tax'],
+                                                              $notify_order->products[$i]['qty'])
+                                . $products_ordered_attributes
                                 . "\n";
             }
 
