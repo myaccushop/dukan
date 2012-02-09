@@ -15,6 +15,8 @@ define('HEADING_TITLE', 'Magnetic scale');
 
 define('TEXT_MAGNETIC_SCALE', '
 <br/>
+
+
 <b>Are magnetic or glass scales the same ?<br />
 </b><dl><dt>Many linear measurement systems are based on optical principles (glass scale). A 
           light source and photo-detector are guided along a glass scale to "read" 
@@ -31,7 +33,10 @@ define('TEXT_MAGNETIC_SCALE', '
           by the oil and coolants.</strong><br />
 </dt>
 </dl>
-
+<img src="images/magnetic_head.JPG" > 
+<img src="images/magnetic_scale.JPG" > 
+<br/> <sub>Magnetic head and scale. </sub>
+<br/>
 <strong><br />
 All our DRO kits come with magnetic scales:<br />
   <br />
