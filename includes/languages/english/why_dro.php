@@ -15,6 +15,8 @@ define('HEADING_TITLE', 'Why DRO');
 
 define('TEXT_WHY_DRO', '
 <br/>
+<hr style="width: 960px; height: 5px; color: rgb(9, 12, 9); border-style: solid; margin-left: 0px; margin-right: auto;" />
+<br/>
 <dt><b>Why Digital Readout?</b></dt><dt><br />
 </dt><dt>Manually controlled machines require an operator to directly position 
           the workpiece or tool to carry out the machining process. A handwheel 

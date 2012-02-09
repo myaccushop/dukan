@@ -14,33 +14,18 @@ define('NAVBAR_TITLE', 'Magnetic scale');
 define('HEADING_TITLE', 'Magnetic scale');
 
 define('TEXT_MAGNETIC_SCALE', '
-<br/>
 
+<strong><br />
+All our DRO kits come with magnetic scales:</strong><br />
+  <br />
 
-<b>Are magnetic or glass scales the same ?<br />
-</b><dl><dt>Many linear measurement systems are based on optical principles (glass scale). A 
-          light source and photo-detector are guided along a glass scale to "read" 
-          the overlapping patterns of light, which shine through or reflected 
-          from the grating on the glass. This is a source of problems as this 
-          optical method is prone to suffer in the machine tool environment. Any 
-          machining process will cause a build-up of dirt, dust and grime carried 
-          by the oil and coolants. This same build-up can coat the glass grating 
-          and when this happens the measurement stops, production stops and with 
-          it goes your profitability! <br />
-</dt>
-<dt>So please consider this simple point and remember that with glass 
-          scales... if it does not see, it does not work! <strong style="font-style: italic;">Magnetic scales are immune to dirt build-up, dust and grime carried 
-          by the oil and coolants.</strong><br />
-</dt>
-</dl>
 <img src="images/magnetic_head.JPG" > 
 <img src="images/magnetic_scale.JPG" > 
 <br/> <sub>Magnetic head and scale. </sub>
+
 <br/>
-<strong><br />
-All our DRO kits come with magnetic scales:<br />
-  <br />
-Magnetic scales are :</strong><br />
+<br/>
+<strong>Magnetic scales are :</strong><br />
 <ul>
   <li>Immune to coolant and dust. They have full IP-67 rating ( scales 
 suited for contaminated or dirty environmental conditions). <br />
@@ -61,6 +46,25 @@ suited for contaminated or dirty environmental conditions). <br />
 
     All axis 5 micron (0.0002") resolution IP-67 rated magnetic scale<br />
 <br />
+<hr style="width: 960px; height: 5px; color: rgb(9, 12, 9); border-style: solid; margin-left: 0px; margin-right: auto;" />
+<br/>
+<b>Are magnetic or glass scales the same ?<br />
+</b><dl><dt>Many linear measurement systems are based on optical principles (glass scale). A 
+          light source and photo-detector are guided along a glass scale to "read" 
+          the overlapping patterns of light, which shine through or reflected 
+          from the grating on the glass. This is a source of problems as this 
+          optical method is prone to suffer in the machine tool environment. Any 
+          machining process will cause a build-up of dirt, dust and grime carried 
+          by the oil and coolants. This same build-up can coat the glass grating 
+          and when this happens the measurement stops, production stops and with 
+          it goes your profitability! <br />
+</dt>
+<dt>So please consider this simple point and remember that with glass 
+          scales... if it does not see, it does not work! <strong style="font-style: italic;">Magnetic scales are immune to dirt build-up, dust and grime carried 
+          by the oil and coolants.</strong><br />
+</dt>
+</dl>
+
 
 ');
 ?>
