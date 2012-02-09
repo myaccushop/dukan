@@ -67,4 +67,7 @@
   define('FILENAME_KB_VIDEOS', 'kb_videos.php');
   define('FILENAME_KB_MANUALS', 'kb_manuals.php');
   define('FILENAME_KB_FAQ', 'kb_faq.php');
+  define('FILENAME_MAGNETIC_SCALE', 'magnetic_scale.php');
+  define('FILENAME_REMOTE_CONTROL', 'remote_control.php');
+  define('FILENAME_WHY_DRO', 'why_dro.php');
 ?>
