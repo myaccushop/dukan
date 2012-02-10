@@ -11,6 +11,10 @@
 */
 
   require('includes/application_top.php');
+  //
+  // We don't support login/accounts, redirect to homepage
+  //
+  tep_redirect(tep_href_link(FILENAME_DEFAULT));
 
   if (!tep_session_is_registered('customer_id')) {
     $navigation->set_snapshot();

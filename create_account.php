@@ -11,6 +11,10 @@
 */
 
   require('includes/application_top.php');
+  //
+  // We don't support login/accounts, redirect to homepage
+  //
+  tep_redirect(tep_href_link(FILENAME_DEFAULT));
 
 // PWA BOF
   if (isset($HTTP_GET_VARS['guest']) && $cart->count_contents() < 1) tep_redirect(tep_href_link(FILENAME_SHOPPING_CART));
