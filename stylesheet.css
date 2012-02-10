@@ -18,7 +18,7 @@ body {
   background: #ffffff;
   color: #000;
   margin: 0px;
-  font-size: small;
+  font-size: smaller;
   font-family: Verdana, Arial, sans-serif;
 }
 
@@ -77,7 +77,7 @@ body {
 
 .contentText, .contentText table {
 #  padding: 5px 0 5px 0;
-  font-size: 15px;
+  font-size: small;
   line-height: 1.5;
 }
 
