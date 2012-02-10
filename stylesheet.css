@@ -10,16 +10,16 @@
 */
 
 .ui-widget {
-  font-family: Lucida Grande, Lucida Sans, Verdana, Arial, sans-serif;
-  font-size: 14px;
+  font-family: Verdana, Arial, sans-serif;
+  font-size: small;
 }
 
 body {
   background: #ffffff;
   color: #000;
   margin: 0px;
-  font-size: 15px;
-  font-family: Lucida Grande, Lucida Sans, Verdana, Arial, sans-serif;
+  font-size: small;
+  font-family: Verdana, Arial, sans-serif;
 }
 
 #bodyWrapper {
