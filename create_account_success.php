@@ -11,6 +11,10 @@
 */
 
   require('includes/application_top.php');
+  //
+  // We don't support login/accounts, redirect to homepage
+  //
+  tep_redirect(tep_href_link(FILENAME_DEFAULT));
 
   require(DIR_WS_LANGUAGES . $language . '/' . FILENAME_CREATE_ACCOUNT_SUCCESS);
 

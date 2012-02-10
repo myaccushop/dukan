@@ -12,6 +12,11 @@
 
   require('includes/application_top.php');
 
+  //
+  // We don't support login/accounts, redirect to homepage
+  //
+  tep_redirect(tep_href_link(FILENAME_DEFAULT));
+
 // redirect the customer to a friendly cookie-must-be-enabled page if cookies are disabled (or the session has not started)
   if ($session_started == false) {
     tep_redirect(tep_href_link(FILENAME_COOKIE_USAGE));
