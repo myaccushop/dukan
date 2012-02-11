@@ -58,5 +58,15 @@ product has been returned to us. In this case, please refer to our
 return policy and return your purchase once you have received it. If you
  would like to purchase a different product, please visit our website or
  contact through email at support@accudro.com.<br /><br />
+
+<h1><strong>PAYMENT</strong></h1>
+AccuDRO Systems accepts the following forms of payment for online purchases:
+<ul>   
+  <li> Paypal (MasterCard, VISA, American Express, Bank)</li>
+</ul>
+The transaction will be charged to your Paypal account only after we have 
+verified address, received payment authorization and confirmed stock availability, and your order is shipped. Your Paypal account will not be changed at the time you submit your order.<br /><br />
+
+
 ');
 ?>
