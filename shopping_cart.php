@@ -142,7 +142,7 @@
 
   <div id="accept_legal_part">
   <?php echo tep_draw_checkbox_field('accept_legal', '1'); ?>
-  I have read and accept the <a target="_blank" href="<?php echo FILENAME_CONDITIONS; ?>">Legal Terms and Conditions</a>
+  I have read and accept the <a target="_blank" href="<?php echo FILENAME_CONDITIONS; ?>">Terms and Conditions</a>
   </div>
 <?php
   if (isset($HTTP_GET_VARS['legal_deny'])) {

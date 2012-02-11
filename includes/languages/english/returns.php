@@ -13,7 +13,9 @@
 define('NAVBAR_TITLE', 'Returns');
 define('HEADING_TITLE', 'Returns');
 
-define('TEXT_RETURNS_INFORMATION', '<p><ul>
+define('TEXT_RETURNS_INFORMATION', '
+ Accudro Systems wants to ensure your complete satisfaction for our online purchases, so this our return policy:
+<p><ul>
   <li>All merchandise sold carry 14 days money back guarantee from the date of purchase.</li>
   <li>All merchandise must be returned in original, unused and in new condition.</li>
   <li>All merchandise must be returned in original, unmarked, undamaged boxes with all original packaging materials.  </li>
@@ -25,6 +27,8 @@ define('TEXT_RETURNS_INFORMATION', '<p><ul>
   <li>All returns need "RMA" or Return Merchandise Authorization number,
  returns without  "RMA" or Return Merchandise Authorization  will not be
  eligible for refund.</li>
+ <li>We will not accept merchandise that has been, used, altered or damaged.</li>
+ <li>Refunds may only be issued in the same form as payment.</li>
 </ul>
 <strong>Follow these return processing steps:</strong><br />
 <ol>
