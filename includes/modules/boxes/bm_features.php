@@ -33,12 +33,19 @@
      function execute() {
       global $oscTemplate;
 
-      $data = '<div class="grid_5 bottom_box">' .
+      $data = '<div class="grid_11 bottom_box">' .
               '  <div class="bottom_box_title">' . MODULE_BOXES_FEATURES_TITLE . '</div>' .
-              '  <div class="bottom_box_items"> <ul>' .
-              '    <li><a href="' . tep_href_link(FILENAME_MAGNETIC_SCALE) . '">' . MODULE_BOXES_FEATURES_BOX_MAGNETIC_SCALES . '</a></li>' .
-              '    <li><a href="' . tep_href_link(FILENAME_REMOTE_CONTROL) . '">' . MODULE_BOXES_FEATURES_BOX_REMOTE_CONTROL . '</a></li>' .
-              '  </ul></div>' .
+              '  <div class="bottom_box_items"> ' .
+              ' <table border="0">'.
+
+             ' <tr>'.
+             '   <td><a href="' . tep_href_link(FILENAME_MAGNETIC_SCALE) . '">' . MODULE_BOXES_FEATURES_BOX_MAGNETIC_SCALES . '<img src="images/magnetic_scale.JPG" width="150" height="100" border="0" style="border:0px solid black" ; />  </a>'.
+             '</td>'.
+             '   <td> <a href="' . tep_href_link(FILENAME_REMOTE_CONTROL) . '">' . MODULE_BOXES_FEATURES_BOX_REMOTE_CONTROL . '<img src="images/remote_controller.JPG" width="150" height="225"  border="0" style="border:0px solid black"  ; />  </a>'.
+             '</td>'.
+             ' </tr>'.
+             ' </table>'.
+              ' </div>' .
               '</div>';
       $this->html = $data;
       $oscTemplate->addBlock($data, $this->group);
