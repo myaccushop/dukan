@@ -48,6 +48,15 @@ $.datepicker.setDefaults($.datepicker.regional['<?php echo JQUERY_DATEPICKER_I18
 <link rel="stylesheet" type="text/css" href="stylesheet.css" />
 <link rel="stylesheet" type="text/css" href="acdr.css" />
 <?php echo $oscTemplate->getBlocks('header_tags'); ?>
+
+<link rel="stylesheet" href="ext/jquery/tinycarousel/css/website.css" type="text/css" media="screen"/> 
+
+<script type="text/javascript" src="ext/jquery/tinycarousel/jquery.tinycarousel.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('#slider3').tinycarousel({ pager: true, interval: true  });	
+      });
+</script>	
 </head>
 <body>
 
