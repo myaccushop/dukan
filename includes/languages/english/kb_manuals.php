@@ -13,6 +13,14 @@
 define('NAVBAR_TITLE', 'Manuals');
 define('HEADING_TITLE', 'Manuals');
 
-define('TEXT_INFORMATION', ' <br/> Lathe and Mill Kit DRO manual :&nbsp;&nbsp; <a href="manuals/PEARL_V3.pdf">   IAP3X-Pearl v3</a> <sub>(pdf) <sub/>');
+define('TEXT_INFORMATION', ' 
+<table> 
+   <tr>  
+     <td width="300">Lathe and Mill Kit DRO manual :</td>   
+     <td width="500"><a style="color: #CC0000" href="manuals/PEARL_V3.pdf"><strong>   IAP3X-Pearl v3</strong> </a> <sub>(pdf) <sub/>  </td> 
+  </tr>
+</table> ');
 
 ?>
+
+
