@@ -3,3 +3,6 @@
 2] qtpro4.6.1 : 
    This addon gives the sub-items of a product an inventory option
    http://addons.oscommerce.com/info/7786
+
+
+3] 
