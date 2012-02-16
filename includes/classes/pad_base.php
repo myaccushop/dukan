@@ -391,6 +391,7 @@ if(PRODINFO_ATTRIBUTE_ACTUAL_PRICE_PULL_DOWN == 'True'){
         }
         else {
           $is_out_of_stock=tep_check_stock(tep_get_prid($this->products_id),1,$newcomb);
+          $inStock = ($is_out_of_stock ? "OUT" : "IN");
           if (!$is_out_of_stock | ($showoos == true)) {
             switch ($markoos) {
               case 'Left':   $newtext=($is_out_of_stock ? TEXT_OUT_OF_STOCK.' - ' : '').substr($newtext,2);
@@ -400,7 +401,8 @@ if(PRODINFO_ATTRIBUTE_ACTUAL_PRICE_PULL_DOWN == 'True'){
               default:       $newtext=substr($newtext,2);
                              break;
             }
-            $combinations[] = array('comb'=>$newcomb, 'id'=>substr($newid,1), 'text'=>$newtext);
+            $combinations[] = array('comb'=>$newcomb, 'id'=>substr($newid,1), 'text'=>$newtext, "in_stock"=>$inStock);
+            //$combinations[] = array('comb'=>$newcomb, 'id'=>substr($newid,1), 'text'=>$newtext);
             if ($newisselected) $selected_combination = sizeof($combinations)-1;
           }
         }

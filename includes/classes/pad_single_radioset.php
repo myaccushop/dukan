@@ -82,14 +82,29 @@
         }
         $combname=substr($combname,2).':';
         
+        $OUT_STRING = "OUT";
         foreach ($combinations as $combindex => $comb) {
           $out.="<tr>\n";
-          $out.='  <td align="right" class=main><strong>'.$combname."</strong></td>\n  <td class=main>";
+          $out.='  <td style="width:200px;align:right" class=main><strong>'.$combname."</strong></td>\n  <td style=\"width:400px;align:right;\" >";
           $out.=tep_draw_radio_field('attrcomb', $combinations[$combindex]['id'], ($combindex==$selected_combination)) . $comb['text'];
+          $out.="   ";
+          // $out.=$comb['text'];
+          $out.="</td>\n";
+          $out.='<td  style="align:right; width:400px;">';
+          if ( $comb['in_stock'] == $OUT_STRING )  {
+//            $out.= " <input type=\"text\" name=\"quantity\" value=\"1\" maxlength=\"2\" size=\"2\"> ";
+            $out.= tep_draw_button(IMAGE_BUTTON_OUT_OF_STOCK, 'alert', $_SERVER["REQUEST_URI"], 'primary', array("disabled" => "1")); 
+          }
+          else  {
+            // $out.=tep_draw_hidden_field('attrcomb', $combinations[$combindex]['id']).tep_draw_hidden_field('products_id', $product_info['products_id']) . tep_draw_button(IMAGE_BUTTON_IN_CART, 'cart', null, 'primary');
+            $out.=tep_draw_hidden_field('products_id',$product_info['products_id']) . tep_draw_button(IMAGE_BUTTON_IN_CART, 'cart', null, 'primary');
+          }
           $out.="</td>\n";
           $out.="</tr>\n";
           $combname='';
         }
+
+
       }
       
       $out.=$this->_draw_out_of_stock_message_js($attributes);

@@ -131,6 +131,12 @@ $("#piGal a[rel^='fancybox']").fancybox({
 <?php
     }
 ?>
+    <div style="clear: both;"></div>
+
+
+<!--  ++++ QT Pro start : modified by me                            -->                               
+<!--      old add to cart button                              -->                               
+<!--  
   <div class="buttonSet space_top">
 <?php
   if($product_info['products_quantity'] <= 0 || $product_info['products_status']==0) {
@@ -145,6 +151,9 @@ $("#piGal a[rel^='fancybox']").fancybox({
 ?>
     <?php //echo tep_draw_button(IMAGE_BUTTON_REVIEWS . (($reviews['count'] > 0) ? ' (' . $reviews['count'] . ')' : ''), 'comment', tep_href_link(FILENAME_PRODUCT_REVIEWS, tep_get_all_get_params())); ?>
   </div>
+-->
+<!--  ++++ QT Pro end : modified by me                    -->                               
+
 
 <?php echo stripslashes($product_info['products_description']); ?>
 
