@@ -138,7 +138,7 @@ $("#piGal a[rel^='fancybox']").fancybox({
 
 
 
- <div id="QTpro" class="center" >
+ <div id="QTpro" style="background-color:#f2f2f2"  class="center" >
 <?php
 //++++ QT Pro: End Changed Code
     $products_attributes_query = tep_db_query("select count(*) as total from " . TABLE_PRODUCTS_OPTIONS . " popt, " . TABLE_PRODUCTS_ATTRIBUTES . " patrib where patrib.products_id='" . (int)$HTTP_GET_VARS['products_id'] . "' and patrib.options_id = popt.products_options_id and popt.language_id = '" . (int)$languages_id . "'");
