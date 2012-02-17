@@ -423,3 +423,19 @@ SPAN.errorText {
   float: left;
   margin-right: 5px;
 }
+
+
+.left {
+width:350px;
+float:left;
+}
+
+.center {
+width:500px;
+float:left;
+}
+
+.right {
+width:600px;
+float:left;
+}

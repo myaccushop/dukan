@@ -19,7 +19,7 @@
 
   require(DIR_WS_INCLUDES . 'template_top.php');
 
-  if ($product_check['total'] < 1) {
+if ($product_check['total'] < 1) {
 ?>
 
 <div class="contentContainer">
@@ -55,7 +55,7 @@
 <?php echo tep_draw_form('cart_quantity', tep_href_link(FILENAME_PRODUCT_INFO, tep_get_all_get_params(array('action')) . 'action=add_product')); ?>
 
 <div>
-  <h1 style="float: right;"><?php echo $products_price; ?></h1>
+   <h1 style="float: right;"><?php echo $products_price; ?></h1>
   <h1><?php echo $products_name; ?></h1>
 </div>
 
@@ -69,7 +69,7 @@
       if (tep_db_num_rows($pi_query) > 0) {
 ?>
 
-    <div id="piGal" style="float: right;">
+    <div id="piGal" class="left" >
       <ul>
 
 <?php
@@ -111,7 +111,7 @@ $('#piGal ul').bxGallery({
 </script>
 
 <?php
-      } else {
+    } else {
 ?>
 
     <div id="piGal" style="float: right;">
@@ -131,7 +131,40 @@ $("#piGal a[rel^='fancybox']").fancybox({
 <?php
     }
 ?>
-  <div class="buttonSet space_top">
+
+
+
+
+
+
+
+ <div id="QTpro" class="center" >
+<?php
+//++++ QT Pro: End Changed Code
+    $products_attributes_query = tep_db_query("select count(*) as total from " . TABLE_PRODUCTS_OPTIONS . " popt, " . TABLE_PRODUCTS_ATTRIBUTES . " patrib where patrib.products_id='" . (int)$HTTP_GET_VARS['products_id'] . "' and patrib.options_id = popt.products_options_id and popt.language_id = '" . (int)$languages_id . "'");
+    $products_attributes = tep_db_fetch_array($products_attributes_query);
+    if ($products_attributes['total'] > 0) {
+//++++ QT Pro: Begin Changed code
+      $products_id=(preg_match("/^\d{1,10}(\{\d{1,10}\}\d{1,10})*$/",$HTTP_GET_VARS['products_id']) ? $HTTP_GET_VARS['products_id'] : (int)$HTTP_GET_VARS['products_id']); 
+      require(DIR_WS_CLASSES . 'pad_' . PRODINFO_ATTRIBUTE_PLUGIN . '.php');
+      $class = 'pad_' . PRODINFO_ATTRIBUTE_PLUGIN;
+      $pad = new $class($products_id);
+      echo $pad->draw();
+//++++ QT Pro
+    ?>
+</div>
+<?php
+     }
+//++++ QT Pro:
+
+//Display a table with which attributecombinations is on stock to the customer?
+if(PRODINFO_ATTRIBUTE_DISPLAY_STOCK_LIST == 'True'): require(DIR_WS_MODULES . "qtpro_stock_table.php"); endif;
+
+//++++ QT Pro: End Changed Code
+?>
+
+
+  <div id="chkout" class="right" >
 <?php
   if($product_info['products_quantity'] <= 0 || $product_info['products_status']==0) {
 ?>
@@ -146,30 +179,12 @@ $("#piGal a[rel^='fancybox']").fancybox({
     <?php //echo tep_draw_button(IMAGE_BUTTON_REVIEWS . (($reviews['count'] > 0) ? ' (' . $reviews['count'] . ')' : ''), 'comment', tep_href_link(FILENAME_PRODUCT_REVIEWS, tep_get_all_get_params())); ?>
   </div>
 
+
+ <div style="clear: both;"></div>
+ </br>
+ </br>
+ </br>
 <?php echo stripslashes($product_info['products_description']); ?>
-
-<?php
-//++++ QT Pro: End Changed Code
-    $products_attributes_query = tep_db_query("select count(*) as total from " . TABLE_PRODUCTS_OPTIONS . " popt, " . TABLE_PRODUCTS_ATTRIBUTES . " patrib where patrib.products_id='" . (int)$HTTP_GET_VARS['products_id'] . "' and patrib.options_id = popt.products_options_id and popt.language_id = '" . (int)$languages_id . "'");
-    $products_attributes = tep_db_fetch_array($products_attributes_query);
-    if ($products_attributes['total'] > 0) {
-//++++ QT Pro: Begin Changed code
-      $products_id=(preg_match("/^\d{1,10}(\{\d{1,10}\}\d{1,10})*$/",$HTTP_GET_VARS['products_id']) ? $HTTP_GET_VARS['products_id'] : (int)$HTTP_GET_VARS['products_id']); 
-      require(DIR_WS_CLASSES . 'pad_' . PRODINFO_ATTRIBUTE_PLUGIN . '.php');
-      $class = 'pad_' . PRODINFO_ATTRIBUTE_PLUGIN;
-      $pad = new $class($products_id);
-      echo $pad->draw();
-//++++ QT Pro
-    ?>
-
-<?php
-     }
-//++++ QT Pro:
-//Display a table with which attributecombinations is on stock to the customer?
-if(PRODINFO_ATTRIBUTE_DISPLAY_STOCK_LIST == 'True'): require(DIR_WS_MODULES . "qtpro_stock_table.php"); endif;
-
-//++++ QT Pro: End Changed Code
-?>
 
     <div style="clear: both;"></div>
 
