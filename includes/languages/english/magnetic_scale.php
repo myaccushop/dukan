@@ -36,13 +36,13 @@ suited for contaminated or dirty environmental conditions). <br />
 </li>
 </ul>
  <br />
-<strong>Lathe Kit scale resolution</strong><br />
+<strong>Lathe Kit scale resolution:</strong><br />
 
-    Y-axis: 5 micron (0.0002") resolution IP-67 rated magnetic scale<br />
+    Cross axis: 1 micron (0.00005") resolution IP-67 rated magnetic scale<br />
+    Longitude axis: 5 micron (0.0002") resolution IP-67 rated magnetic scale<br />
 
-    X-axis: 1 micron (0.00005") resolution IP-67 rated magnetic scale<br />
 <br />
-<strong>Mill Kit scale resolution</strong><br />
+<strong>Mill Kit scale resolution:</strong><br />
 
     All axis 5 micron (0.0002") resolution IP-67 rated magnetic scale<br />
 <br />

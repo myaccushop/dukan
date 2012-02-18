@@ -13,5 +13,5 @@
 define('NAVBAR_TITLE', 'FAQ');
 define('HEADING_TITLE', 'FAQ');
 
-define('TEXT_INFORMATION', 'Put your KB FAQ here.');
+define('TEXT_INFORMATION', '');
 ?>

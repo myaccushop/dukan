@@ -13,5 +13,5 @@
 define('NAVBAR_TITLE', 'Videos');
 define('HEADING_TITLE', 'Videos');
 
-define('TEXT_INFORMATION', 'Put your KB Videos here.');
+define('TEXT_INFORMATION', 'Comming soon.');
 ?>
