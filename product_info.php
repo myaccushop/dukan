@@ -165,6 +165,8 @@ if(PRODINFO_ATTRIBUTE_DISPLAY_STOCK_LIST == 'True'): require(DIR_WS_MODULES . "q
 
 
   <div id="chkout" class="right" >
+</br>
+</br>
 <?php
   if($product_info['products_quantity'] <= 0 || $product_info['products_status']==0) {
 ?>
