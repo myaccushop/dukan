@@ -58,4 +58,5 @@
   define('FILENAME_STOCK', 'stock.php');
   define('FILENAME_QTPRODOCTOR', 'qtprodoctor.php');
 //++++ QT Pro: End Changed Code
+  define('FILENAME_WELCOME', 'welcome.php');
 ?>
