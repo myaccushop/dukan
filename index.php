@@ -160,7 +160,8 @@ ul.lof-main-wapper > li {
   <div id="miniCatContent" class="bottomContent grid_24 alpha omega">
 <?php
 
-$bottom_boxes = array ('specials', 'features');
+//$bottom_boxes = array ('specials', 'features');
+$bottom_boxes = array ('features');
 foreach ($bottom_boxes as $box_type) {
   //
   // Print Information box (need to style it).

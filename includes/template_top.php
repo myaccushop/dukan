@@ -54,7 +54,8 @@ $.datepicker.setDefaults($.datepicker.regional['<?php echo JQUERY_DATEPICKER_I18
 <script type="text/javascript" src="ext/jquery/tinycarousel/jquery.tinycarousel.min.js"></script>
 <script type="text/javascript">
     $(document).ready(function(){
-        $('#slider3').tinycarousel({ pager: true, interval: true  });	
+        //$('#slider2').tinycarousel({display: 2});
+        $('#slider3').tinycarousel({ display:3, pager: true  });	
       });
 </script>	
 </head>

@@ -9,13 +9,24 @@
 #slider1 .overview li{ float: left; margin: 0 20px 0 0; padding: 1px; height: 121px; border: 1px solid #dcdcdc; width: 236px;}
 
 */
-#slider3 { height: 145px; overflow:hidden; }
-#slider3 .viewport { float: left; width: 240px; height: 125px; overflow: hidden; position: relative; }
-#slider3 .butt1ons_tiny_carousel { background:url("images/buttons.png") no-repeat scroll 0 0 transparent;display: block; margin: 30px 10px 0 0; float: left; }
+
+#slider2 { height: 1%; overflow:hidden; padding: 0 0 10px;   }
+#slider2 .viewport { float: left; width: 720px; height: 125px; overflow: hidden; position: relative; }
+#slider2 .butt1ons_tiny_carousel { background:url("../../../../images/buttons.png") no-repeat scroll 0 0 transparent; display: block; margin: 30px 10px 0 0; background-position: 0 -38px; text-indent: -999em; float: left; width: 39px; height: 37px; overflow: hidden; position: relative; }
+#slider2 .next { background-position: 0 0; margin: 30px 0 0 10px;  }
+#slider2 .disable { visibility: hidden; }
+#slider2 .overview { list-style: none; position: absolute; padding: 0; margin: 0; width: 240px; left: 0 top: 0; }
+#slider2 .overview li{ float: left; margin: 0 20px 0 0; padding: 1px; height: 121px; border: 1px solid #dcdcdc; width: 236px;}
+
+
+
+#slider3 { height: 225px; overflow:hidden; }
+#slider3 .viewport { float: left; width: 900px; height: 200px; overflow: hidden; position: relative; }
+#slider3 .butt1ons_tiny_carousel { background:url("../../../../images/buttons.png") no-repeat scroll 0 0 transparent;display: block; margin: 30px 10px 0 0; float: left; }
 #slider3 .next { margin: 30px 0 0 10px;  }
 #slider3 .disable { visibility: hidden; }
 #slider3 .overview { list-style: none; padding: 0; margin: 0;  position: absolute; left: 0; top: 0; }
-#slider3 .overview li{ float: left; margin: 0 20px 0 0; padding: 1px; height: 121px; border: 1px solid #dcdcdc; width: 236px;}
+#slider3 .overview li{ float: left; margin: 0 20px 0 0; padding: 1px; height: 200px; border: 1px solid #dcdcdc; width: 300px;}
 
 #slider3 .pager { overflow:hidden; list-style: none; clear: both; margin: 0 0 0 45px; }
 #slider3 .pager li { float: left; }
