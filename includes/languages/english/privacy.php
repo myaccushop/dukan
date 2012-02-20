@@ -13,7 +13,7 @@
 define('NAVBAR_TITLE', 'Privacy Policy');
 define('HEADING_TITLE', 'Privacy Policy');
 
-define('TEXT_INFORMATION', '
+define('TEXT_PRIVACY_INFORMATION', '
  <br /><strong>What information do we collect?</strong> <br />
 We collect information from you when you place an order, subscribe to our newsletter, respond to a survey or fill out a form.  <br />
 When ordering or registering on our site, as appropriate, you may be asked to enter your: name, e-mail address, mailing address or phone number.<br /><br />
@@ -86,6 +86,6 @@ disclaimers, and limitations of liability governing the use of our
 website at <a href="conditions.php">www.accudro.com</a><br /><br /><strong>Your Consent</strong> <br /><br />By using our site, you consent to our <a target="_blank" href="https://www.accudro.com/privacy.php" style="text-decoration: none; color: rgb(60, 60, 60);">privacy policy</a>.<br />
 <br /><strong>Changes to our Privacy Policy</strong> <br /><br />If
  we decide to change our privacy policy, we will post those changes on 
-this page, and/or update the Privacy Policy modification date below. <br /><br />This policy was last modified on 2/11/2012<br /><br /><span></span><span></span><span></span></div>
+this page, and/or update the Privacy Policy modification date below. <br /><br />This policy was last modified on 2/11/2012<br /><br /><span></span><span></span><span></span>
 ');
 ?>

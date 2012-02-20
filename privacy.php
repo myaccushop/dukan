@@ -23,7 +23,7 @@
 
 <div class="contentContainer">
   <div class="contentText">
-    <?php echo TEXT_INFORMATION; ?>
+    <?php echo TEXT_PRIVACY_INFORMATION; ?>
   </div>
 
   <div class="buttonSet">
