@@ -33,7 +33,7 @@
 
      function execute() {
       global $oscTemplate;
-      $data = '<div class="grid_23 bottom_box">' .
+      $data = '<div class="grid_24 bottom_box">' .
         '      <div class="bottom_box_title">' . MODULE_BOXES_FEATURES_TITLE . '</div>' .
         '      <div class="bottom_box_items"> ' .
          '	<div id="slider3">'.
