@@ -129,7 +129,7 @@ ul.lof-main-wapper > li {
         $new_image = $product_image['image'];
       }
 
-      $npc .= '<li class="slide grid_24 alpha omega">' . tep_image(DIR_WS_IMAGES . $new_image, $new_products['products_name'], "", "340px"). "\n";
+      $npc .= '<li class="slide grid_24 alpha omega"> <a href="' . tep_href_link(FILENAME_PRODUCT_INFO, 'products_id=' . $new_products['products_id']) . '">' . tep_image(DIR_WS_IMAGES . $new_image, $new_products['products_name'], "", "340px"). "\n</a>";
       $npc .= '<div class="lof-main-item-desc grid_10 push_13">' . "\n";
       $npc .= '  <h3><a target="_parent" ' . $counter . '" href="' . tep_href_link(FILENAME_PRODUCT_INFO, 'products_id=' . $new_products['products_id']) . '">' . $new_products['products_name'] . '</a> <i>' . $currencies->display_price($new_products['products_price'], tep_get_tax_rate($new_products['products_tax_class_id'])) . '</i></h3>' . "\n";
       $npc .= preg_replace('/(.*?)<!--break-->.*/ms', '${1}', $new_products['products_description']) . "\n";
