@@ -32,7 +32,7 @@ suited for contaminated or dirty environmental conditions). <br />
 </li>
 <li>Very durable than the glass type.</li>
 <li>Can easily cut it to desired length.</li>
-<li>Easily be mounted. Our sales can be surface mounted directly to the table.other brands require!<br />
+<li>Can easily be mounted. Our scales can be surface mounted directly to the machine table.<br />
 </li>
 </ul>
  <br />

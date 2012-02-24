@@ -21,7 +21,7 @@ define('TEXT_FAQ_INFORMATION', '
 magnetic scale, download co-ordinates using RS232 connector and remote 
 control<br />
      + When you buy a product from us,  you make us your partner in your venture, we will not let you down.<br />
-     + Our vendor is in business for last 10 years and their DROs are been used world wide by MNCs. <br />
+     + Our vendor is in business for last 10 years and their DROs are being used world wide by MNCs. <br />
      + We back our products with 2 year warranty, all repair/replacement is handle in USA<br /><br />
 <strong></strong> <strong>How do we contact you ?</strong><br /><strong><br />
  </strong> By email <a href="mailto:' . STORE_OWNER_EMAIL_ADDRESS . '">' . STORE_OWNER_EMAIL_ADDRESS . '</a> or call ' . SUPPORT_PHONE_NUMBER . '<br />
