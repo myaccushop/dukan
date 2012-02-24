@@ -37,12 +37,8 @@ define('TEXT_RETURNS_INFORMATION', '
   <li>Place the original boxes inside of a larger shipping box.</li>
   <li>Place a copy of your receipt inside the box with a brief explanation of the reason you would like to return the merchandise.</li>
   <li>Write RMA number in our addres as shown below</li>
-  <li>Send it back to us at the following address:</li>
+  <li>Send it to the address provided along with RMA.</li>
 </ol>
-        AccuDRO Systems<br />
-        Attn:<strong> RMA#&lt;write your RMA number here&gt;</strong><br />
-        1111 NW abc<br />
-        Hillsboro OR <br />
 <br />
 ');
 ?>
