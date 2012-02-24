@@ -80,7 +80,7 @@ AccuDRO Systems accepts the following forms of payment for online purchases:
   <li> Paypal (MasterCard, VISA, American Express, Bank)</li>
 </ul>
 The transaction will be charged to your Paypal account only after we have 
-verified address, received payment authorization and confirmed stock availability, and your order is shipped. Your Paypal account will not be changed at the time you submit your order.<br /><br />
+verified address, received payment authorization and confirmed stock availability, and your order is shipped. Your Paypal account will not be charged at the time you submit your order.<br /><br />
 
 
 <h1><strong>Editing, Deleting and Modification</strong></h1>
@@ -94,7 +94,7 @@ ACCEPTANCE OF THE CHANGE. <br /><br />
 
 <h1><strong>Fraud</strong></h1>
 FRAUDULENT ACTIVITIES are highly monitored in our site and if fraud is detected 
-AccuDRO Systems shall resort al remedies available to us, and you shall be 
+AccuDRO Systems shall resort to all remedies available to us, and you shall be 
 responsible for all costs and legal fees arising from these fraudulent 
 activities.<br /><br />
 
