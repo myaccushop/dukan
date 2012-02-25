@@ -19,12 +19,12 @@ define('TEXT_FAQ_INFORMATION', '
 </strong>    3 Reasons<br />
      + Our DROs are best in business with advance features like, 
 magnetic scale, download co-ordinates using RS232 connector and remote 
-control<br />
+control.<br />
      + When you buy a product from us,  you make us your partner in your venture, we will not let you down.<br />
      + Our vendor has been in business since last 10 years and their DROs are being used by MNCs worldwide. <br />
-     + We back our products with 2 year warranty, all repair/replacement is handle in USA<br /><br />
+     + We back our products with 2 year warranty, all repair/replacement is handle in USA.<br /><br />
 <strong></strong> <strong>How do we contact you ?</strong><br /><strong><br />
- </strong> By email <a href="mailto:' . STORE_OWNER_EMAIL_ADDRESS . '">' . STORE_OWNER_EMAIL_ADDRESS . '</a> or call ' . SUPPORT_PHONE_NUMBER . '<br />
+ </strong> By email <a href="mailto:' . STORE_OWNER_EMAIL_ADDRESS . '">' . STORE_OWNER_EMAIL_ADDRESS . '</a> or call ' . SUPPORT_PHONE_NUMBER . '.<br />
 <br /><strong>Are you based in the USA?</strong><br /><strong>  
   <br />
   </strong>Yes, we are proud to be a USA based company.<br />
