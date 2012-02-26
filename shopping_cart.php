@@ -154,7 +154,7 @@
   if (isset($HTTP_GET_VARS['legal_deny'])) {
 ?>
   <div id="accept_deny_part" style="color: red;margin-left:2em">
-  <b>Alert!</b> Checkout order cannot be processed unless <a target="_blank" href="<?php echo FILENAME_CONDITIONS; ?>">Legal Terms and Conditions</a> are accepted.
+  <b>Alert!</b> Checkout order cannot be processed unless <a target="_blank" href="<?php echo FILENAME_CONDITIONS; ?>"><strong>Terms and Conditions</strong></a> are accepted.
   </div>
 <?php
   }
