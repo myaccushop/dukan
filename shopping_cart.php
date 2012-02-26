@@ -92,7 +92,6 @@
 //++++ QT Pro: End Changed Code
         if (tep_not_null($stock_check)) {
           $any_out_of_stock = 1;
-
           $products_name .= $stock_check;
         }
       }
@@ -136,6 +135,13 @@
 <?php
       }
     }
+
+    if ($any_out_of_stock) {
+      //
+      // Don't show checkout button or legal checkbox if out of stock items
+      // exist in the cart
+      //
+    } else {
 ?>
 
   </div>
@@ -160,7 +166,6 @@
   </div>
 
   <div id="checkout_methods">
-    <!-- span class="buttonAction"><?php echo tep_draw_button(IMAGE_BUTTON_CHECKOUT, 'triangle-1-e', tep_href_link(FILENAME_CHECKOUT_SHIPPING, '', 'SSL'), 'primary'); ?></span -->
 <?php
     $initialize_checkout_methods = $payment_modules->checkout_initialization_method();
 
@@ -181,7 +186,9 @@
 
   </div> <!-- checkout_methods -->
 </div>
-
+<?php
+    }
+?>
 </form>
 
 <?php
@@ -203,8 +210,8 @@
 
 <script type="text/javascript">
 $('#checkout_methods a').attr('disabled', true);
-$('#checkout_methods a').animate({opacity:0.4}, 300 );
-$('#checkout_methods a').css('cursor', 'wait');
+// $('#checkout_methods a').animate({opacity:0.4}, 300 );
+// $('#checkout_methods a').css('cursor', 'wait');
 $('#checkout_methods a').attr('title', $('#checkout_methods a').attr('href'));
 $('#checkout_methods a').attr('href', "<?php echo $PHP_SELF . "?legal_deny" ?>");
 $('#accept_legal_part').css ('border', '2px solid #f77');
@@ -212,14 +219,14 @@ $('#accept_legal_part').css ('border', '2px solid #f77');
 $('#accept_legal_part input').change (function() {
   if ($(this).attr('checked') == true) {
     $('#checkout_methods a').removeAttr('disabled');
-    $('#checkout_methods a').animate({opacity:1}, 300 );
+    // $('#checkout_methods a').animate({opacity:1}, 300 );
     $('#checkout_methods a').css('cursor', 'pointer');
     $('#checkout_methods a').attr('href', $('#checkout_methods a').attr('title'));
     $('#accept_legal_part').animate ({borderTopColor:"transparent",borderBottomColor:"transparent",borderLeftColor:"transparent",borderRightColor:"transparent"}, 800);
   } else {
     $('#checkout_methods a').attr('disabled', true);
-    $('#checkout_methods a').animate({opacity:0.4}, 300 );
-    $('#checkout_methods a').css('cursor', 'wait');
+    // $('#checkout_methods a').animate({opacity:0.4}, 300 );
+    // $('#checkout_methods a').css('cursor', 'wait');
     $('#checkout_methods a').attr('title', $('#checkout_methods a').attr('href'));
     $('#checkout_methods a').attr('href', "<?php echo $PHP_SELF . "?legal_deny" ?>");
     $('#accept_legal_part').animate ({borderTopColor:"#f77",borderBottomColor:"#f77",borderLeftColor:"#f77",borderRightColor:"#f77"}, 100);
