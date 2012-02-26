@@ -3,3 +3,13 @@
 2] qtpro4.6.1 : 
    This addon gives the sub-items of a product an inventory option
    http://addons.oscommerce.com/info/7786
+
+
+3] Is there a way to reset the "products viewed" and "products purchased" statistics in the Reports section? If so, how?
+
+   you can do this by running queries on the database using phpmyadmin:
+
+   update products_description set products_viewed = 0;
+   update products set products_ordered = 0;
+
+

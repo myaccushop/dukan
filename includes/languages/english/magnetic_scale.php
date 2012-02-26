@@ -25,14 +25,14 @@ All our DRO kits come with magnetic scales:</strong><br />
 
 <br/>
 <br/>
-<strong>Magnetic scales are :</strong><br />
+<strong>Magnetic scales:</strong><br />
 <ul>
-  <li>Immune to coolant and dust. They have full IP-67 rating ( scales 
+  <li>Are immune to coolant and dust. They have full IP-67 rating ( scales 
 suited for contaminated or dirty environmental conditions). <br />
 </li>
-<li>Very durable than the glass type.</li>
-<li>Can easily cut it to desired length.</li>
-<li>Can easily be mounted. Our scales can be surface mounted directly to the machine table.<br />
+<li>Are very durable than the glass type.</li>
+<li>Can easily cut to desired length.</li>
+<li>Can easily be mounted. They can be surface mounted directly to the machine table.<br />
 </li>
 </ul>
  <br />

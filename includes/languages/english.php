@@ -250,5 +250,5 @@ define('TEXT_CCVAL_ERROR_INVALID_NUMBER', 'The credit card number entered is inv
 define('TEXT_CCVAL_ERROR_UNKNOWN_CARD', 'The first four digits of the number entered are: %s. If that number is correct, we do not accept that type of credit card. If it is wrong, please try again.');
 
 define('FOOTER_TEXT_BODY', 'Copyright &copy; ' . date('Y') . ' <a href="' . tep_href_link(FILENAME_DEFAULT) . '">' . STORE_NAME . '</a>');
-define('SUPPORT_PHONE_NUMBER', '(555) 555-5555');
+define('SUPPORT_PHONE_NUMBER', '1-877-407-3515 ');
 ?>
