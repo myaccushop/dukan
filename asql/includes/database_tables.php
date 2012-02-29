@@ -62,4 +62,10 @@
 //++++ QT Pro: Begin Changed code
   define('TABLE_PRODUCTS_STOCK', 'products_stock');
 //++++ QT Pro: End Changed Code
+  /***** Begin Sitemap_SEO *****/
+  define('TABLE_SITEMAP_SEO_BOX_LINKS', 'sitemap_seo_box_links');  
+  define('TABLE_SITEMAP_SEO_BOXES', 'sitemap_seo_boxes');
+  define('TABLE_SITEMAP_SEO_PAGES', 'sitemap_seo_pages');
+  define('TABLE_SITEMAP_SEO_SETTINGS', 'sitemap_seo_settings'); 
+  /***** End Sitemap_SEO *****/    
 ?>

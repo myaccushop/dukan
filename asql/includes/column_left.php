@@ -21,6 +21,7 @@
     include(DIR_WS_BOXES . 'localization.php');
     include(DIR_WS_BOXES . 'reports.php');
     include(DIR_WS_BOXES . 'tools.php');
+    include(DIR_WS_BOXES . 'sitemap_seo.php');  
 ?>
 
 <div id="adminAppMenu">

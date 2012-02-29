@@ -70,4 +70,11 @@
   define('FILENAME_MAGNETIC_SCALE', 'magnetic_scale.php');
   define('FILENAME_REMOTE_CONTROL', 'remote_control.php');
   define('FILENAME_WHY_DRO', 'why_dro.php');
+
+  /***** Begin Sitemap_SEO *****/
+  define('FILENAME_SITEMAP_SEO', 'sitemap.php');
+  define('FILENAME_SITEMAP_SEO_CATEGORY', 'sitemap_category.php');
+  define('FILENAME_SITEMAP_SEO_PRODUCT', 'sitemap_product.php');
+  define('FILENAME_SITEMAP_SEO_MANUFACTURERS', 'sitemap_manufacturers.php');  
+  /***** End Sitemap_SEO *****/
 ?>

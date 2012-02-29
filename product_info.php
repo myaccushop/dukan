@@ -219,6 +219,15 @@ if(PRODINFO_ATTRIBUTE_DISPLAY_STOCK_LIST == 'True'): require(DIR_WS_MODULES . "q
 
 </form>
 
+     <!-- Begin Sitemap SEO-->
+     <script type='text/javascript' src='javascript/sitemap_seo.js'></script>
+     <?php 
+     require(DIR_WS_LANGUAGES . $language . '/' . FILENAME_SITEMAP_SEO);
+     include(DIR_WS_MODULES . FILENAME_SITEMAP_SEO_PRODUCT);
+     include(DIR_WS_MODULES . FILENAME_SITEMAP_SEO_CATEGORY);
+     include(DIR_WS_MODULES . FILENAME_SITEMAP_SEO_MANUFACTURERS); 
+     ?>     
+    <!-- End Sitemap SEO -->
 <?php
   }
 

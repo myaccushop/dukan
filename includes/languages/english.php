@@ -251,4 +251,7 @@ define('TEXT_CCVAL_ERROR_UNKNOWN_CARD', 'The first four digits of the number ent
 
 define('FOOTER_TEXT_BODY', 'Copyright &copy; ' . date('Y') . ' <a href="' . tep_href_link(FILENAME_DEFAULT) . '">' . STORE_NAME . '</a>');
 define('SUPPORT_PHONE_NUMBER', '1-877-407-3515 ');
+/***** Begin Sitemap_SEO *****/
+define('BOX_INFORMATION_SITEMAP_SEO', 'Site Map');
+/***** End Sitemap_SEO *****/
 ?>

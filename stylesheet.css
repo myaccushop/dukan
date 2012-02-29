@@ -439,3 +439,60 @@ float:left;
 width:600px;
 float:left;
 }
+
+/***** Begin Sitemap SEO *****/ 
+ul.sitemap {
+color: #ff0000;
+}
+.sitemap {
+  font-family: Verdana, Arial, sans-serif;
+  font-size: 10px;
+  color: #0000ff;
+  font-weight : normal;
+}
+.sitemapHeading {
+  font-family: Verdana, Arial, sans-serif;
+  font-size: 12px;
+  color: #0000ff;
+  font-weight : normal;
+}
+.sitemapProducts {
+  font-family: Verdana, Arial, sans-serif;
+  font-size: 10px;
+  color: #f000ff;
+  font-weight : normal;
+}
+A.sitemap { 
+  color: #009900; 
+}
+A.sitemap:hover {
+  color: #ff0000;
+}
+.sitemap_indvidual_hdg {
+  font-family: Verdana, Arial, sans-serif;
+  font-size: 12px;
+  color: #0000ff;
+  font-weight : normal;
+}
+A.sitemap_indvidual_hdg { color: #009900; }
+A.sitemap_indvidual_hdg:hover { color: #ff0000; }
+.sitemap_indvidual { 
+  font-family: Verdana, Arial, sans-serif;
+  font-size: 10px;
+  color: #f000ff;
+  font-weight : normal;
+}
+A.sitemap_indvidual { color: #009900; }
+A.sitemap_indvidual:hover { color: #ff0000; }
+
+h2 {
+ font-family: Verdana, Arial, sans-serif;
+ font-size: 14px;
+ font-weight: normal;
+ margin-bottom: 0;
+ padding-bottom: 0;
+ color: #000;
+}
+
+/***** End Sitemap SEO *****/ 
+

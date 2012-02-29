@@ -59,4 +59,10 @@
   define('FILENAME_QTPRODOCTOR', 'qtprodoctor.php');
 //++++ QT Pro: End Changed Code
   define('FILENAME_WELCOME', 'welcome.php');
+  /***** Begin Sitemap_SEO *****/  
+  define('FILENAME_SITEMAP_SEO', 'sitemap.php');
+  define('FILENAME_SITEMAP_SEO_BOX_CONTROL', 'sitemap_seo_box_control.php');
+  define('FILENAME_SITEMAP_SEO_PAGE_CONTROL', 'sitemap_seo_page_control.php');    
+  define('FILENAME_SITEMAP_SEO_SETTINGS_CONTROL', 'sitemap_seo_settings_control.php');
+  /***** End Sitemap_SEO *****/ 
 ?>

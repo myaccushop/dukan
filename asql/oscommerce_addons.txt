@@ -13,3 +13,8 @@
    update products set products_ordered = 0;
 
 
+4] Sitemap SEO
+   http://addons.oscommerce.com/info/6459
+
+   The support thread is located at:
+   http://forums.oscommerce.com/index.php?showtopic=324829

@@ -114,6 +114,13 @@ define('BOX_TOOLS_SERVER_INFO', 'Server Info');
 define('BOX_TOOLS_VERSION_CHECK', 'Version Checker');
 define('BOX_TOOLS_WHOS_ONLINE', 'Who\'s Online');
 
+/***** Begin Sitemap_SEO *****/
+define('BOX_HEADING_SITEMAP_SEO', 'Sitemap SEO');
+define('BOX_SITEMAP_SEO_BOX_CONTROL', 'Box Control');
+define('BOX_SITEMAP_SEO_PAGE_CONTROL', 'Page Control');
+define('BOX_SITEMAP_SEO_SETTINGS_CONTROL', 'Settings Control');
+/***** End Sitemap_SEO *****/ 
+
 // localizaion box text in includes/boxes/localization.php
 define('BOX_HEADING_LOCALIZATION', 'Localization');
 define('BOX_LOCALIZATION_CURRENCIES', 'Currencies');
@@ -305,4 +312,10 @@ define('SUPPORT_PHONE_NUMBER', '1-877-407-3515');
 define('EMAIL_SEPARATOR', '------------------------------------------------------');
 
 define('COMMUNICATION_EMAIL_FOOTER', "For any questions or support, please contact:\n" . EMAIL_SEPARATOR . "\n  " . STORE_NAME . "\n  " . STORE_OWNER_EMAIL_ADDRESS . "\n  " . SUPPORT_PHONE_NUMBER );
+/***** Begin Sitemap_SEO *****/
+define('BOX_HEADING_SITEMAP_SEO', 'Sitemap SEO');
+define('BOX_SITEMAP_SEO_BOX_CONTROL', 'Box Control');
+define('BOX_SITEMAP_SEO_PAGE_CONTROL', 'Page Control');
+define('BOX_SITEMAP_SEO_SETTINGS_CONTROL', 'Settings Control');
+/***** End Sitemap_SEO *****/
 ?>
