@@ -53,7 +53,11 @@ function buildBranch($parent_id, $level = 0, $p_category_link = false) {
 			
 			if ($level == 0) {$result .= $this->root_start_string;} //prints nothing
 			
-			$result .= str_repeat($this->spacer_string, $this->spacer_multiplier * $level) . '<a class="sitemap" title="'. $category['name'] . '" href="' . tep_href_link(FILENAME_DEFAULT, 'cPath=' . $category_link) . '">';
+                        /* ST_change change the file name from index.php to catalog.php so that the individual 
+                          $result .= str_repeat($this->spacer_string, $this->spacer_multiplier * $level) . '<a class="sitemap" title="'. $category['name'] . '" href="' . tep_href_link(FILENAME_DEFAULT, 'cPath=' . $category_link) . '">';
+
+                         */
+			$result .= str_repeat($this->spacer_string, $this->spacer_multiplier * $level) . '<a class="sitemap" title="'. $category['name'] . '" href="' . tep_href_link(FILENAME_CATALOG, 'cPath=' . $category_link) . '">';
 			
 			$result .= $category['name'];
 			

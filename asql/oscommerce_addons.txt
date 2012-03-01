@@ -18,3 +18,21 @@
 
    The support thread is located at:
    http://forums.oscommerce.com/index.php?showtopic=324829
+
+   SEO configuration:
+
+    - Configuration:
+        Sitemap SEO:
+                    Display Products in Categories : True
+                    Display the manufacturers: false
+                    Show Related Products by Manufacturer: false
+                    Module Placement - Standard Boxes: left
+                    Module Placement - Standard Pages: left
+
+
+    - Sitemap SEO
+      Setting Control:
+                     Page Heading: AccuDRO Sitemap
+                     Heading Text - Categories: Products
+                     Heading Text - Standard Pages All other links
+     Page control: remove the unwanted links and set the sort order
