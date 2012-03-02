@@ -25,16 +25,21 @@ All our DRO kits come with magnetic scales:</strong><br />
 
 <br/>
 <br/>
-<strong>Magnetic scales:</strong><br />
+<strong>Why Magnetic scales:</strong><br />
 <ul>
-  <li>Are immune to coolant and dust. They have full IP-67 rating ( scales 
-suited for contaminated or dirty environmental conditions). <br />
-</li>
-<li>Are very durable than the glass type.</li>
-<li>Can easily cut to desired length.</li>
-<li>Can easily be mounted. They can be surface mounted directly to the machine table.<br />
-</li>
+  <li>Are immune to coolant and dust. They have full IP-67 rating ( scales suited for contaminated or dirty environmental conditions). <br /></li>
+  <li>Are very durable than the glass type.</li>
+  <li>Unlike glass scales can be cut to any length you need.</li>
+  <li>Can easily be mounted. They can be surface mounted directly to the machine table.</li>
+  <li>They are more durable.</li>
+  <li>Thinnest scale to mount.</li>
 </ul>
+
+ <br />
+<strong>100% Laser Calibration:</strong><br />
+  Our magnetic scales are individually inspected and calibrated by Innovative\'s in-house laser interferrometer to ensure 100% accuracy, each magnetic scale comes with a calibration certificate.
+<br />
+
  <br />
 <strong>Lathe Kit scale resolution:</strong><br />
 
