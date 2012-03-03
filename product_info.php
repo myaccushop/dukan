@@ -68,6 +68,8 @@ if ($product_check['total'] < 1) {
 
       if (tep_db_num_rows($pi_query) > 0) {
 ?>
+<div class="fb-like" data-send="true" data-layout="button_count" data-width="450" data-show-faces="true" data-font="verdana"></div>
+<br/>
 
     <div id="piGal" class="left" >
       <ul>
@@ -165,8 +167,8 @@ if(PRODINFO_ATTRIBUTE_DISPLAY_STOCK_LIST == 'True'): require(DIR_WS_MODULES . "q
 
 
   <div id="chkout" class="right" >
-</br>
-</br>
+<br/>
+<br/>
 <?php
   if($product_info['products_quantity'] <= 0 || $product_info['products_status']==0) {
 ?>
@@ -183,9 +185,9 @@ if(PRODINFO_ATTRIBUTE_DISPLAY_STOCK_LIST == 'True'): require(DIR_WS_MODULES . "q
 
 
  <div style="clear: both;"></div>
- </br>
- </br>
- </br>
+ <br/>
+ <br/>
+ <br/>
 <?php echo stripslashes($product_info['products_description']); ?>
 
     <div style="clear: both;"></div>
