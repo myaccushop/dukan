@@ -68,7 +68,10 @@ if ($product_check['total'] < 1) {
 
       if (tep_db_num_rows($pi_query) > 0) {
 ?>
-<div class="fb-like" data-send="true" data-layout="button_count" data-width="450" data-show-faces="true" data-font="verdana"></div>
+<div class="fb-like" data-send="true" data-layout="button_count" data-width="50" data-show-faces="true" data-font="verdana"></div>
+<!-- Place this tag where you want the +1 button to render -->
+<g:plusone size="medium"></g:plusone>
+<a href="https://twitter.com/share" class="twitter-share-button">Tweet</a>
 <br/>
 
     <div id="piGal" class="left" >
