@@ -13,3 +13,6 @@
    update products set products_ordered = 0;
 
 
+4] Modular SEO Header Tags
+   down load http://addons.oscommerce.com/info/7646/v,23
+   Please read the support thread at:http://forums.oscommerce.com/topic/367607-addon-modular-seo-header-tags/
