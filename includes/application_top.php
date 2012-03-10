@@ -44,7 +44,38 @@
   $request_type = (getenv('HTTPS') == 'on') ? 'SSL' : 'NONSSL';
 
 // set php_self in the local scope
-  $PHP_SELF = (((strlen(ini_get('cgi.fix_pathinfo')) > 0) && ((bool)ini_get('cgi.fix_pathinfo') == false)) || !isset($HTTP_SERVER_VARS['SCRIPT_NAME'])) ? basename($HTTP_SERVER_VARS['PHP_SELF']) : basename($HTTP_SERVER_VARS['SCRIPT_NAME']);
+//  $PHP_SELF = (((strlen(ini_get('cgi.fix_pathinfo')) > 0) && ((bool)ini_get('cgi.fix_pathinfo') == false)) || !isset($HTTP_SERVER_VARS['SCRIPT_NAME'])) ? basename($HTTP_SERVER_VARS['PHP_SELF']) : basename($HTTP_SERVER_VARS['SCRIPT_NAME']);
+
+/**
+  * ULTIMATE Seo Urls 5 PRO by FWR Media
+  * function to return the base filename 
+  */
+  function usu5_base_filename() {
+    // Probably won't get past SCRIPT_NAME unless this is reporting cgi location
+    $base = new ArrayIterator( array( 'SCRIPT_NAME', 'PHP_SELF', 'REQUEST_URI', 'ORIG_PATH_INFO', 'HTTP_X_ORIGINAL_URL', 'HTTP_X_REWRITE_URL' ) );
+    while ( $base->valid() ) {
+      if ( array_key_exists(  $base->current(), $_SERVER ) && !empty(  $_SERVER[$base->current()] ) ) {
+        if ( false !== strpos( $_SERVER[$base->current()], '.php' ) ) {
+          preg_match( '@[a-z0-9_]+\.php@i', $_SERVER[$base->current()], $matches );
+          if ( is_array( $matches ) && ( array_key_exists( 0, $matches ) )
+                                    && ( substr( $matches[0], -4, 4 ) == '.php' )
+                                    && ( is_readable( $matches[0] ) ) ) {
+            return $matches[0];
+          } 
+        } 
+      }
+      $base->next();
+    }
+    // Some odd server set ups return / for SCRIPT_NAME and PHP_SELF when accessed as mysite.com (no index.php) where they usually return /index.php
+    if ( ( $_SERVER['SCRIPT_NAME'] == '/' ) || ( $_SERVER['PHP_SELF'] == '/' ) ) {
+      return 'index.php';
+    }
+    // Return the standard RC3 code 
+    return ( ( ( strlen( ini_get( 'cgi.fix_pathinfo' ) ) > 0) && ( (bool)ini_get( 'cgi.fix_pathinfo' ) == false ) ) || !isset( $_SERVER['SCRIPT_NAME'] ) ) ? basename( $_SERVER['PHP_SELF'] ) : basename( $_SERVER['SCRIPT_NAME'] );
+  } // End function
+// set php_self in the local scope
+  $PHP_SELF = usu5_base_filename();
+
 
   if ($request_type == 'NONSSL') {
     define('DIR_WS_CATALOG', DIR_WS_HTTP_CATALOG);
@@ -275,6 +306,16 @@
     $languages_id = $lng->language['id'];
   }
 
+  /**
+  * ULTIMATE Seo Urls 5 PRO by FWR Media
+  */
+  Usu_Main::i()->setVar( 'languages_id', $languages_id )
+               ->setVar( 'request_type', $request_type ) 
+               ->setVar( 'session_started', $session_started ) 
+               ->setVar( 'sid', $SID ) 
+               ->setVar( 'language', $language )
+               ->setVar( 'filename', $PHP_SELF )
+               ->initiate( ( isset( $lng ) && ( $lng instanceof language ) ) ? $lng : array(), $languages_id, $language );
 // include the language translations
   require(DIR_WS_LANGUAGES . $language . '.php');
 
