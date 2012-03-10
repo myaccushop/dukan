@@ -305,4 +305,11 @@ define('SUPPORT_PHONE_NUMBER', '1-877-407-3515');
 define('EMAIL_SEPARATOR', '------------------------------------------------------');
 
 define('COMMUNICATION_EMAIL_FOOTER', "For any questions or support, please contact:\n" . EMAIL_SEPARATOR . "\n  " . STORE_NAME . "\n  " . STORE_OWNER_EMAIL_ADDRESS . "\n  " . SUPPORT_PHONE_NUMBER );
+
+// Start Modular SEO header Tags
+  define( 'MODULE_HEADER_TAGS_PRODUCT_TITLE_INSERT_TITLE', 'Products Head Title:' );
+  define( 'MODULE_HEADER_TAGS_PRODUCT_DESCRIPTION_INSERT_TITLE', 'Products Meta Description:' );
+  define( 'MODULE_HEADER_TAGS_EDIT_CATEGORIES_TITLE', 'Category Head Title:' );
+  define( 'MODULE_HEADER_TAGS_EDIT_CATEGORIES_DESCRIPTION', 'Category Meta Description:' );
+// End Modular SEO header Tags
 ?>

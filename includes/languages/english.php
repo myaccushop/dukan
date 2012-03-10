@@ -41,13 +41,15 @@ function tep_date_raw($date, $reverse = false) {
 define('LANGUAGE_CURRENCY', 'USD');
 
 // Global entries for the <html> tag
-define('HTML_PARAMS', 'dir="ltr" lang="en"');
+define('HTML_PARAMS','xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en"');
 
 // charset for web pages and emails
 define('CHARSET', 'utf-8');
 
 // page title
-define('TITLE', STORE_NAME);
+// Modular SEO header Tags
+define('TITLE', '');
+// Modular SEO header Tags define('TITLE', STORE_NAME);
 
 // header text in includes/header.php
 define('HEADER_TITLE_CREATE_ACCOUNT', 'Create an Account');

@@ -21,6 +21,9 @@ $product_investigation = qtpro_doctor_investigate_product($HTTP_GET_VARS['pID'])
 
   $action = (isset($HTTP_GET_VARS['action']) ? $HTTP_GET_VARS['action'] : '');
 
+  // Modular SEO Header Tags
+  include( DIR_WS_MODULES . 'header_tags/categories_products_process.php' );
+
   if (tep_not_null($action)) {
     switch ($action) {
       case 'setflag':
@@ -585,6 +588,9 @@ updateGross();
           </tr>
 <?php
     }
+
+// Modular SEO Header Tags
+  include( DIR_WS_MODULES . 'header_tags/products_insert.php' );
 ?>
           <tr>
             <td colspan="2"><?php echo tep_draw_separator('pixel_trans.gif', '1', '10'); ?></td>
@@ -1086,7 +1092,10 @@ $('#products_date_available').datepicker({
         break;
     }
 
-    if ( (tep_not_null($heading)) && (tep_not_null($contents)) ) {
+ // Modular SEO Header Tags
+  include( DIR_WS_MODULES . 'header_tags/categories_insert.php' );
+
+   if ( (tep_not_null($heading)) && (tep_not_null($contents)) ) {
       echo '            <td width="25%" valign="top">' . "\n";
 
       $box = new box;
