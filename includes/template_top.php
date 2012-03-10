@@ -60,49 +60,54 @@ $.datepicker.setDefaults($.datepicker.regional['<?php echo JQUERY_DATEPICKER_I18
         $('#slider3').tinycarousel({ display:3, pager: true  });	
       });
 </script>	
+<?php
+// load server configuration parameters
+  if (file_exists('includes/local/noanalytics.php')) { // for developers
+
+  } else {
+?>
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-29342563-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+    </script>
 
 
-<script type="text/javascript">
+    <!-- Quantcast Tag -->
+    <script type="text/javascript">
+    var _qevents = _qevents || [];
+    
+    (function() {
+   var elem = document.createElement('script');
+   elem.src = (document.location.protocol == "https:" ? "https://secure" : "http://edge") + ".quantserve.com/quant.js";
+   elem.async = true;
+   elem.type = "text/javascript";
+   var scpt = document.getElementsByTagName('script')[0];
+   scpt.parentNode.insertBefore(elem, scpt);
+   })();
 
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-29342563-1']);
-  _gaq.push(['_trackPageview']);
+   _qevents.push({
+   qacct:"p-84dUqzRKnAMMI"
+   });
+   </script>
 
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-
-</script>
-
-
-<!-- Quantcast Tag -->
-<script type="text/javascript">
-var _qevents = _qevents || [];
-
-(function() {
-var elem = document.createElement('script');
-elem.src = (document.location.protocol == "https:" ? "https://secure" : "http://edge") + ".quantserve.com/quant.js";
-elem.async = true;
-elem.type = "text/javascript";
-var scpt = document.getElementsByTagName('script')[0];
-scpt.parentNode.insertBefore(elem, scpt);
-})();
-
-_qevents.push({
-qacct:"p-84dUqzRKnAMMI"
-});
-</script>
-
-<noscript>
-<div style="display:none;">
-<img src="//pixel.quantserve.com/pixel/p-84dUqzRKnAMMI.gif" border="0" height="1" width="1" alt="Quantcast"/>
-</div>
-</noscript>
-<!-- End Quantcast tag -->
-
-
+   <noscript>
+   <div style="display:none;">
+   <img src="//pixel.quantserve.com/pixel/p-84dUqzRKnAMMI.gif" border="0" height="1" width="1" alt="Quantcast"/>
+   </div>
+   </noscript>
+   <!-- End Quantcast tag -->
+<?php  
+     }
+?>
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
