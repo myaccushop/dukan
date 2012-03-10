@@ -13,3 +13,7 @@
    update products set products_ordered = 0;
 
 
+4] Ultimate Seo Urls 5 PRO
+
+   http://addons.oscommerce.com/info/7704/v,23
+   Support thread: http://forums.oscommerce.com/topic/336702-ultimate-seo-urls-5-by-fwr-media/ 
