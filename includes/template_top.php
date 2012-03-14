@@ -26,7 +26,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=<?php echo CHARSET; ?>" />
 <title><?php echo tep_output_string_protected($oscTemplate->getTitle()); ?> Digital Readouts beats Newall Acurite Sargon Fagro Electronica Heidenhain. </title>
 <meta name="description" content="At AccuDRO we sell high quality digital readout systems with magnetic scales starting at only $650! Call us at 877-407-3515 for all your digital readout needs!" />
-<meta name="keywords" content="dro, digital readout, heidenhain, newall, acurite, electronica" />
+<meta name="keywords" content="dro, digital readout, heidenhain, newall, acurite,mini lathe dro, mini mill dro, minilathe dro, minimill dro , mini-lathe dro, mini-mill dro, lathe dro, mill dro, Accudro.com, Newall DP700 DRO Mill Packages 2 & 3 Axes, Newall, mill digital read out, readouts, dros,Anilam dro, Heidenhain dro, Heidenhain DRO, Anilam DRO, dro, digital read out, 2 or 3 axis dro, dro packages, dro bundles, dro kits, dro systems" />
 <base href="<?php echo (($request_type == 'SSL') ? HTTPS_SERVER : HTTP_SERVER) . DIR_WS_CATALOG; ?>" />
 <link rel="stylesheet" type="text/css" href="ext/jquery/ui/custom-theme/jquery-ui-1.8.10.custom.css" />
 <script type="text/javascript" src="ext/jquery/jquery-1.4.4.min.js"></script>
