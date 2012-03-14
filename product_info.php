@@ -68,11 +68,14 @@ if ($product_check['total'] < 1) {
 
       if (tep_db_num_rows($pi_query) > 0) {
 ?>
-<div class="fb-like" data-send="true" data-layout="button_count" data-width="50" data-show-faces="true" data-font="verdana"></div>
+<div class="outer" style="width: 350x; height:25px; float:left; background-color:#cccccc  ; border-radius:3px;border:1px; padding:5px;">
+
+<div class="fb-like" data-send="false" data-layout="button_count" data-width="100" data-show-faces="true" data-font="verdana"></div>
 <!-- Place this tag where you want the +1 button to render -->
 <g:plusone size="medium"></g:plusone>
 <a href="https://twitter.com/share" class="twitter-share-button">Tweet</a>
-<br/>
+</div>
+ <div style="clear: both;"></div>
 
     <div id="piGal" class="left" >
       <ul>
@@ -187,8 +190,7 @@ if(PRODINFO_ATTRIBUTE_DISPLAY_STOCK_LIST == 'True'): require(DIR_WS_MODULES . "q
   </div>
 
 
- <div style="clear: both;"></div>
- <br/>
+ <div style="clear: both;"></div> <br/>
  <br/>
  <br/>
 <?php echo stripslashes($product_info['products_description']); ?>
