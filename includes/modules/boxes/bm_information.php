@@ -51,9 +51,13 @@
               '    <li><a href="' . tep_href_link(FILENAME_WARRANTY) . '">' . MODULE_BOXES_INFORMATION_BOX_WARRANTY . '</a></li>' .
               '    <li><a href="' . tep_href_link(FILENAME_FAQ) . '">' . MODULE_BOXES_INFORMATION_BOX_FAQ . '</a></li>' .
               '    <li><a href="' . tep_href_link(FILENAME_ABOUT) . '">' . MODULE_BOXES_INFORMATION_BOX_ABOUT . '</a></li>' .
-              '    <li><a href="https://twitter.com/AccuDRO" class="twitter-follow-button" data-show-count="false" data-show-screen-name="false">Follow @AccuDRO</a></li>' .
+              '    <li><br/><strong> Connect with Us</strong></li>' .
+//              '    <li><a href="https://twitter.com/AccuDRO" class="twitter-follow-button" data-show-count="false" data-show-screen-name="false">Follow @AccuDRO</a></li>' .
+              '    <li><a href="https://twitter.com/AccuDRO">  <img src="images/twitter_logo.png" alt="Follow us on Twitter" title="Follow us on Twitter"></a><a href="https://facebook.com/AccuDRO">  <img src="images/facebook_logo.png" alt="Join us on facebook" title="Join us on facebook"></a></li>' .
               '  </ul></div>' .
              '</div>';
+
+
 
 
       $this->html = $data;
