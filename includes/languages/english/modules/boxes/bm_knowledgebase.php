@@ -18,5 +18,6 @@
   define('MODULE_BOXES_KNOWLEDGEBASE_BOX_FAQ', 'FAQ');
   define('MODULE_BOXES_KNOWLEDGEBASE_BOX_MAGNETIC_SCALES', 'Magnetic Scales');
   define('MODULE_BOXES_KNOWLEDGEBASE_BOX_REMOTE_CONTROL', 'Remote control');
+  define('MODULE_BOXES_KNOWLEDGEBASE_BOX_DRO_PROD_IMPROV', 'Productivity improvement calculator');
 
 ?>

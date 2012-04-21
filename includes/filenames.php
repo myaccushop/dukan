@@ -70,4 +70,5 @@
   define('FILENAME_MAGNETIC_SCALE', 'magnetic_scale.php');
   define('FILENAME_REMOTE_CONTROL', 'remote_control.php');
   define('FILENAME_WHY_DRO', 'why_dro.php');
+  define('FILENAME_DRO_PRODUCTIVITY_CAL', 'dro_productivity_improvement_cal.php');
 ?>

@@ -48,6 +48,7 @@
               '  <div class="bottom_box_items"> <ul>' .
               '    <li><a href="' . tep_href_link(FILENAME_MAGNETIC_SCALE) . '">' . MODULE_BOXES_KNOWLEDGEBASE_BOX_MAGNETIC_SCALES . '</a></li>' .
               '    <li><a href="' . tep_href_link(FILENAME_REMOTE_CONTROL) . '">' . MODULE_BOXES_KNOWLEDGEBASE_BOX_REMOTE_CONTROL . '</a></li>' .
+              '    <li><a href="' . tep_href_link(FILENAME_DRO_PRODUCTIVITY_CAL) . '">' . MODULE_BOXES_KNOWLEDGEBASE_BOX_DRO_PROD_IMPROV . '</a></li>' .
               '    <li><a href="' . tep_href_link(FILENAME_KB_VIDEOS) . '">' . MODULE_BOXES_KNOWLEDGEBASE_BOX_VIDEOS . '</a></li>' .
               '    <li><a href="' . tep_href_link(FILENAME_KB_MANUALS) . '">' . MODULE_BOXES_KNOWLEDGEBASE_BOX_MANUALS . '</a></li>' .
               '    <li><a href="' . tep_href_link(FILENAME_KB_FAQ) . '">' . MODULE_BOXES_KNOWLEDGEBASE_BOX_FAQ . '</a></li>' .

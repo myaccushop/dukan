@@ -10,12 +10,10 @@
   Released under the GNU General Public License
 */
 
-define('NAVBAR_TITLE', 'Why DRO');
-define('HEADING_TITLE', 'Why DRO');
+define('NAVBAR_TITLE', 'DRO Productivity improvement');
+define('HEADING_TITLE', 'Productivity improvement gained using DRO.');
 
-define('TEXT_WHY_DRO', '
-<br/>
-<hr style="width: 960px; height: 5px; color: rgb(9, 12, 9); border-style: solid; margin-left: 0px; margin-right: auto;" />
+define('TEXT_DRO_PRODUCTIVITY_CAL', '
 <br/>
 <dt><b>Why Digital Readout?</b></dt><dt><br />
 </dt><dt>Manually controlled machines require an operator to directly position 
@@ -32,26 +30,22 @@ define('TEXT_WHY_DRO', '
           travel being the precise movement of the slide not revolutions of the 
           leadscrew. </dt>
 
- <p>Positioning time is reduced vastly:<br />
-    </p>
-    <ul>
-      <li>Digital Readouts (DRO’s) utilize linear scales mounted on the lathe or
-        mill. The scale reads position that is independent of the lead screw and
-        shows the true tool position, regardless of mechanical wear and
-        backlash. The reading lines on vernier dials, counting hand wheel
-        revolutions and lead screw backlash compensation are eliminated.</li>
-      <li>The accuracy and repeatability of precision linear scales allow the
-        machine operator to position the tool to the design print dimensions.
-        Three of  this steps, Stop-check-measure steps are all but eliminated.
-        Features like Diameter Reading, bolt hole and etc.... greatly reduce
-        mathematics, calculations and scrap due to operator error. Less time is
-        spend in checking and measuring which leaves more time to do other
-        things.<br />
-      </li>
-    </ul>
-<br/>
-<br/>
-<br/>
+<P><FONT SIZE="+2">Simple Adder</FONT></P>
+
+<FORM NAME="Calculator" METHOD="post">
+<P>Lathe or Mill used hours per week: <INPUT TYPE=TEXT NAME="input_A" SIZE=2 VALUE=60></P>
+<P>Shop Rate/Hour ($): <INPUT TYPE=TEXT NAME="input_B" SIZE=2 VALUE=50></P>
+<P>DRO Productivity Improvement (%): <INPUT TYPE=TEXT NAME="input_C" SIZE=2 VALUE=25></P>
+<P>Average Cost of a DRO kit ($): <INPUT TYPE=TEXT NAME="input_D" SIZE=2 VALUE=800></P>
+<P><INPUT TYPE="button" VALUE="Calculate" name="AddButton" onClick="CalculateSum(this.form.input_A.value, this.form.input_B.value, this.form.input_C.value,this.form.input_D.value,this.form)"></P>
+<P>Hours saved     = <INPUT TYPE=TEXT NAME="Answer" SIZE=1>hrs/week</P>
+<P>Productivity improvement = $<INPUT TYPE=TEXT NAME="Answer1" SIZE=1>per week</P>
+<P>Return of Investment  in <INPUT TYPE=TEXT NAME="Answer2" SIZE=1> weeks</P>
+<P><INPUT TYPE="button" VALUE="Clear Fields" name="ClearButton" onClick="ClearForm(this.form)"></P>
+</FORM>
+
+
+
 <br/>
 <br/>
 
