@@ -26,9 +26,9 @@ Productivity improvement gained using DRO Is typically 20% to 40%. Please use fo
 <P>DRO Productivity Improvement (%): <INPUT TYPE=TEXT NAME="input_C" SIZE=2 VALUE=40></P>
 <P>Average Cost of a DRO kit @AccuDRO ($): <INPUT TYPE=TEXT NAME="input_D" SIZE=2 VALUE=800></P>
 <P><INPUT TYPE="button" VALUE="Calculate" name="AddButton" onClick="CalculateSum(this.form.input_A.value, this.form.input_B.value, this.form.input_C.value,this.form.input_D.value,this.form)"></P>
-<P>Hours saved     = <INPUT TYPE=TEXT NAME="Answer" SIZE=1>hrs/week</P>
-<P>Productivity improvement = $<INPUT TYPE=TEXT NAME="Answer1" SIZE=1>per week.</P>
-<P>Return of Investment  in <INPUT TYPE=TEXT NAME="Answer2" SIZE=1> weeks.</P>
+<P>Hours saved     = <INPUT TYPE=TEXT NAME="Answer" SIZE=3>hrs/week</P>
+<P>Productivity improvement = $<INPUT TYPE=TEXT NAME="Answer1" SIZE=3>per week.</P>
+<P>Return of Investment  in <INPUT TYPE=TEXT NAME="Answer2" SIZE=3> weeks.</P>
 <P><INPUT TYPE="button" VALUE="Clear Fields" name="ClearButton" onClick="ClearForm(this.form)"></P>
 </FORM>
 Order your DRO kit here online or by sending us email <a href="mailto:' . STORE_OWNER_EMAIL_ADDRESS . '">' . STORE_OWNER_EMAIL_ADDRESS . '</a> or call ' . SUPPORT_PHONE_NUMBER . ' and start saving money today.<br />
