@@ -25,7 +25,7 @@ define('TEXT_INFORMATION', '
 
 
 
- <strong>How to calculate ROI on the DRO kit?</strong><strong> </strong></p>
+ <strong>How to calculate ROI on the Lathe or Mill machine DRO kit?</strong><strong> </strong></p>
     <p>
       <meta content="text/html; charset=UTF-8" http-equiv="content-type" />
     </p>
