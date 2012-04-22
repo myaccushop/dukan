@@ -14,7 +14,7 @@ define('NAVBAR_TITLE', 'FAQ');
 define('HEADING_TITLE', 'Frequently Asked Questions');
 
 define('TEXT_FAQ_INFORMATION', '
-FAQs covered here are generally related to our on-line shop operation, for technical FAQs please visit our knowledge base FAQs <a href="' . tep_href_link(FILENAME_KB_FAQ) . '">here</a>.
+FAQs covered here are generally related to our on-line shop operation, for technical FAQs please visit our knowledge base FAQs <a href="' . tep_href_link(FILENAME_KB_FAQ) . '" style="color:#cc0000" ><strong>here</strong></a>.
 <br/>
 <strong><br />
   Why buy from AccuDRO Systems ?</strong><br /><strong>  <br />
