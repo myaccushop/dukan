@@ -15,11 +15,22 @@ define('HEADING_TITLE', 'Manuals');
 
 define('TEXT_INFORMATION', ' 
 <br/>
-<table> 
-   <tr>  
-     <td width="300">Lathe and Mill Kit DRO manual :</td>   
-     <td width="500"><a style="color: #CC0000" href="manuals/PEARL_V3.pdf"><strong>   IAP3X-Pearl v3</strong> </a> <sub>(pdf) <sub/>  </td> 
+<table border="0" cellpadding="20"> 
+   <tr bgcolor="#c1ecfa" >  
+     <td width="300" height="75" >Lathe and Mill Kit DRO manual :</td>   
+     <td width="300"><a style="color: #CC0000" href="manuals/PEARL_V3.pdf"><strong>   IAP3X-Pearl v3</strong> </a> <sub>(pdf) <sub/> </td> 
   </tr>
+   <tr bgcolor="#d5ffff" >  
+     <td width="300" height="75">Lathe Machine Read Head Installation Manual: <br/> 
+ <sub>(Details about how to mount x-axis and y-axis read heads) <sub/></td>   
+     <td width="300"><a style="color: #CC0000" href="manuals/accudro_lathe_instructions.pdf"><strong>   Lathe-Installation-Instruction</strong> </a> <sub>(pdf) <sub/>  </td> 
+  </tr>
+   <tr  bgcolor="#c1ecfa">  
+     <td width="300" height="75">Mill Machine Read Head Installation Manual: <br/> 
+ <sub>(Details about how to mount x-axis, y-axis and z-axis  read heads) <sub/></td>   
+     <td width="300"><a style="color: #CC0000" href="manuals/accudro_mill_instructions.pdf"><strong>   Mill-Installation-Instruction</strong> </a> <sub>(pdf) <sub/>  </td> 
+  </tr>
+
 </table> 
 <br/>
 <br/>
