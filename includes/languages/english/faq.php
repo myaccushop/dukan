@@ -36,6 +36,20 @@ control.<br />
 <p>  AccuDRO accepts all major credit cards through PayPal.</p>
 <br />
 
+<strong>Do you provide custom dro kits, for example, 3 axis mill machine kit with 80”x40”x42” scales ?</strong><br />
+  <br />
+<strong>  
+  </strong> Yes, we do. Please email <a href="mailto:' . STORE_OWNER_EMAIL_ADDRESS . '">' . STORE_OWNER_EMAIL_ADDRESS . '</a> or call ' . SUPPORT_PHONE_NUMBER . '.
+
+  <br /> <br />
+
+
+
+<strong>Do you take bulk orders, for example, 100 orders of 2 axis mill/lathe machine kit  with 12”x40” scales ?</strong><br />
+  <br />
+<strong>  
+  </strong> Yes, we do. Please email <a href="mailto:' . STORE_OWNER_EMAIL_ADDRESS . '">' . STORE_OWNER_EMAIL_ADDRESS . '</a> or call ' . SUPPORT_PHONE_NUMBER . '.
+
   <br />
 <br />
 <br />

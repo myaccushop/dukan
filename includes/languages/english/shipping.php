@@ -20,7 +20,9 @@ define('TEXT_SHIPPING_INFORMATION', '
 
 <p>We will collect your payment (through PayPal) when your order is shipped and not while your order is in process. Order will be shipped within 2 to 3 business days from the day order is placed.
 
-<p>We offer only  Flat rate shipping, each order of DRO kit will incur $49.99 flat rate shipping. Sorry, we cannot combined multiple orders e.g. if you order 3 DRO kits then you will need to pay shipping charge for every single DRO kit, the total shipping charges will be $49.99 times 3.
+<p>We offer only  Flat rate shipping (does not apply for custom or bulk orders), each order of DRO kit will incur $49.99 flat rate shipping. Sorry, we cannot combined multiple orders e.g. if you order 3 DRO kits then you will need to pay shipping charge for every single DRO kit, the total shipping charges will be $49.99 times 3.
+
+<p>Shipping charges for the custom or bulk orders will be provided in a separate invoice.
 
 <p> Orders will be shipped using FedEx ground shipping. The shipping time is usually between 1 to 7 business days. Following maps shows *approximate transit time for ground shipping, for more detail visit FedEx website.
 

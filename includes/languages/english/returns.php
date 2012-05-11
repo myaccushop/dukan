@@ -14,6 +14,7 @@ define('NAVBAR_TITLE', 'Returns');
 define('HEADING_TITLE', 'Returns');
 
 define('TEXT_RETURNS_INFORMATION', '
+<h1> Return policy for Online Purchases</h1>
  Accudro Systems wants to ensure complete satisfaction for your online purchases, so this our return policy:
 <p><ul>
   <li>All merchandise sold carry 14 days money back guarantee from the date of purchase.</li>
@@ -40,5 +41,12 @@ define('TEXT_RETURNS_INFORMATION', '
   <li>Send it to the address provided along with RMA.</li>
 </ol>
 <br />
+<h1> Return policy for bulk or custom orders</h1>
+<p>
+Returns for custom or bulk orders for any reason other than our error or a defect in the material or workmanship of the product cannot be accepted, all other terms and conditions from \'<strong>Return policy for Online Purchases</strong>\' apply here.
+
+<br/>
+<br/>
+<br/>
 ');
 ?>
