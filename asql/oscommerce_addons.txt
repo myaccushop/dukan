@@ -17,3 +17,8 @@
 
    http://addons.oscommerce.com/info/7704/v,23
    Support thread: http://forums.oscommerce.com/topic/336702-ultimate-seo-urls-5-by-fwr-media/ 
+
+5] Ultimate Html Emails v2.1-2.3
+  
+   Contribution: http://addons.oscommerce.com/info/7855/v,23
+   Support: http://forums.oscommerce.com/index.php?showtopic=296492
