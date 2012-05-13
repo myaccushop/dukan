@@ -317,6 +317,12 @@
   }
 
 // lets start with the email confirmation
+//---  Beginning of addition: Ultimate HTML Emails  ---//
+if (EMAIL_USE_HTML == 'true') {
+  require(DIR_WS_MODULES . 'UHtmlEmails/Green/checkout_process.php');
+  $email_order = $html_email;
+}else{//Send text email
+  //---  End of addition: Ultimate HTML Emails  ---//
   $email_order = STORE_NAME . "\n" . 
                  EMAIL_SEPARATOR . "\n" . 
                  EMAIL_TEXT_ORDER_NUMBER . ' ' . $insert_id . "\n" .
@@ -358,6 +364,18 @@
       $email_order .= $payment_class->email_footer . "\n\n";
     }
   }
+//---  Beginning of addition: Ultimate HTML Emails  ---//
+}
+
+if(ULTIMATE_HTML_EMAIL_DEVELOPMENT_MODE === 'true'){
+	//Save the contents of the generated html email to the harddrive in .htm file. This can be practical when developing a new layout.
+	$TheFileName = 'Last_mail_from_checkout_process.php.htm';
+	$TheFileHandle = fopen($TheFileName, 'w') or die("can't open error log file");
+	fwrite($TheFileHandle, $email_order);
+	fclose($TheFileHandle);
+}
+//---  End of addition: Ultimate HTML Emails  ---//
+
   tep_mail($order->customer['firstname'] . ' ' . $order->customer['lastname'], $order->customer['email_address'], EMAIL_TEXT_SUBJECT, $email_order, STORE_OWNER, STORE_OWNER_EMAIL_ADDRESS);
   //
   //  Always send an email notification to store owner
