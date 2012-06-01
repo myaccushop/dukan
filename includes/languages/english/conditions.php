@@ -72,7 +72,7 @@ for shipping, the purchase cannot be cancelled or modified until the
 product has been returned to us. In this case, please refer to our 
 return policy and return your purchase once you have received it. If you
  would like to purchase a different product, please visit our website or
- contact through email at support@accudro.com.<br /><br />
+ contact through email at support@accudro.com. <strong>Custom or bulk orders cannot be canceled</strong>, however, we can try to accommodate any changes to it provided the order has not yet been shipped by our overseas supplier.<br /><br />
 
 <h1><strong>PAYMENT</strong></h1>
 AccuDRO Systems accepts the following forms of payment for online purchases:
