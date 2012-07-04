@@ -29,13 +29,18 @@ control.<br />
  </strong> By email <a href="mailto:' . STORE_OWNER_EMAIL_ADDRESS . '">' . STORE_OWNER_EMAIL_ADDRESS . '</a> or call ' . SUPPORT_PHONE_NUMBER . '.<br />
 <br /><strong>Are you based in the USA?</strong><br /><strong>  
   <br />
-  </strong>Yes, we are proud to be a USA based company.<br />
+  </strong>Yes, we are proud to be a USA based company. We are located in Hillsboro, Oregon.<br />
 <span style="font-weight: bold;"><br />
 </span><strong>What Payments Do You Accept?
 	</strong>
 <p>  AccuDRO accepts all major credit cards through PayPal.</p>
 <br />
 
+<strong>Do you charge sales tax ?
+	</strong>
+<p>  No, we do not charge sales tax at all.</p>
+<br />
+ 
 <strong>Do you provide custom dro kits, for example, 3 axis mill machine kit with 80”x40”x42” scales ?</strong><br />
   <br />
 <strong>  
