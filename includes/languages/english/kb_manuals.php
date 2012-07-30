@@ -32,7 +32,7 @@ define('TEXT_INFORMATION', '
    </a> <sub>(pdf) <sub/>  </td> 
   </tr>
    <tr bgcolor="#d5ffff" >  
-     <td width="300" height="75" >Xterme+ DRO manual :</td>   
+     <td width="300" height="75" >Xterme+ DRO manual :<br/> - AccuDRO\'s most advance DRO Counter with 5.7" color LCD screen.</td>   
      <td width="300">
         <a style="color: #CC0000" href="manuals/AccuDRO_xtreme+_dro_manual.pdf">
         <img width="67" height="94" title="Accudro Xterme+ DRO manual" alt="Accudro Xterme+ DRO manual" src="images/Accudro_xtreme+_dro_manual.png">
