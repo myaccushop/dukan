@@ -301,7 +301,7 @@ define('ERROR_FILETYPE_NOT_ALLOWED', 'Error: File upload type not allowed.');
 define('SUCCESS_FILE_SAVED_SUCCESSFULLY', 'Success: File upload saved successfully.');
 define('WARNING_NO_FILE_UPLOADED', 'Warning: No file uploaded.');
 
-define('SUPPORT_PHONE_NUMBER', '1-877-407-3515');
+define('SUPPORT_PHONE_NUMBER', '1-503-985-8284');
 define('EMAIL_SEPARATOR', '------------------------------------------------------');
 
 define('COMMUNICATION_EMAIL_FOOTER', "For any questions or support, please contact:\n" . EMAIL_SEPARATOR . "\n  " . STORE_NAME . "\n  " . STORE_OWNER_EMAIL_ADDRESS . "\n  " . SUPPORT_PHONE_NUMBER );
